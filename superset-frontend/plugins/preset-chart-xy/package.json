@@ -34,7 +34,7 @@
     "@vx/axis": "^0.0.198",
     "@vx/legend": "^0.0.198",
     "@vx/scale": "^0.0.197",
-    "csstype": "^2.6.3",
+    "csstype": "^3.1.0",
     "encodable": "^0.7.6",
     "lodash": "^4.17.11",
     "reselect": "^4.0.0"
