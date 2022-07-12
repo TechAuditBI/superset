@@ -39,6 +39,8 @@ import ModalTrigger from 'src/components/ModalTrigger';
 import Button from 'src/components/Button';
 import ViewQueryModal from 'src/explore/components/controls/ViewQueryModal';
 import { ResultsPaneOnDashboard } from 'src/explore/components/DataTablesPane';
+// @ts-ignore
+import exportTableToExcel from 'src/dashboard/actions/exportTable';
 
 const MENU_KEYS = {
   CROSS_FILTER_SCOPING: 'cross_filter_scoping',
@@ -125,6 +127,7 @@ export interface SliceHeaderControlsProps {
   supersetCanCSV?: boolean;
   sliceCanEdit?: boolean;
 }
+
 interface State {
   showControls: boolean;
   showCrossFilterScopingModal: boolean;
@@ -275,6 +278,8 @@ class SliceHeaderControls extends React.PureComponent<
     const fullscreenLabel = isFullSize
       ? t('Exit fullscreen')
       : t('Enter fullscreen');
+    const resizeLabel = isFullSize ? t('Minimize chart') : t('Maximize chart');
+
     const menu = (
       <Menu
         onClick={this.handleMenuClick}
@@ -399,33 +404,40 @@ class SliceHeaderControls extends React.PureComponent<
 
         {this.props.slice.viz_type !== 'filter_box' &&
           this.props.supersetCanCSV && (
-            <Menu.SubMenu title={t('Download')}>
-              <Menu.Item
-                key={MENU_KEYS.EXPORT_CSV}
-                icon={<Icons.FileOutlined css={dropdownIconsStyles} />}
-              >
-                {t('Export to .CSV')}
-              </Menu.Item>
+            <Menu.Item key={MENU_KEYS.EXPORT_CSV}>
+              {t('Export EXCEL')}
+            </Menu.Item>
+          )}
 
-              {this.props.slice.viz_type !== 'filter_box' &&
-                isFeatureEnabled(FeatureFlag.ALLOW_FULL_CSV_EXPORT) &&
-                this.props.supersetCanCSV &&
-                isTable && (
-                  <Menu.Item
-                    key={MENU_KEYS.EXPORT_FULL_CSV}
-                    icon={<Icons.FileOutlined css={dropdownIconsStyles} />}
-                  >
-                    {t('Export to full .CSV')}
-                  </Menu.Item>
-                )}
-
-              <Menu.Item
-                key={MENU_KEYS.DOWNLOAD_AS_IMAGE}
-                icon={<Icons.FileImageOutlined css={dropdownIconsStyles} />}
-              >
-                {t('Download as image')}
-              </Menu.Item>
-            </Menu.SubMenu>
+        {this.props.slice.viz_type !== 'filter_box' &&
+          isFeatureEnabled(FeatureFlag.ALLOW_FULL_CSV_EXPORT) &&
+          this.props.supersetCanCSV &&
+          isTable && (
+            <Menu.Item key={MENU_KEYS.EXPORT_FULL_CSV}>
+              {t('Export full CSV')}
+            </Menu.Item>
+          )}
+        {['pivot_table_v2', 'table', 'time_table'].includes(
+          this.props.slice.viz_type,
+        ) ? (
+          <Menu.Item
+            onClick={() => {
+              const father = document.querySelectorAll(
+                `[data-test-chart-id="${this.props.slice.slice_id}"]`,
+              )[0];
+              const tables = father.querySelectorAll('table');
+              exportTableToExcel(tables, `${this.props.slice.slice_name}`);
+            }}
+          >
+            {t('Export current table')}
+          </Menu.Item>
+        ) : null}
+        {isFeatureEnabled(FeatureFlag.DASHBOARD_CROSS_FILTERS) &&
+          isCrossFilter &&
+          canEmitCrossFilter && (
+            <Menu.Item key={MENU_KEYS.CROSS_FILTER_SCOPING}>
+              {t('Cross-filter scoping')}
+            </Menu.Item>
           )}
       </Menu>
     );

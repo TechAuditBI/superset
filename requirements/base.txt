@@ -302,5 +302,8 @@ wtforms-json==0.3.3
 yarl==1.6.3
     # via aiohttp
 
+zipp==3.4.1
+    # via -r requirements/base.in
+xlsxwriter
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

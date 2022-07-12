@@ -225,7 +225,7 @@ function DashboardTable({
             },
           },
           {
-            name: t('View All »'),
+            name: 'Показать все »',
             buttonStyle: 'link',
             onClick: () => {
               const target =

@@ -119,8 +119,17 @@ const getEntityUrl = (entity: ActivityObject) => {
 };
 
 const getEntityLastActionOn = (entity: ActivityObject) => {
-  if ('time' in entity) {
-    return t('Viewed %s', moment(entity.time).fromNow());
+  // translation keys for last action on
+  const LAST_VIEWED = `${t('Last viewed')} %s`;
+  const LAST_MODIFIED = `${t('Last modified')} %s`;
+
+  // for Recent viewed items
+  if ('time_delta_humanized' in entity) {
+    return t(LAST_VIEWED, entity.time_delta_humanized);
+  }
+
+  if ('changed_on_delta_humanized' in entity) {
+    return t(LAST_MODIFIED, entity.changed_on_delta_humanized);
   }
 
   let time: number | string | undefined | null;

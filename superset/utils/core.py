@@ -179,6 +179,23 @@ class DatasourceType(str, Enum):
     SLTABLE = "sl_table"
     TABLE = "table"
     DATASET = "dataset"
+class ChartDataResultFormat(str, Enum):
+    """
+    Chart data response format
+    """
+
+    CSV = "csv"
+    JSON = "json"
+    XLSX = "xlsx"
+
+
+class ChartDataResultType(str, Enum):
+    """
+    Chart data response type
+    """
+
+    COLUMNS = "columns"
+    FULL = "full"
     QUERY = "query"
     SAVEDQUERY = "saved_query"
     VIEW = "view"

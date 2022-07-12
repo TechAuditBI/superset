@@ -24,11 +24,12 @@ import wtforms_json
 from deprecation import deprecated
 from flask import Flask, redirect
 from flask_appbuilder import expose, IndexView
-from flask_babel import gettext as __, lazy_gettext as _
 from flask_compress import Compress
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from superset.constants import CHANGE_ME_SECRET_KEY
+from flask_babel import gettext as __, lazy_gettext as _
+from superset.connectors.connector_registry import ConnectorRegistry
 from superset.extensions import (
     _event_logger,
     APP_DIR,
@@ -56,7 +57,6 @@ if TYPE_CHECKING:
     from superset.app import SupersetApp
 
 logger = logging.getLogger(__name__)
-
 
 class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
     def __init__(self, app: SupersetApp) -> None:
@@ -233,6 +233,7 @@ class SupersetAppInitializer:  # pylint: disable=too-many-public-methods
             category_label=__("Manage"),
             category_icon="",
         )
+
         appbuilder.add_view(
             DashboardModelView,
             "Dashboards",

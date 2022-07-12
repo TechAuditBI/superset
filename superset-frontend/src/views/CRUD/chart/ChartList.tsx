@@ -146,6 +146,8 @@ const Actions = styled.div`
   color: ${({ theme }) => theme.colors.grayscale.base};
 `;
 
+const IsCyrillic = (ch: string) => /^[\u0400-\u04FF ]+$/.test(ch);
+
 function ChartList(props: ChartListProps) {
   const {
     addDangerToast,
@@ -539,7 +541,12 @@ function ChartList(props: ChartListProps) {
             if (!a.label || !b.label) {
               return 0;
             }
-
+            if (IsCyrillic(a.label[0]) && !IsCyrillic(b.label[0])) {
+              return -1;
+            }
+            if (IsCyrillic(b.label[0]) && !IsCyrillic(a.label[0])) {
+              return 1;
+            }
             if (a.label > b.label) {
               return 1;
             }

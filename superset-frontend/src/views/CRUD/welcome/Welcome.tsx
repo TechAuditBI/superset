@@ -284,7 +284,7 @@ function Welcome({ user, addDangerToast }: WelcomeProps) {
     <WelcomeContainer>
       {WelcomeTopExtension && <WelcomeTopExtension />}
       <WelcomeNav>
-        <h1 className="welcome-header">Home</h1>
+        <span className="navbar-brand">{t('Home')}</span>
         {isFeatureEnabled(FeatureFlag.THUMBNAILS) ? (
           <div className="switch">
             <AntdSwitch checked={checked} onChange={handleToggle} />

@@ -319,10 +319,8 @@ class Chart extends React.Component {
       formData: isFullCSV
         ? { ...this.props.formData, row_limit: this.props.maxRows }
         : this.props.formData,
-      resultType: 'full',
-      resultFormat: 'csv',
-      force: true,
-      ownState: this.props.ownState,
+      resultType: 'results',
+      resultFormat: 'xlsx',
     });
   }
 

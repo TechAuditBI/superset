@@ -44,6 +44,11 @@ const colorSchemeOptions = (theme: SupersetTheme) => [
   { value: theme.colors.error.light1, label: t('red') },
 ];
 
+const inverseOptions = [
+  { value: 'Inversed', label: t('Inversed') },
+  { value: 'Not inversed', label: t('Not inversed') },
+];
+
 const operatorOptions = [
   { value: COMPARATOR.NONE, label: 'None' },
   { value: COMPARATOR.GREATER_THAN, label: '>' },
@@ -192,43 +197,53 @@ export const FormattingPopoverContent = ({
   const colorScheme = colorSchemeOptions(theme);
   return (
     <Form
-      onFinish={onChange}
-      initialValues={config}
-      requiredMark="optional"
-      layout="vertical"
-    >
-      <Row gutter={12}>
-        <Col span={12}>
-          <FormItem
-            name="column"
-            label={t('Column')}
-            rules={rulesRequired}
-            initialValue={columns[0]?.value}
-          >
-            <Select ariaLabel={t('Select column')} options={columns} />
-          </FormItem>
-        </Col>
-        <Col span={12}>
-          <FormItem
-            name="colorScheme"
-            label={t('Color scheme')}
-            rules={rulesRequired}
-            initialValue={colorScheme[0].value}
-          >
-            <Select ariaLabel={t('Color scheme')} options={colorScheme} />
-          </FormItem>
-        </Col>
-      </Row>
-      <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
-        {renderOperatorFields}
+    onFinish={onChange}
+    initialValues={config}
+    requiredMark="optional"
+    layout="vertical"
+  >
+    <Row gutter={12}>
+      <Col span={12}>
+        <FormItem
+          name="column"
+          label={t('Column')}
+          rules={rulesRequired}
+          initialValue={columns[0]?.value}
+        >
+          <Select ariaLabel={t('Select column')} options={columns} />
+        </FormItem>
+      </Col>
+      <Col span={12}>
+        <FormItem
+          name="colorScheme"
+          label={t('Color scheme')}
+          rules={rulesRequired}
+          initialValue={colorSchemeOptions[0].value}
+        >
+          <Select ariaLabel={t('Color scheme')} options={colorSchemeOptions} />
+        </FormItem>
+      </Col>
+    </Row>
+    <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
+      {renderOperatorFields}
+    </FormItem>
+    <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
+      <FormItem
+        name="inverseMode"
+        label={t('Inverse mode')}
+        initialValue={inverseOptions[0].value}
+        rules={rulesRequired}
+      >
+        <Select ariaLabel={t('Color scheme')} options={inverseOptions} />
       </FormItem>
-      <FormItem>
-        <JustifyEnd>
-          <Button htmlType="submit" buttonStyle="primary">
-            {t('Apply')}
-          </Button>
-        </JustifyEnd>
-      </FormItem>
-    </Form>
+    </FormItem>
+    <FormItem>
+      <JustifyEnd>
+        <Button htmlType="submit" buttonStyle="primary">
+          {t('Apply')}
+        </Button>
+      </JustifyEnd>
+    </FormItem>
+  </Form>
   );
 };

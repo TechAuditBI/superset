@@ -372,8 +372,12 @@ export default function DateFilterLabel(props: DateFilterControlProps) {
         overlayStyle={overlayStyle}
       >
         <Tooltip placement="top" title={tooltipTitle}>
-          <Label className="pointer" data-test="time-range-trigger">
-            {actualTimeRange}
+          <Label
+            className="pointer"
+            data-test="time-range-trigger"
+            onClick={onOpen}
+          >
+            {t(actualTimeRange)}
           </Label>
         </Tooltip>
       </StyledPopover>

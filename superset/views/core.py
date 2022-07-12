@@ -21,11 +21,13 @@ import logging
 import re
 from contextlib import closing
 from datetime import datetime, timedelta
+from io import BytesIO, StringIO
 from typing import Any, Callable, cast, Dict, List, Optional, Union
 from urllib import parse
 
 import backoff
 import humanize
+import pandas
 import pandas as pd
 import simplejson as json
 from flask import abort, flash, g, redirect, render_template, request, Response
@@ -476,12 +478,24 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
     def generate_json(
         self, viz_obj: BaseViz, response_type: Optional[str] = None
     ) -> FlaskResponse:
-        if response_type == ChartDataResultFormat.CSV:
+
+        if response_type == utils.ChartDataResultFormat.CSV:
             return CsvResponse(
                 viz_obj.get_csv(), headers=generate_download_headers("csv")
             )
 
-        if response_type == ChartDataResultType.QUERY:
+        if response_type == utils.ChartDataResultFormat.XLSX:
+            sio = BytesIO()
+            df = pandas.read_csv(StringIO(viz_obj.get_csv()), sep=',')
+            writer = pandas.ExcelWriter(sio, engine='xlsxwriter')
+            df.to_excel(writer, sheet_name="Лист 1", index=None)
+            writer.save()
+
+            sio.seek(0)
+            workbook = sio.getvalue()
+            return CsvResponse(workbook, headers=generate_download_headers("xlsx"))
+
+        if response_type == utils.ChartDataResultType.QUERY:
             return self.get_query_string_response(viz_obj)
 
         if response_type == ChartDataResultType.RESULTS:
@@ -615,11 +629,12 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
 
         TODO: break into one endpoint for each return shape"""
 
-        response_type = ChartDataResultFormat.JSON.value
-        responses: List[Union[ChartDataResultFormat, ChartDataResultType]] = list(
-            ChartDataResultFormat
-        )
-        responses.extend(list(ChartDataResultType))
+        response_type = utils.ChartDataResultFormat.JSON.value
+
+        responses: List[
+            Union[utils.ChartDataResultFormat, utils.ChartDataResultType]
+        ] = list(utils.ChartDataResultFormat)
+        responses.extend(list(utils.ChartDataResultType))
         for response_option in responses:
             if request.args.get(response_option) == "true":
                 response_type = response_option
@@ -688,7 +703,6 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
                 form_data=form_data,
                 force=force,
             )
-
             return self.generate_json(viz_obj, response_type)
         except SupersetException as ex:
             return json_error_response(utils.error_msg_from_exception(ex), 400)
@@ -1535,6 +1549,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
                 item_url = slc.slice_url
                 item_title = slc.chart
 
+            _t = humanize.i18n.activate("ru_RU")
             payload.append(
                 {
                     "action": log.action,

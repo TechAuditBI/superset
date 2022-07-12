@@ -317,7 +317,7 @@ class SliceAdder extends React.Component {
             value={this.state.sortBy}
             onChange={this.handleSelect}
             options={Object.entries(KEYS_TO_SORT).map(([key, label]) => ({
-              label: t('Sort by %s', label),
+              label: `${t('Sort by')} ${t(label)}`,
               value: key,
             }))}
             placeholder={t('Sort by')}

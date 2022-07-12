@@ -284,8 +284,7 @@ const SavedQueries = ({
           {
             name: (
               <>
-                <i className="fa fa-plus" />
-                {t('SQL Query')}
+                <i className="fa fa-plus" /> {t('SQL query')}
               </>
             ),
             buttonStyle: 'tertiary',
@@ -294,7 +293,7 @@ const SavedQueries = ({
             },
           },
           {
-            name: t('View All »'),
+            name: 'Показать все »',
             buttonStyle: 'link',
             onClick: () => {
               window.location.href = '/savedqueryview/list';

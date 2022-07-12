@@ -24,42 +24,42 @@ import { WelcomeTable } from './types';
 describe('EmptyState', () => {
   const variants = [
     {
-      tab: 'Favorite',
-      tableName: WelcomeTable.Dashboards,
+      tab: 'Избранное',
+      tableName: 'DASHBOARDS',
     },
     {
-      tab: 'Mine',
-      tableName: WelcomeTable.Dashboards,
+      tab: 'Мои',
+      tableName: 'DASHBOARDS',
     },
     {
-      tab: 'Favorite',
-      tableName: WelcomeTable.Charts,
+      tab: 'Избранное',
+      tableName: 'CHARTS',
     },
     {
-      tab: 'Mine',
-      tableName: WelcomeTable.Charts,
+      tab: 'Мои',
+      tableName: 'CHARTS',
     },
     {
-      tab: 'Favorite',
-      tableName: WelcomeTable.SavedQueries,
+      tab: 'Избранное',
+      tableName: 'SAVED_QUERIES',
     },
     {
-      tab: 'Mine',
-      tableName: WelcomeTable.SavedQueries,
+      tab: 'Мои',
+      tableName: 'SAVED_QUEREIS',
     },
   ];
   const recents = [
     {
-      tab: 'Viewed',
-      tableName: WelcomeTable.Recents,
+      tab: 'Просмотренные',
+      tableName: 'недавние',
     },
     {
-      tab: 'Edited',
-      tableName: WelcomeTable.Recents,
+      tab: 'Измененные',
+      tableName: 'недавние',
     },
     {
-      tab: 'Created',
-      tableName: WelcomeTable.Recents,
+      tab: 'Созданные',
+      tableName: 'недавние',
     },
   ];
   variants.forEach(variant => {
@@ -68,13 +68,13 @@ describe('EmptyState', () => {
       expect(wrapper).toExist();
       const textContainer = wrapper.find('.ant-empty-description');
       expect(textContainer.text()).toEqual(
-        variant.tab === 'Favorite'
-          ? "You don't have any favorites yet!"
-          : `No ${
+        variant.tab === 'Избранное'
+          ? 'У вас пока нет избранных'
+          : `Нет ${
               variant.tableName === 'SAVED_QUERIES'
-                ? 'saved queries'
+                ? 'сохраненных запросов'
                 : variant.tableName.toLowerCase()
-            } yet`,
+            }`,
       );
       expect(wrapper.find('button')).toHaveLength(1);
     });
