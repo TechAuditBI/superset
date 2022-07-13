@@ -409,16 +409,17 @@ class SliceHeaderControls extends React.PureComponent<
 
         {this.props.slice.viz_type !== 'filter_box' &&
           this.props.supersetCanCSV && (
-            <Menu.Item key={MENU_KEYS.EXPORT_CSV}>
+            <Menu.Item key={MENU_KEYS.EXPORT_XLSX}>
               {t('Export EXCEL')}
             </Menu.Item>
-          )}
+        )}
         {this.props.slice.viz_type !== 'filter_box' &&
           this.props.supersetCanCSV && (
-            <Menu.Item key={MENU_KEYS.EXPORT_XLSX}>
-              {t('Export XLSX')}
+            <Menu.Item key={MENU_KEYS.EXPORT_CSV}>
+              {t('Export CSV')}
             </Menu.Item>
           )}
+
 
         {this.props.slice.viz_type !== 'filter_box' &&
           isFeatureEnabled(FeatureFlag.ALLOW_FULL_CSV_EXPORT) &&

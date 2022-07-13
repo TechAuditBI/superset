@@ -5646,6 +5646,9 @@ msgstr "Экспорт"
 msgid "Export CSV"
 msgstr "Экпспорт CSV"
 
+msgid "Export EXCEL"
+msgstr "Экспорт EXCEL"
+
 #: superset/views/dashboard/views.py:67
 msgid "Export dashboards?"
 msgstr "Экспортировать дашборд?"
