@@ -2961,7 +2961,7 @@
       "Thursday": ["Четверг"],
       "Time": ["Время"],
       "Time Offset": ["Смещение времени"],
-      "Numerical range": ["Числовой диапазон"],
+      "Numerical Range": ["Числовой диапазон"],
       "Time Series - Bar Chart": ["Time Series - Bar Chart"],
       "Time Series - Dual Axis Line Chart": [
         "Time Series - Dual Axis Line Chart"
@@ -3172,7 +3172,7 @@
       "Uses circles to visualize the flow of data through different stages of a system. Hover over individual paths in the visualization to understand the stages a value took. Useful for multi-stage, multi-group visualizing funnels and pipelines.": [
         ""
       ],
-      "Value": ["Подписи"],
+      "Value": ["Список значений"],
       "Value Domain": [""],
       "Value bounds": [""],
       "Vehicle Types": [""],

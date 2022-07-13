@@ -14102,7 +14102,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1202
 #: superset-frontend/src/views/CRUD/alert/ExecutionLog.tsx:140
 msgid "Value"
-msgstr "Подписи"
+msgstr "Список значений"
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/controlPanel.ts:91
 msgid "Value Domain"
