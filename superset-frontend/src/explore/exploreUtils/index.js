@@ -104,18 +104,7 @@ export function mountExploreUrl(endpointType, extraSearch = {}, force = false) {
     }
     search.standalone = DashboardStandaloneMode.HIDE_NAV;
   }
-  const url = uri.directory(directory).search(search).toString();
-  if (!allowOverflow && url.length > MAX_URL_LENGTH) {
-    const minimalFormData = {
-      datasource: formData.datasource,
-      viz_type: formData.viz_type,
-      slice_id: formData.slice_id,
-    };
-    return getExploreLongUrl(minimalFormData, endpointType, false, {
-      URL_IS_TOO_LONG_TO_SHARE: null,
-    });
-  }
-  return url;
+  return uri.directory(directory).search(search).toString();
 }
 
 export function getChartDataUri({ path, qs, allowDomainSharding = false }) {
