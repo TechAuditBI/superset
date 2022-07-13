@@ -1,3 +1,2 @@
 DB_CONNECTION_DOC_LINKS: 
- - https://localhost:8088
- 
+ - postgresql://superset:XXXXXXXXXX@db:5432/superset  # remove if you have your own links 

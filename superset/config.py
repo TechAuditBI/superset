@@ -184,9 +184,9 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = CHANGE_ME_SECRET_KEY
 
 # The SQLAlchemy connection string.
-SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
+# SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
-# SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
+SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://postgres:password123$@localhost:5432/techaudit')
 
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',
@@ -594,12 +594,14 @@ IMG_UPLOAD_URL = "/static/uploads/"
 # each cache config.
 CACHE_DEFAULT_TIMEOUT = int(timedelta(days=1).total_seconds())
 
+
+CACHE_REDIS_URL = os.environ.get("CACHE_REDIS_URL", "redis://izb-superset01:7000/1")
 # Default cache for Superset objects
 CACHE_CONFIG: CacheConfig = {
         "CACHE_TYPE": "redis",
         "CACHE_DEFAULT_TIMEOUT": 3600,
         "CACHE_KEY_PREFIX":"superset_13",
-        "CACHE_REDIS_URL":"redis://izb-superset01:7000/1"
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
 }
 
 # Cache for datasource metadata and query results
@@ -607,7 +609,7 @@ DATA_CACHE_CONFIG: CacheConfig = {
         "CACHE_TYPE": "redis",
         "CACHE_DEFAULT_TIMEOUT": 3600,
         "CACHE_KEY_PREFIX":"superset_13_data",
-        "CACHE_REDIS_URL":"redis://izb-superset01:7000/1"
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
         }
 
 # Cache for dashboard filter state (`CACHE_TYPE` defaults to `SimpleCache` when
@@ -1225,7 +1227,7 @@ RLS_FORM_QUERY_REL_FIELDS: Optional[Dict[str, List[List[Any]]]] = None
 #
 SESSION_COOKIE_HTTPONLY = True  # Prevent cookie from being read by frontend JS?
 SESSION_COOKIE_SECURE = False  # Prevent cookie from being transmitted over non-tls?
-SESSION_COOKIE_SAMESITE = "Lax"  # One of [None, 'None', 'Lax', 'Strict']
+SESSION_COOKIE_SAMESITE = "None"  # One of [None, 'None', 'Lax', 'Strict']
 
 # Cache static resources.
 SEND_FILE_MAX_AGE_DEFAULT = int(timedelta(days=365).total_seconds())

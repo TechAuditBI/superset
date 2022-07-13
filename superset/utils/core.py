@@ -179,6 +179,9 @@ class DatasourceType(str, Enum):
     SLTABLE = "sl_table"
     TABLE = "table"
     DATASET = "dataset"
+    QUERY = "query"
+    SAVEDQUERY = "saved_query"
+    
 class ChartDataResultFormat(str, Enum):
     """
     Chart data response format

@@ -47,6 +47,7 @@ const MENU_KEYS = {
   DOWNLOAD_AS_IMAGE: 'download_as_image',
   EXPLORE_CHART: 'explore_chart',
   EXPORT_CSV: 'export_csv',
+  EXPORT_XLSX: 'export_xlsx',
   EXPORT_FULL_CSV: 'export_full_csv',
   FORCE_REFRESH: 'force_refresh',
   FULLSCREEN: 'fullscreen',
@@ -116,6 +117,7 @@ export interface SliceHeaderControlsProps {
   logExploreChart?: (sliceId: number) => void;
   toggleExpandSlice?: (sliceId: number) => void;
   exportCSV?: (sliceId: number) => void;
+  exportXLSX?: (sliceId: number) => void;
   exportFullCSV?: (sliceId: number) => void;
   handleToggleFullSize: () => void;
 
@@ -199,6 +201,9 @@ class SliceHeaderControls extends React.PureComponent<
       case MENU_KEYS.EXPORT_CSV:
         // eslint-disable-next-line no-unused-expressions
         this.props.exportCSV && this.props.exportCSV(this.props.slice.slice_id);
+        break;
+      case MENU_KEYS.EXPORT_XLSX:
+        this.props.exportXLSX && this.props.exportXLSX(this.props.slice.slice_id);
         break;
       case MENU_KEYS.FULLSCREEN:
         this.props.handleToggleFullSize();
@@ -406,6 +411,12 @@ class SliceHeaderControls extends React.PureComponent<
           this.props.supersetCanCSV && (
             <Menu.Item key={MENU_KEYS.EXPORT_CSV}>
               {t('Export EXCEL')}
+            </Menu.Item>
+          )}
+        {this.props.slice.viz_type !== 'filter_box' &&
+          this.props.supersetCanCSV && (
+            <Menu.Item key={MENU_KEYS.EXPORT_XLSX}>
+              {t('Export XLSX')}
             </Menu.Item>
           )}
 

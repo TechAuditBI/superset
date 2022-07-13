@@ -29,7 +29,6 @@ from werkzeug.middleware.proxy_fix import ProxyFix
 
 from superset.constants import CHANGE_ME_SECRET_KEY
 from flask_babel import gettext as __, lazy_gettext as _
-from superset.connectors.connector_registry import ConnectorRegistry
 from superset.extensions import (
     _event_logger,
     APP_DIR,

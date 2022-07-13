@@ -36,6 +36,7 @@ const MENU_KEYS = {
   EDIT_PROPERTIES: 'edit_properties',
   DOWNLOAD_SUBMENU: 'download_submenu',
   EXPORT_TO_CSV: 'export_to_csv',
+  EXPORT_TO_XLSX: 'export_to_xlsx',
   EXPORT_TO_CSV_PIVOTED: 'export_to_csv_pivoted',
   EXPORT_TO_JSON: 'export_to_json',
   DOWNLOAD_AS_IMAGE: 'download_as_image',
@@ -133,6 +134,19 @@ export const useExploreAdditionalActionsMenu = (
     [canDownloadCSV, latestQueryFormData],
   );
 
+const exportXLSX = useCallback(
+    () =>
+      canDownloadCSV
+        ? exportChart({
+            formData: latestQueryFormData,
+            ownState,
+            resultType: 'full',
+            resultFormat: 'xlsx',
+          })
+        : null,
+    [canDownloadCSV, latestQueryFormData],
+);
+
   const exportCSVPivoted = useCallback(
     () =>
       canDownloadCSV
@@ -176,6 +190,11 @@ export const useExploreAdditionalActionsMenu = (
           break;
         case MENU_KEYS.EXPORT_TO_CSV:
           exportCSV();
+          setIsDropdownVisible(false);
+          setOpenSubmenus([]);
+          break;
+        case MENU_KEYS.EXPORT_TO_XLSX:
+          exportXLSX();
           setIsDropdownVisible(false);
           setOpenSubmenus([]);
           break;

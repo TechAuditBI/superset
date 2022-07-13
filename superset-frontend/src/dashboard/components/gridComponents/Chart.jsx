@@ -36,6 +36,7 @@ import {
   LOG_ACTIONS_EXPLORE_DASHBOARD_CHART,
   LOG_ACTIONS_EXPORT_CSV_DASHBOARD_CHART,
   LOG_ACTIONS_FORCE_REFRESH_CHART,
+  LOG_ACTIONS_EXPORT_XLSX_DASHBOARD_CHART
 } from 'src/logger/LogUtils';
 import { areObjectsEqual } from 'src/reduxUtils';
 import { FILTER_BOX_MIGRATION_STATES } from 'src/explore/constants';
@@ -140,6 +141,7 @@ class Chart extends React.Component {
     this.handleFilterMenuOpen = this.handleFilterMenuOpen.bind(this);
     this.handleFilterMenuClose = this.handleFilterMenuClose.bind(this);
     this.exportCSV = this.exportCSV.bind(this);
+    this.exportXLSX = this.exportXLSX.bind(this);
     this.exportFullCSV = this.exportFullCSV.bind(this);
     this.forceRefresh = this.forceRefresh.bind(this);
     this.resize = this.resize.bind(this);
@@ -320,6 +322,18 @@ class Chart extends React.Component {
         ? { ...this.props.formData, row_limit: this.props.maxRows }
         : this.props.formData,
       resultType: 'results',
+      resultFormat: 'csv',
+    });
+  }
+
+  exportXLSX() {
+    this.props.logEvent(LOG_ACTIONS_EXPORT_XLSX_DASHBOARD_CHART, {
+      slice_id: this.props.slice.slice_id,
+      is_cached: this.props.isCached,
+    });
+    exportChart({
+      formData: this.props.formData,
+      resultType: 'results',
       resultFormat: 'xlsx',
     });
   }
@@ -423,6 +437,7 @@ class Chart extends React.Component {
           logExploreChart={this.logExploreChart}
           onExploreChart={this.onExploreChart}
           exportCSV={this.exportCSV}
+          exportXLSX={this.exportXLSX}
           exportFullCSV={this.exportFullCSV}
           updateSliceName={updateSliceName}
           sliceName={sliceName}

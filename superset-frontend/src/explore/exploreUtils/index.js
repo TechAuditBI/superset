@@ -248,8 +248,11 @@ export const buildV1ChartDataPayload = ({
   );
 };
 
-export const getLegacyEndpointType = ({ resultType, resultFormat }) =>
-  ['csv', 'xlsx'].includes(resultFormat) ? resultFormat : resultType;
+export const getLegacyEndpointType = ({ resultType, resultFormat }) =>{
+    return resultFormat === 'csv' || resultFormat === 'xlsx'
+      ? resultFormat
+      : resultType;
+}
 
 export const exportChart = ({
   formData,

@@ -130,6 +130,14 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
     ? exportChart.bind(this, {
         formData: latestQueryFormData,
         resultType: 'results',
+        resultFormat: 'csv',
+      })
+    : null;
+
+const doExportXLSX = canDownloadCSV
+    ? exportChart.bind(this, {
+        formData: latestQueryFormData,
+        resultType: 'results',
         resultFormat: 'xlsx',
       })
     : null;
@@ -184,11 +192,19 @@ const ExploreActionButtons = (props: ExploreActionButtonsProps) => {
           />
           <ActionButton
             icon={<Icons.FileExcelOutlined iconSize="m" />}
-            text=".XLSX"
-            tooltip={t('Export to Excel format')}
+            text=".CSV"
+            tooltip={t('Export to CSV format')}
             onClick={doExportCSV}
             className={exportToCSVClasses}
           />
+          <ActionButton
+            icon={<Icons.FileExcelOutlined iconSize="m" />}
+            text=".XLSX"
+            tooltip={t('Export to Excel format')}
+            onClick={doExportXLSX}
+            className={exportToCSVClasses}
+          />
+          
           <ActionButton
             icon={<Icons.FileExcelOutlined iconSize="m" />}
             text="В текущем виде"

@@ -47,7 +47,8 @@ from superset.utils.async_query_manager import AsyncQueryTokenException
 from superset.utils.core import create_zip, get_user_id, json_int_dttm_ser
 from superset.views.base import CsvResponse, generate_download_headers
 from superset.views.base_api import statsd_metrics
-
+from io import BytesIO
+import pandas  
 if TYPE_CHECKING:
     from superset.common.query_context import QueryContext
 
@@ -376,6 +377,17 @@ class ChartDataRestApi(ChartRestApi):
             resp = make_response(response_data, 200)
             resp.headers["Content-Type"] = "application/json; charset=utf-8"
             return resp
+        
+        if result_format == ChartDataResultFormat.XLSX:
+            sio = BytesIO()
+            df = pandas.DataFrame(result["queries"][0]["data"])
+            writer = pandas.ExcelWriter(sio, engine='xlsxwriter')
+            df.to_excel(writer, sheet_name="Лист 1", index=None)
+            writer.save()
+
+            sio.seek(0)
+            workbook = sio.getvalue()
+            return CsvResponse(workbook, headers=generate_download_headers("xlsx"))
 
         return self.response_400(message=f"Unsupported result_format: {result_format}")
 
