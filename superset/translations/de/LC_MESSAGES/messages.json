@@ -872,7 +872,7 @@
       "Chart [{}] has been overwritten": ["Diagramm [{}] wurde überschrieben"],
       "Chart [{}] has been saved": ["Diagramm [{}] wurde gespeichert"],
       "Chart [{}] was added to dashboard [{}]": [
-        "Diagramm [{}] wurde dem Dashboard [{}] hinzugefügt"
+        "Diagramm [{}] wurde dem Dashboard hinzugefügt [{}]"
       ],
       "Chart cache timeout": ["Diagramm-Cache Timeout"],
       "Chart changes": ["Diagrammänderungen"],
@@ -3653,7 +3653,6 @@
       "Stop": ["Stopp"],
       "Stop query": ["Abfrage anhalten"],
       "Stop running (Ctrl + x)": ["Ausführung abbrechen (Strg + x)"],
-      "Stop running (Ctrl + e)": ["Ausführung abbrechen (Strg + e)"],
       "Stopped an unsafe database connection": [
         "Eine unsichere Datenbankverbindung wurde beendet"
       ],

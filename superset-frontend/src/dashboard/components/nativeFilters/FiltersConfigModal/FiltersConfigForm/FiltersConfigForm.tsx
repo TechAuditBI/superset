@@ -306,7 +306,6 @@ const FILTER_TYPE_NAME_MAPPING = {
   [t('Time grain')]: t('Time grain'),
   [t('Group By')]: t('Group by'),
 };
-
 const localCache = new Map<string, any>();
 
 const cachedSupersetGet = cacheWrapper(

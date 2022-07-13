@@ -8267,7 +8267,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:295
 #, fuzzy
 msgid "Numerical range"
-msgstr "Период времени"
+msgstr "Цифровой диапазон"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:100
 msgid "OCT"
@@ -13178,6 +13178,9 @@ msgstr "Смещение времени"
 #, fuzzy
 msgid "Time Range"
 msgstr "Период времени"
+
+msgid "Numerical Range"
+msgstr "Числовой диапазон"
 
 #: superset-frontend/plugins/legacy-plugin-chart-partition/src/controlPanel.tsx:86
 #, fuzzy

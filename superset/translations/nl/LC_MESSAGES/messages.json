@@ -2454,8 +2454,6 @@
       ],
       "X-axis": [""],
       "Dimension to use on x-axis.": [""],
-      "Y-axis": [""],
-      "Dimension to use on y-axis.": [""],
       "Percentage threshold": [""],
       "Minimum threshold in percentage points for showing labels.": [""],
       "Rich tooltip": [""],
@@ -3067,7 +3065,6 @@
       "Run selection": ["Selectie uitvoeren"],
       "Run": ["Uitvoeren"],
       "Stop running (Ctrl + x)": ["Stop de uitvoering (Ctrl + x)"],
-      "Stop running (Ctrl + e)": ["Stop de uitvoering (Ctrl + e)"],
       "Run query (Ctrl + Return)": ["Query uitvoeren (Ctrl + Return)"],
       "Save & Explore": ["Opslaan en verkennen"],
       "Overwrite & Explore": ["Overschrijven en verkennen"],
@@ -3480,7 +3477,7 @@
       "This dashboard was saved successfully.": [
         "Dit dashboard is succesvol opgeslagen."
       ],
-      "Sorry, an unknown error occurred": [""],
+      "Sorry, an unknown error occured": [""],
       "Sorry, there was an error saving this dashboard: %s": [""],
       "You do not have permission to edit this dashboard": [
         "U hebt geen toestemming om dit dashboard te bewerken"
