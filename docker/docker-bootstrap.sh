@@ -35,6 +35,8 @@ else
   echo "Skipping local overrides"
 fi
 
+pip install -r requirements/base.txt
+
 if [[ "${1}" == "worker" ]]; then
   echo "Starting Celery worker..."
   celery --app=superset.tasks.celery_app:app worker -Ofair -l INFO

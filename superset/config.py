@@ -64,6 +64,27 @@ from superset.utils.core import is_test, parse_boolean_string
 from superset.utils.encrypt import SQLAlchemyUtilsAdapter
 from superset.utils.log import DBEventLogger
 from superset.utils.logging_configurator import DefaultLoggingConfigurator
+import logging
+import os
+from datetime import timedelta
+from typing import Optional
+
+from cachelib.file import FileSystemCache
+from celery.schedules import crontab
+
+
+def get_env_variable(var_name: str, default: Optional[str] = None) -> str:
+    """Get the environment variable or raise exception."""
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        if default is not None:
+            return default
+        else:
+            error_msg = "The environment variable {} was missing, abort...".format(
+                var_name
+            )
+            raise EnvironmentError(error_msg)
 
 logger = logging.getLogger(__name__)
 
@@ -186,8 +207,12 @@ SECRET_KEY = CHANGE_ME_SECRET_KEY
 # The SQLAlchemy connection string.
 # SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
-SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://postgres:password123$@localhost:5432/techaudit')
-
+SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://superset:superset@localhost:5432/superset')
+DATABASE_USER = 'superset'
+DATABASE_PASSWORD = 'superset'
+DATABASE_HOST = 'localhost'
+DATABASE_PORT = 5432
+DATABASE_DB = 'superset'
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',
 # returns a password and set SQLALCHEMY_CUSTOM_PASSWORD_STORE.
@@ -213,14 +238,14 @@ SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = (  # pylint: disable=invalid-name
 QUERY_SEARCH_LIMIT = 10000
 
 # Flask-WTF flag for CSRF
-WTF_CSRF_ENABLED = True
+WTF_CSRF_ENABLED = False
 
 # Add endpoints that need to be exempt from CSRF protection
-WTF_CSRF_EXEMPT_LIST = [
-    "superset.views.core.log",
-    "superset.views.core.explore_json",
-    "superset.charts.data.api.data",
-]
+# WTF_CSRF_EXEMPT_LIST = [
+#     "superset.views.core.log",
+#     "superset.views.core.explore_json",
+#     "superset.charts.data.api.data",
+# ]
 
 # Whether to run the web server in debug mode or not
 DEBUG = os.environ.get("FLASK_ENV") == "development"
@@ -595,10 +620,11 @@ IMG_UPLOAD_URL = "/static/uploads/"
 CACHE_DEFAULT_TIMEOUT = int(timedelta(days=1).total_seconds())
 
 
-CACHE_REDIS_URL = os.environ.get("CACHE_REDIS_URL", "redis://izb-superset01:7000/1")
+CACHE_REDIS_URL = os.environ.get("CACHE_REDIS_URL", "redis://redis:6379/0")
 # Default cache for Superset objects
 CACHE_CONFIG: CacheConfig = {
         "CACHE_TYPE": "redis",
+        "CACHE_REDIS_PORT": "6379",
         "CACHE_DEFAULT_TIMEOUT": 3600,
         "CACHE_KEY_PREFIX":"superset_13",
         "CACHE_REDIS_URL": CACHE_REDIS_URL
@@ -608,9 +634,10 @@ CACHE_CONFIG: CacheConfig = {
 DATA_CACHE_CONFIG: CacheConfig = {
         "CACHE_TYPE": "redis",
         "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
         "CACHE_KEY_PREFIX":"superset_13_data",
         "CACHE_REDIS_URL": CACHE_REDIS_URL
-        }
+}
 
 # Cache for dashboard filter state (`CACHE_TYPE` defaults to `SimpleCache` when
 #  running in debug mode unless overridden)
@@ -1227,7 +1254,7 @@ RLS_FORM_QUERY_REL_FIELDS: Optional[Dict[str, List[List[Any]]]] = None
 #
 SESSION_COOKIE_HTTPONLY = True  # Prevent cookie from being read by frontend JS?
 SESSION_COOKIE_SECURE = False  # Prevent cookie from being transmitted over non-tls?
-SESSION_COOKIE_SAMESITE = "None"  # One of [None, 'None', 'Lax', 'Strict']
+SESSION_COOKIE_SAMESITE = "Lax"  # One of [None, 'None', 'Lax', 'Strict']
 
 # Cache static resources.
 SEND_FILE_MAX_AGE_DEFAULT = int(timedelta(days=365).total_seconds())
@@ -1331,6 +1358,11 @@ ADVANCED_DATA_TYPES: Dict[str, AdvancedDataType] = {
     "internet_address": internet_address,
     "port": internet_port,
 }
+
+
+
+
+
 
 
 # -------------------------------------------------------------------
