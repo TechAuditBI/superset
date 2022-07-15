@@ -16,12 +16,15 @@
 # limitations under the License.
 #
 set -e
-
-cd /app/superset-frontend
+cd ./app
+cat <<EOF >filename
+DB_CONNECTION_DOC_LINKS: 
+ - postgresql://XXXXXXXXXX:XXXXXXXXXX@db:5432/superset 
+EOF
+cd ./superset-frontend
 npm install -g npm@7
 npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional
 
 echo "Running frontend"
-npm run dev
 npm run prod-server

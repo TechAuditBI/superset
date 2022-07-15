@@ -26,6 +26,8 @@ x-superset-volumes: &superset-volumes
   - ./superset-frontend:/app/superset-frontend
   - superset_home:/app/superset_home
   - ./tests:/app/tests
+  - ./requirements:/app/requirements
+  - ./superset_text.yml:/app/superset_text.yml
 
 version: "3.7"
 services:
@@ -109,6 +111,8 @@ services:
     env_file: docker/.env
     depends_on: *superset-depends-on
     volumes: *superset-volumes
+    ports:
+      - 9000:9000
 
   superset-worker:
     image: *superset-image
