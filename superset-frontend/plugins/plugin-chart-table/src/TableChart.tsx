@@ -377,14 +377,13 @@ export default function TableChart<D extends DataRecord = DataRecord>(
               .filter(formatter => formatter.column === column.key)
               .forEach(formatter => {
                 const formatterResult = formatter.getColorFromValue(
-                  value as number,
+                  value as number, true as boolean
                 );
                 if (formatterResult) {
                   backgroundColor = formatterResult;
                 }
               });
           }
-
           const StyledCell = styled.td`
             text-align: ${sharedStyle.textAlign};
             background: ${backgroundColor ||

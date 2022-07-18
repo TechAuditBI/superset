@@ -35,22 +35,24 @@ export const getOpacity = (
   value: number,
   cutoffPoint: number,
   extremeValue: number,
+  invertMode: boolean,
   minOpacity = MIN_OPACITY_BOUNDED,
   maxOpacity = MAX_OPACITY,
 ) => {
   if (extremeValue === cutoffPoint) {
     return maxOpacity;
   }
-  return Math.min(
+  let alpha = Math.min(
     maxOpacity,
-    round(
-      Math.abs(
-        ((maxOpacity - minOpacity) / (extremeValue - cutoffPoint)) *
-          (value - cutoffPoint),
-      ) + minOpacity,
+    round(maxOpacity - Math.abs(
+        ((maxOpacity - minOpacity) / (extremeValue - cutoffPoint)) * (value - cutoffPoint)) + minOpacity,
       2,
     ),
   );
+  if (invertMode){
+    alpha = maxOpacity - alpha;
+  };
+  return alpha;
 };
 
 export const getColorFunction = (
@@ -59,6 +61,7 @@ export const getColorFunction = (
     targetValue,
     targetValueLeft,
     targetValueRight,
+    inverseMode,
     colorScheme,
   }: ConditionalFormattingConfig,
   columnValues: number[],
@@ -171,24 +174,28 @@ export const getColorFunction = (
       comparatorFunction = () => false;
       break;
   }
-
+  
   return (value: number) => {
     const compareResult = comparatorFunction(value, columnValues);
     if (compareResult === false) return undefined;
+    if (inverseMode === undefined){inverseMode = false;};
     const { cutoffValue, extremeValue } = compareResult;
-    return addAlpha(
+     return addAlpha(
       colorScheme,
-      getOpacity(value, cutoffValue, extremeValue, minOpacity, maxOpacity),
+      getOpacity(value, cutoffValue, extremeValue, inverseMode, minOpacity, maxOpacity),
     );
   };
 };
 
 export const getColorFormatters = memoizeOne(
-  (
+  function (
     columnConfig: ConditionalFormattingConfig[] | undefined,
     data: DataRecord[],
-  ) =>
-    columnConfig?.reduce(
+  ) {
+    if (!columnConfig){
+      return [];
+    }
+    return columnConfig.reduce(
       (acc: ColorFormatters, config: ConditionalFormattingConfig) => {
         if (
           config?.column !== undefined &&
@@ -210,5 +217,8 @@ export const getColorFormatters = memoizeOne(
         return acc;
       },
       [],
-    ) ?? [],
+    )
+
+  }
+  
 );

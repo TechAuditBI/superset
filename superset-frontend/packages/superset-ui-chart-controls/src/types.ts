@@ -436,6 +436,7 @@ export type ConditionalFormattingConfig = {
   targetValue?: number;
   targetValueLeft?: number;
   targetValueRight?: number;
+  inverseMode?: boolean;
   column?: string;
   colorScheme?: string;
 };

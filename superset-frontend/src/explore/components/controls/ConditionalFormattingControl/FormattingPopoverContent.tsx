@@ -17,11 +17,11 @@
  * under the License.
  */
  import React from 'react';
- import { styled, t } from '@superset-ui/core';
+ import { styled, SupersetTheme, t, useTheme } from '@superset-ui/core';
  import { Form, FormItem, FormProps } from 'src/components/Form';
- import { Select } from 'src/components';
-import { Col, Row } from 'src/components';
-import { InputNumber } from 'src/components/Input';
+ import Select from 'src/components/Select/Select';
+ import { Col, Row } from 'src/components';
+ import { InputNumber } from 'src/components/Input';
  import Button from 'src/components/Button';
  import {
    COMPARATOR,
@@ -38,10 +38,10 @@ import { InputNumber } from 'src/components/Input';
    justify-content: flex-end;
  `;
  
- const colorSchemeOptions = [
-   { value: 'rgb(0,255,0)', label: t('green') },
-   { value: 'rgb(255,255,0)', label: t('yellow') },
-   { value: 'rgb(255,0,0)', label: t('red') },
+ const colorSchemeOptions = (theme: SupersetTheme) => [
+   { value: theme.colors.success.light1, label: t('green') },
+   { value: theme.colors.alert.light1, label: t('yellow') },
+   { value: theme.colors.error.light1, label: t('red') },
  ];
  
  const operatorOptions = [
@@ -58,23 +58,28 @@ import { InputNumber } from 'src/components/Input';
    { value: COMPARATOR.BETWEEN_OR_RIGHT_EQUAL, label: '< x ≤' },
  ];
  
- 
- const targetValueValidator = (
-   compare: (targetValue: number, compareValue: number) => boolean,
-   rejectMessage: string,
- ) => (targetValue: number | string) => (
-   _: any,
-   compareValue: number | string,
- ) => {
-   if (
-     !targetValue ||
-     !compareValue ||
-     compare(Number(targetValue), Number(compareValue))
-   ) {
-     return Promise.resolve();
-   }
-   return Promise.reject(new Error(rejectMessage));
- };
+ const inverseOptions = [
+  {value: false, label: t("Not inversed"),},
+  {value: true, label: t("Inversed"),},
+
+ ]
+
+ const targetValueValidator =
+   (
+     compare: (targetValue: number, compareValue: number) => boolean,
+     rejectMessage: string,
+   ) =>
+   (targetValue: number | string) =>
+   (_: any, compareValue: number | string) => {
+     if (
+       !targetValue ||
+       !compareValue ||
+       compare(Number(targetValue), Number(compareValue))
+     ) {
+       return Promise.resolve();
+     }
+     return Promise.reject(new Error(rejectMessage));
+   };
  
  const targetValueLeftValidator = targetValueValidator(
    (target: number, val: number) => target > val,
@@ -131,16 +136,8 @@ import { InputNumber } from 'src/components/Input';
      <Select ariaLabel={t('Operator')} options={operatorOptions} />
    </FormItem>
  );
- const inverseField = (
-  <FormItem
-    name="inverse"
-    label={t('inverse')}
-    rules={rulesRequired}
-    initialValue={operatorOptions[0].value}
-  >
-    <Select ariaLabel={t('Operator')} options={operatorOptions} />
-  </FormItem>
-);
+
+ 
  const renderOperatorFields = ({ getFieldValue }: GetFieldValue) =>
    isOperatorNone(getFieldValue('operator')) ? (
      <Row gutter={12}>
@@ -197,44 +194,61 @@ import { InputNumber } from 'src/components/Input';
    config?: ConditionalFormattingConfig;
    onChange: (config: ConditionalFormattingConfig) => void;
    columns: { label: string; value: string }[];
- }) => (
-   <Form
-     onFinish={onChange}
-     initialValues={config}
-     requiredMark="optional"
-     layout="vertical"
-   >
-     <Row gutter={12}>
-       <Col span={12}>
-         <FormItem
-           name="column"
-           label={t('Column')}
-           rules={rulesRequired}
-           initialValue={columns[0]?.value}
-         >
-           <Select ariaLabel={t('Select column')} options={columns} />
-         </FormItem>
-       </Col>
-       <Col span={12}>
-         <FormItem
-           name="colorScheme"
-           label={t('Color scheme')}
-           rules={rulesRequired}
-           initialValue={colorSchemeOptions[0].value}
-         >
-           <Select ariaLabel={t('Color scheme')} options={colorSchemeOptions} />
-         </FormItem>
-       </Col>
-     </Row>
-     <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
-       {renderOperatorFields}
-     </FormItem>
-     <FormItem>
-       <JustifyEnd>
-         <Button htmlType="submit" buttonStyle="primary">
-           {t('Apply')}
-         </Button>
-       </JustifyEnd>
-     </FormItem>
-   </Form>
- );
+ }) => {
+   const theme = useTheme();
+   const colorScheme = colorSchemeOptions(theme);
+   return (
+     <Form
+       onFinish={onChange}
+       initialValues={config}
+       requiredMark="optional"
+       layout="vertical"
+     >
+       <Row gutter={12}>
+         <Col span={12}>
+           <FormItem
+             name="column"
+             label={t('Column')}
+             rules={rulesRequired}
+             initialValue={columns[0]?.value}
+           >
+             <Select ariaLabel={t('Select column')} options={columns} />
+           </FormItem>
+         </Col>
+         <Col span={12}>
+           <FormItem
+             name="colorScheme"
+             label={t('Color scheme')}
+             rules={rulesRequired}
+             initialValue={colorScheme[0].value}
+           >
+             <Select ariaLabel={t('Color scheme')} options={colorScheme} />
+           </FormItem>
+         </Col>
+       </Row>
+       <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
+         {renderOperatorFields}
+       </FormItem>
+       <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
+      <FormItem
+        name="inverseMode"
+        label={t('Inverse mode')}
+        initialValue={inverseOptions[0].value}
+        rules={rulesRequired}
+      >
+        <Select ariaLabel={t('Color scheme')} options={inverseOptions} />
+      </FormItem>
+    </FormItem>
+       <FormItem>
+         <JustifyEnd>
+           <Button htmlType="submit" buttonStyle="primary">
+             {t('Apply')}
+           </Button>
+         </JustifyEnd>
+       </FormItem>
+
+
+
+     </Form>
+   );
+ };
