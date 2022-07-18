@@ -36,6 +36,7 @@ else
 fi
 
 pip install -r requirements/base.txt
+scripts/po2json.sh
 
 if [[ "${1}" == "worker" ]]; then
   echo "Starting Celery worker..."
