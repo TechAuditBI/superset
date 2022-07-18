@@ -17,6 +17,8 @@
 #
 set -e
 cd ./app/superset-frontend
+
+
 npm install -g npm@7
 npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional
@@ -27,5 +29,3 @@ echo "Running frontend"
 npm run prod
 npm run build-prod
 npm run prod-server
-
-superset fab babel-compile --target superset/translations

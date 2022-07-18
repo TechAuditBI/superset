@@ -64,6 +64,10 @@ echo_step "3" "Starting" "Setting up roles and perms"
 superset init
 echo_step "3" "Complete" "Setting up roles and perms"
 
+echo_step "1" "Starting" "Building translations"
+superset fab babel-compile --target superset/translations
+echo_step "2" "Complete" "Finish buildling translations"
+
 if [ "$SUPERSET_LOAD_EXAMPLES" = "yes" ]; then
     # Load some data to play with
     echo_step "4" "Starting" "Loading examples"
