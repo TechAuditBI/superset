@@ -27,6 +27,7 @@ x-superset-volumes: &superset-volumes
   - superset_home:/app/superset_home
   - ./tests:/app/tests
   - ./requirements:/app/requirements
+  - ./scripts:/app/scripts
   - ./superset_text.yml:/app/superset_text.yml
 
 version: "3.7"
@@ -42,7 +43,7 @@ services:
 
   db:
     env_file: docker/.env
-    image: postgres:10
+    image: postgres:14
     container_name: superset_db
     restart: unless-stopped
     ports:
