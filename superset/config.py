@@ -208,11 +208,12 @@ SECRET_KEY = CHANGE_ME_SECRET_KEY
 # SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
 SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://superset:superset@localhost:5432/superset')
-DATABASE_USER = 'superset'
-DATABASE_PASSWORD = 'superset'
-DATABASE_HOST = 'localhost'
-DATABASE_PORT = 5432
-DATABASE_DB = 'superset'
+DATABASE_DIALECT = os.environ.get("DATABASE_DIALECT")
+DATABASE_USER = os.environ.get("DATABASE_USER")
+DATABASE_PASSWORD = os.environ.get("DATABASE_PASSWORD")
+DATABASE_HOST = os.environ.get("DATABASE_HOST")
+DATABASE_PORT = os.environ.get("DATABASE_PORT")
+DATABASE_DB = os.environ.get("DATABASE_DB")
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',
 # returns a password and set SQLALCHEMY_CUSTOM_PASSWORD_STORE.
