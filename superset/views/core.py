@@ -1994,6 +1994,8 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
         return self.render_template(
             "superset/spa.html",
             entry="spa",
+            # dashboard title is always visible
+            title=dashboard.dashboard_title,
             bootstrap_data=json.dumps(
                 bootstrap_data, default=utils.pessimistic_json_iso_dttm_ser
             ),

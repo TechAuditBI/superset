@@ -41,7 +41,7 @@ import handleResourceExport from 'src/utils/export';
 import ConfirmStatusChange from 'src/components/ConfirmStatusChange';
 import SubMenu, { SubMenuProps } from 'src/views/components/SubMenu';
 import FaveStar from 'src/components/FaveStar';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import ListView, {
   Filter,
   FilterOperator,
@@ -154,6 +154,8 @@ function ChartList(props: ChartListProps) {
     addSuccessToast,
     user: { userId },
   } = props;
+
+  const history = useHistory();
 
   const {
     state: {
@@ -660,7 +662,7 @@ function ChartList(props: ChartListProps) {
       ),
       buttonStyle: 'primary',
       onClick: () => {
-        window.location.assign('/chart/add');
+        history.push('/chart/add');
       },
     });
 
