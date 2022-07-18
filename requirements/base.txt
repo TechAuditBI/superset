@@ -307,3 +307,9 @@ zipp==3.4.1
 xlsxwriter==3.0.3
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
+
+# Connection to db's 
+cx_Oracle
+pymssql
+pyodbc
+clickhouse-sqlalchemy
