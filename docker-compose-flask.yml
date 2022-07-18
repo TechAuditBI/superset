@@ -26,8 +26,6 @@ x-superset-volumes: &superset-volumes
   - ./superset-frontend:/app/superset-frontend
   - superset_home:/app/superset_home
   - ./tests:/app/tests
-  - ./requirements:/app/requirements
-  - ./superset_text.yml:/app/superset_text.yml
 
 version: "3.7"
 services:
@@ -42,7 +40,7 @@ services:
 
   db:
     env_file: docker/.env
-    image: postgres:10
+    image: postgres:14
     container_name: superset_db
     restart: unless-stopped
     ports:
@@ -51,7 +49,7 @@ services:
       - db_home:/var/lib/postgresql/data
 
   superset:
-    env_file: docker/.env
+    build: ./
     image: *superset-image
     container_name: superset_app
     command: ["/app/docker/docker-bootstrap.sh", "app"]
@@ -62,17 +60,9 @@ services:
     depends_on: *superset-depends-on
     volumes: *superset-volumes
     environment:
-      DATABASE_URI: "postgres://superset:superset@127.0.0.1:5432/superset"
+      DATABASE_URI: postgresql+psycopg2://superset:superset@db:5432/superset
       CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
 
-  superset-websocket:
-    container_name: superset_websocket
-    build: ./superset-websocket
-    image: superset-websocket
-    ports:
-      - 8080:8080
-    depends_on:
-      - redis
     # Mount everything in superset-websocket into container and
     # then exclude node_modules and dist with bogus volume mount.
     # This is necessary because host and container need to have
@@ -83,36 +73,6 @@ services:
     # For example, node_modules may contain libs with native bindings.
     # Those bindings need to be compiled for each OS and the container
     # OS is not necessarily the same as host OS.
-    volumes:
-      - ./superset-websocket:/home/superset-websocket
-      - /home/superset-websocket/node_modules
-      - /home/superset-websocket/dist
-    environment:
-      - PORT=8080
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
-      - REDIS_SSL=false
-
-  superset-init:
-    image: *superset-image
-    container_name: superset_init
-    command: ["/app/docker/docker-init.sh"]
-    env_file: docker/.env
-    depends_on: *superset-depends-on
-    user: *superset-user
-    volumes: *superset-volumes
-    environment:
-      CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
-
-  superset-node:
-    image: node:16
-    container_name: superset_node
-    command: ["/app/docker/docker-frontend.sh"]
-    env_file: docker/.env
-    depends_on: *superset-depends-on
-    volumes: *superset-volumes
-    ports:
-      - 9000:9000
 
   superset-worker:
     image: *superset-image
