@@ -49,9 +49,6 @@ from dateutil import tz
 from flask import Blueprint
 from flask_appbuilder.security.manager import AUTH_DB
 from pandas._libs.parsers import STR_NA_VALUES  # pylint: disable=no-name-in-module
-from pandas._libs.parsers import STR_NA_VALUES
-from typing_extensions import Literal
-from werkzeug.local import LocalProxy
 
 from superset.advanced_data_type.plugins.internet_address import internet_address
 from superset.advanced_data_type.plugins.internet_port import internet_port
@@ -64,27 +61,6 @@ from superset.utils.core import is_test, parse_boolean_string
 from superset.utils.encrypt import SQLAlchemyUtilsAdapter
 from superset.utils.log import DBEventLogger
 from superset.utils.logging_configurator import DefaultLoggingConfigurator
-import logging
-import os
-from datetime import timedelta
-from typing import Optional
-
-from cachelib.file import FileSystemCache
-from celery.schedules import crontab
-
-
-def get_env_variable(var_name: str, default: Optional[str] = None) -> str:
-    """Get the environment variable or raise exception."""
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        if default is not None:
-            return default
-        else:
-            error_msg = "The environment variable {} was missing, abort...".format(
-                var_name
-            )
-            raise EnvironmentError(error_msg)
 
 logger = logging.getLogger(__name__)
 
@@ -205,14 +181,10 @@ SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = CHANGE_ME_SECRET_KEY
 
 # The SQLAlchemy connection string.
-# SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
+SQLALCHEMY_DATABASE_URI = "sqlite:///" + os.path.join(DATA_DIR, "superset.db")
 # SQLALCHEMY_DATABASE_URI = 'mysql://myapp@localhost/myapp'
-SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://superset:superset@localhost:5432/superset')
-DATABASE_USER = 'superset'
-DATABASE_PASSWORD = 'superset'
-DATABASE_HOST = 'localhost'
-DATABASE_PORT = 5432
-DATABASE_DB = 'superset'
+# SQLALCHEMY_DATABASE_URI = 'postgresql://root:password@localhost/myapp'
+
 # In order to hook up a custom password store for all SQLACHEMY connections
 # implement a function that takes a single argument of type 'sqla.engine.url',
 # returns a password and set SQLALCHEMY_CUSTOM_PASSWORD_STORE.
@@ -235,17 +207,17 @@ SQLALCHEMY_ENCRYPTED_FIELD_TYPE_ADAPTER = (  # pylint: disable=invalid-name
     SQLAlchemyUtilsAdapter
 )
 # The limit of queries fetched for query search
-QUERY_SEARCH_LIMIT = 10000
+QUERY_SEARCH_LIMIT = 1000
 
 # Flask-WTF flag for CSRF
-WTF_CSRF_ENABLED = False
+WTF_CSRF_ENABLED = True
 
 # Add endpoints that need to be exempt from CSRF protection
-# WTF_CSRF_EXEMPT_LIST = [
-#     "superset.views.core.log",
-#     "superset.views.core.explore_json",
-#     "superset.charts.data.api.data",
-# ]
+WTF_CSRF_EXEMPT_LIST = [
+    "superset.views.core.log",
+    "superset.views.core.explore_json",
+    "superset.charts.data.api.data",
+]
 
 # Whether to run the web server in debug mode or not
 DEBUG = os.environ.get("FLASK_ENV") == "development"
@@ -272,7 +244,7 @@ SCHEDULED_QUERIES: Dict[str, Any] = {}
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "Vkusvill analytics"
+APP_NAME = "Superset"
 
 # Specify the App icon
 APP_ICON = "/static/assets/images/superset-logo-horiz.png"
@@ -344,7 +316,7 @@ PUBLIC_ROLE_LIKE: Optional[str] = None
 # Babel config for translations
 # ---------------------------------------------------
 # Setup default language
-BABEL_DEFAULT_LOCALE = "ru"
+BABEL_DEFAULT_LOCALE = "en"
 # Your application default translation path
 BABEL_DEFAULT_FOLDER = "superset/translations"
 # The allowed translation for you app
@@ -366,7 +338,7 @@ LANGUAGES = {
 }
 # Turning off i18n by default as translation in most languages are
 # incomplete and not well maintained.
-LANGUAGES = {"ru": {"flag": "ru", "name": "Russian"}, "en": {"flag": "us", "name": "English"}}
+LANGUAGES = {}
 
 # ---------------------------------------------------
 # Feature flags
@@ -399,13 +371,13 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     # make GET request to explore_json. explore_json accepts both GET and POST request.
     # See `PR 7935 <https://github.com/apache/superset/pull/7935>`_ for more details.
     "ENABLE_EXPLORE_JSON_CSRF_PROTECTION": False,
+    "ENABLE_TEMPLATE_PROCESSING": False,
+    "ENABLE_TEMPLATE_REMOVE_FILTERS": False,
     # Allow for javascript controls components
     # this enables programmers to customize certain charts (like the
     # geospatial ones) by inputing javascript in controls. This exposes
     # an XSS security vulnerability
     "ENABLE_JAVASCRIPT_CONTROLS": False,
-    "ENABLE_TEMPLATE_PROCESSING": True,
-    "ENABLE_TEMPLATE_REMOVE_FILTERS": True,
     "KV_STORE": False,
     # When this feature is enabled, nested types in Presto will be
     # expanded into extra columns and/or arrays. This is experimental,
@@ -427,27 +399,16 @@ DEFAULT_FEATURE_FLAGS: Dict[str, bool] = {
     "DASHBOARD_CROSS_FILTERS": False,
     # Feature is under active development and breaking changes are expected
     "DASHBOARD_NATIVE_FILTERS_SET": False,
-    "DASHBOARD_FILTERS_EXPERIMENTAL": True,
+    "DASHBOARD_FILTERS_EXPERIMENTAL": False,
     "GLOBAL_ASYNC_QUERIES": False,
+    "VERSIONED_EXPORT": True,
     "EMBEDDED_SUPERSET": False,
     # Enables Alerts and reports new implementation
+    "ALERT_REPORTS": False,
+    "DASHBOARD_RBAC": False,
+    "ENABLE_EXPLORE_DRAG_AND_DROP": True,
     "ENABLE_FILTER_BOX_MIGRATION": False,
     "ENABLE_ADVANCED_DATA_TYPES": False,
-    "VERSIONED_EXPORT": False,
-    # Note that: RowLevelSecurityFilter is only given by default to the Admin role
-    # and the Admin Role does have the all_datasources security permission.
-    # But, if users create a specific role with access to RowLevelSecurityFilter MVC
-    # and a custom datasource access, the table dropdown will not be correctly filtered
-    # by that custom datasource access. So we are assuming a default security config,
-    # a custom security config could potentially give access to setting filters on
-    # tables that users do not have access to.
-    "ROW_LEVEL_SECURITY": False,
-    # Enables Alerts and reports new implementation
-    "ALERT_REPORTS": False,
-    # Enable experimental feature to search for other dashboards
-    "OMNIBAR": True,
-    "DASHBOARD_RBAC": True,
-    "ENABLE_EXPLORE_DRAG_AND_DROP": True,
     "ENABLE_DND_WITH_CLICK_UX": True,
     # Enabling ALERTS_ATTACH_REPORTS, the system sends email and slack message
     # with screenshot and link
@@ -619,25 +580,11 @@ IMG_UPLOAD_URL = "/static/uploads/"
 # each cache config.
 CACHE_DEFAULT_TIMEOUT = int(timedelta(days=1).total_seconds())
 
-
-CACHE_REDIS_URL = os.environ.get("CACHE_REDIS_URL", "redis://redis:6379/0")
 # Default cache for Superset objects
-CACHE_CONFIG: CacheConfig = {
-        "CACHE_TYPE": "redis",
-        "CACHE_REDIS_PORT": "6379",
-        "CACHE_DEFAULT_TIMEOUT": 3600,
-        "CACHE_KEY_PREFIX":"superset_13",
-        "CACHE_REDIS_URL": CACHE_REDIS_URL
-}
+CACHE_CONFIG: CacheConfig = {"CACHE_TYPE": "NullCache"}
 
 # Cache for datasource metadata and query results
-DATA_CACHE_CONFIG: CacheConfig = {
-        "CACHE_TYPE": "redis",
-        "CACHE_DEFAULT_TIMEOUT": 3600,
-        "CACHE_REDIS_PORT": "6379",
-        "CACHE_KEY_PREFIX":"superset_13_data",
-        "CACHE_REDIS_URL": CACHE_REDIS_URL
-}
+DATA_CACHE_CONFIG: CacheConfig = {"CACHE_TYPE": "NullCache"}
 
 # Cache for dashboard filter state (`CACHE_TYPE` defaults to `SimpleCache` when
 #  running in debug mode unless overridden)
@@ -653,8 +600,6 @@ EXPLORE_FORM_DATA_CACHE_CONFIG: CacheConfig = {
     "CACHE_DEFAULT_TIMEOUT": int(timedelta(days=7).total_seconds()),
     # should the timeout be reset when retrieving a cached value
     "REFRESH_TIMEOUT_ON_RETRIEVAL": True,
-
-
 }
 
 # store cache keys by datasource UID (via CacheKey) for custom processing/invalidation
@@ -1070,11 +1015,6 @@ PRESTO_POLL_INTERVAL = int(timedelta(seconds=1).total_seconds())
 #     },
 # }
 ALLOWED_EXTRA_AUTHENTICATIONS: Dict[str, Dict[str, Callable[..., Any]]] = {}
-# Allow for javascript controls components
-# this enables programmers to customize certain charts (like the
-# geospatial ones) by inputing javascript in controls. This exposes
-# an XSS security vulnerability
-ENABLE_JAVASCRIPT_CONTROLS = True
 
 # The id of a template dashboard that should be copied to every new user
 DASHBOARD_TEMPLATE_ID = None
@@ -1358,11 +1298,6 @@ ADVANCED_DATA_TYPES: Dict[str, AdvancedDataType] = {
     "internet_address": internet_address,
     "port": internet_port,
 }
-
-
-
-
-
 
 
 # -------------------------------------------------------------------
