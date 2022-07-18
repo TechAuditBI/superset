@@ -60,7 +60,7 @@
  
  const inverseOptions = [
   {value: false, label: t("Not inversed"),},
-  {value: true, label: t("Inversed"),},
+  {value: true, label: t("Inversed")}
 
  ]
 

@@ -24,5 +24,7 @@ npm install -f --no-optional
 echo "Running frontend"
 
 ./scripts/po2json.sh
+npm run dev
 npm run build
+npm run build-dev
 npm run prod-server
