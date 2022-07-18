@@ -44,6 +44,13 @@ def get_env_variable(var_name: str, default: Optional[str] = None) -> str:
             raise EnvironmentError(error_msg)
 SESSION_COOKIE_SAMESITE = "Lax"
 
+BABEL_DEFAULT_LOCALE = "ru"
+
+LANGUAGES = {
+    "en": {"flag": "us", "name": "English"},
+    "ru": {"flag": "ru", "name": "Russian"},
+}
+
 SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URI", 'postgres://superset:superset@localhost:5432/superset')
 DATABASE_DIALECT = get_env_variable("DATABASE_DIALECT")
 DATABASE_USER = get_env_variable("DATABASE_USER")
