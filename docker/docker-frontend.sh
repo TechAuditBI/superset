@@ -22,5 +22,7 @@ npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional
 
 echo "Running frontend"
-npm run build-dev
+
+./scripts/po2json.sh
+npm run build
 npm run prod-server
