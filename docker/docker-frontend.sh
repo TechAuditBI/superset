@@ -25,6 +25,7 @@ echo "Running frontend"
 
 
 npm run prod
+npm run build-prod
 npm run prod-server
 
-./scripts/po2json.sh
+superset fab babel-compile --target superset/translations
