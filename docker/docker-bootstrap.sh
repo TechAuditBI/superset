@@ -29,20 +29,6 @@ fi
 # Make sure we have dev requirements installed
 #
 
-apt-get update
-apt-get -y install \
-    npm \
-    nodejs \
-    zlib1g-dev \
-    libfreetype6-dev \
-    libjpeg62-turbo-dev \
-
-
-cd ./superset-frontend
-npm run build 
-cd ..
-
-
 if [ -f "${REQUIREMENTS_LOCAL}" ]; then
   echo "Installing local overrides at ${REQUIREMENTS_LOCAL}"
   pip install -r "${REQUIREMENTS_LOCAL}"
