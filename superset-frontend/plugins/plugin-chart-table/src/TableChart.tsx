@@ -377,7 +377,7 @@ export default function TableChart<D extends DataRecord = DataRecord>(
               .filter(formatter => formatter.column === column.key)
               .forEach(formatter => {
                 const formatterResult = formatter.getColorFromValue(
-                  value as number, true as boolean
+                  value as number
                 );
                 if (formatterResult) {
                   backgroundColor = formatterResult;
@@ -397,7 +397,6 @@ export default function TableChart<D extends DataRecord = DataRecord>(
               : undefined)};
             white-space: ${value instanceof Date ? 'nowrap' : undefined};
           `;
-
           const cellProps = {
             // show raw number in title in case of numeric values
             title: typeof value === 'number' ? String(value) : undefined,
