@@ -31,6 +31,7 @@ export default function createD3NumberFormatter(config: {
   label?: string;
   locale?: FormatLocaleDefinition;
 }) {
+  console.log("LOCALE")
   const {
     description,
     formatString = isRequired('config.formatString'),

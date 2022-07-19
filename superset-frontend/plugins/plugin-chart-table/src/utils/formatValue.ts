@@ -58,39 +58,30 @@ function isProbablyHTML(text: string) {
 
 function formatValue(
   formatter: DataColumnMeta['formatter'],
-  value: DataRecordValue,
-  localize: boolean = true
+  value: DataRecordValue
 ): [boolean, string] {
-  // localize - localizing value for russian
+  // render undefined as empty string
+  if (value === undefined) {
+    return [false, ''];
+  }
+  // render null as `N/A`
+  if (
+    value === null ||
+    // null values in temporal columns are wrapped in a Date object, so make sure we
+    // handle them here too
+    (value instanceof DateWithFormatter && value.input === null)
+  ) {
+    return [false, 'N/A'];
+  }
+  if (formatter) {
+    // in case percent metric can specify percent format in the future
+    return [false, formatter(value as number)];
+  }
+  if (typeof value === 'string') {
+    return isProbablyHTML(value) ? [true, xss.process(value)] : [false, value];
+  }
+  return [false, value.toString()]
 
-  const pureFormating = (): [boolean, string] => {
-    // render undefined as empty string
-    if (value === undefined) {
-      return [false, ''];
-    }
-    // render null as `N/A`
-    if (
-      value === null ||
-      // null values in temporal columns are wrapped in a Date object, so make sure we
-      // handle them here too
-      (value instanceof DateWithFormatter && value.input === null)
-    ) {
-      return [false, 'N/A'];
-    }
-    if (formatter) {
-      // in case percent metric can specify percent format in the future
-      return [false, formatter(value as number)];
-    }
-    if (typeof value === 'string') {
-      return isProbablyHTML(value) ? [true, xss.process(value)] : [false, value];
-    }
-    return [false, value.toString()]
-  };
-  
-  let [html, text] = pureFormating();
-  text = localize ?  text.replace(',', ' ').replace('.', ',') : text
-
-  return [html, text]
 }
 
 export function formatColumnValue(
