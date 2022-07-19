@@ -5,8 +5,10 @@
 #
 #    pip-compile-multi
 #
--e file:.
+# -e file:.
     # via -r requirements/base.in
+
+apache-superset==2.0.0
 aiohttp==3.8.1
     # via slackclient
 aiosignal==1.2.0
@@ -308,8 +310,8 @@ xlsxwriter==3.0.3
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
 
-# Connection to db's 
-cx_Oracle
-pymssql
-pyodbc
-clickhouse-sqlalchemy
+# # Connection to db's 
+# cx_Oracle
+# pymssql
+# pyodbc
+# clickhouse-sqlalchemy

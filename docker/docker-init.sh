@@ -21,7 +21,8 @@ set -e
 # Always install local overrides first
 #
 /app/docker/docker-bootstrap.sh
-
+pip install -r requirements/docker.txt
+pip install -r superset/translations/requirements.txt
 STEP_CNT=4
 
 echo_step() {

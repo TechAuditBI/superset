@@ -35,7 +35,7 @@ if [ -f "${REQUIREMENTS_LOCAL}" ]; then
 else
   echo "Skipping local overrides"
 fi
-
+pip install --upgrade pip
 pip install -r requirements/base.txt
 if [[ "${1}" == "worker" ]]; then
   echo "Starting Celery worker..."

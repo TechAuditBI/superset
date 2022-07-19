@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "po2json": "^0.4.5"
+  }
+}

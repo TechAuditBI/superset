@@ -25,7 +25,4 @@ npm install -f --no-optional
 
 echo "Running frontend"
 
-
-npm run prod
-npm run build-prod
-npm run dev-server
+npm run dev
