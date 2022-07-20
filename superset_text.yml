@@ -1,2 +1,2 @@
 DB_CONNECTION_DOC_LINKS: 
- - postgresql://superset:XXXXXXXXXX@db:5432/superset  # remove if you have your own links 
+ - postgresql://superset:superset@db:5432/superset  # remove if you have your own links 
