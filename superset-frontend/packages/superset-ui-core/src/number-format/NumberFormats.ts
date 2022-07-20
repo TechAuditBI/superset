@@ -21,6 +21,10 @@ const DOLLAR = '$,.2f';
 const DOLLAR_SIGNED = '+$,.2f';
 const DOLLAR_ROUND = '$,d';
 const DOLLAR_ROUND_SIGNED = '+$,d';
+const RUB = '₽,.2f';
+const RUB_SIGNED = '+₽,.2f';
+const RUB_ROUND = '₽,d';
+const RUB_ROUND_SIGNED = '+₽,d';
 
 const FLOAT_1_POINT = ',.1f';
 const FLOAT_2_POINT = ',.2f';
@@ -58,6 +62,10 @@ const NumberFormats = {
   DOLLAR_ROUND,
   DOLLAR_ROUND_SIGNED,
   DOLLAR_SIGNED,
+  RUB,
+  RUB_ROUND,
+  RUB_ROUND_SIGNED,
+  RUB_SIGNED,
   FLOAT,
   FLOAT_1_POINT,
   FLOAT_2_POINT,
