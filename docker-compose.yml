@@ -19,17 +19,21 @@ x-superset-user: &superset-user root
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
-  - node
+  # - node
 x-superset-volumes: &superset-volumes
   # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
+  # - ./docker:/app/docker
+  # - ./superset:/app/superset
+  # - ./superset-frontend:/app/superset-frontend
+  # - superset_home:/app/superset_home
+  # - ./tests:/app/tests
+  # - ./requirements:/app/requirements
+  # - ./scripts:/app/scripts
+  #  - ./superset_text.yml:/app/superset_text.yml
   - ./docker:/app/docker
-  - ./superset:/app/superset
-  - ./superset-frontend:/app/superset-frontend
   - superset_home:/app/superset_home
-  - ./tests:/app/tests
-  - ./requirements:/app/requirements
-  - ./scripts:/app/scripts
-  - ./superset_text.yml:/app/superset_text.yml
+  # - ./superset:/app/superset
+
 
 version: "3.7"
 services:
@@ -41,22 +45,20 @@ services:
       - redis:/data
 
   db:
-    env_file: docker/.env-non-dev
-    image: postgres:10
+    env_file: docker/.env
+    image: postgres:12
     container_name: superset_db
     restart: unless-stopped
     volumes:
       - db_home:/var/lib/postgresql/data
   
-  node:
-    image: node:16
-    container_name: superset_node
-    env_file: docker/.env
-    restart: unless-stopped
-    volumes: *superset-volumes
-    command: ["/app/docker/docker-frontend.sh"]
-    ports:
-      - 9000:9000
+  # node:
+  #   image: node:16
+  #   container_name: superset_node
+  #   env_file: docker/.env
+  #   restart: unless-stopped
+  #   volumes: *superset-volumes
+  #   command: ["/app/docker/docker-frontend.sh"]
 
   superset:
     env_file: docker/.env
@@ -69,9 +71,9 @@ services:
     user: *superset-user
     depends_on: *superset-depends-on
     volumes: *superset-volumes
-    environment:
-      DATABASE_URI: "postgres://superset:superset@127.0.0.1:5432/superset"
-      CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
+    # environment:
+    #   DATABASE_URI: "postgres://superset:superset@127.0.0.1:5432/superset"
+    #   CYPRESS_CONFIG: "${CYPRESS_CONFIG}"
 
   superset-init:
     image: *superset-image
@@ -106,6 +108,35 @@ services:
     depends_on: *superset-depends-on
     user: *superset-user
     volumes: *superset-volumes
+
+  superset-websocket:
+    container_name: superset_websocket
+    build: ./superset-websocket
+    image: superset-websocket
+    ports:
+      - 8080:8080
+    depends_on:
+      - redis
+    # Mount everything in superset-websocket into container and
+    # then exclude node_modules and dist with bogus volume mount.
+    # This is necessary because host and container need to have
+    # their own, separate versions of these files. .dockerignore
+    # does not seem to work when starting the service through
+    # docker-compose.
+    #
+    # For example, node_modules may contain libs with native bindings.
+    # Those bindings need to be compiled for each OS and the container
+    # OS is not necessarily the same as host OS.
+    volumes:
+      - ./superset-websocket:/home/superset-websocket
+      - /home/superset-websocket/node_modules
+      - /home/superset-websocket/dist
+    environment:
+      - PORT=8080
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_SSL=false
+
 
 volumes:
   superset_home:

@@ -16,9 +16,11 @@
 # limitations under the License.
 #
 set -e
-cd ./app/superset-frontend
+cd ./app/
+npm install po2json 
+./scripts/po2json.sh
 
-
+cd ./superset-frontend
 npm install -g npm@7
 npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional

@@ -21,8 +21,6 @@ set -e
 # Always install local overrides first
 #
 /app/docker/docker-bootstrap.sh
-pip install -r requirements/docker.txt
-pip install -r superset/translations/requirements.txt
 STEP_CNT=4
 
 echo_step() {
@@ -38,6 +36,7 @@ Init Step ${1}/${STEP_CNT} [${2}] -- ${3}
 
 EOF
 }
+
 ADMIN_PASSWORD="admin"
 # If Cypress run – overwrite the password for admin and export env variables
 if [ "$CYPRESS_CONFIG" == "true" ]; then

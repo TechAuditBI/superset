@@ -5,7 +5,7 @@
 #
 #    pip-compile-multi
 #
--e file:.
+# -e file:.
     # via
     #   -r requirements/base.in
     #   -r requirements/docker.in

@@ -35,6 +35,7 @@ if [ -f "${REQUIREMENTS_LOCAL}" ]; then
 else
   echo "Skipping local overrides"
 fi
+apt-get install libpq-dev python-dev  -y 
 pip install --upgrade pip
 pip install -r requirements/base.txt
 if [[ "${1}" == "worker" ]]; then
