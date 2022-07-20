@@ -5,6 +5,10 @@
 #
 #    pip-compile-multi
 #
+-e file:.
+    # via
+    #   -r requirements/base.in
+    #   -r requirements/docker.in
 -r base.txt
 
 gevent==21.8.0
