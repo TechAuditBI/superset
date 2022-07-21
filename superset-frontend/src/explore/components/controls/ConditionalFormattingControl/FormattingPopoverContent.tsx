@@ -59,8 +59,8 @@
  ];
  
  const inverseOptions = [
-  {value: false, label: t("Not inversed"),},
-  {value: true, label: t("Inversed")}
+  {value: false, label: t("Ascending"),},
+  {value: true, label: t("Descending")}
 
  ]
 
@@ -232,7 +232,7 @@
        <FormItem noStyle shouldUpdate={shouldFormItemUpdate}>
       <FormItem
         name="inverseMode"
-        label={t('Inverse mode')}
+        label={t('Gradient')}
         initialValue={inverseOptions[0].value}
         rules={rulesRequired}
       >

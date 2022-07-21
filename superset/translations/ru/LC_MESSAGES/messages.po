@@ -15895,3 +15895,12 @@ msgstr "год"
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:42
 msgid "yellow"
 msgstr ""
+
+msgid "Descending"
+msgstr "По убыванию"
+
+msgid "Ascending"
+msgstr "По возрастанию"
+
+msgid "Gradient"
+msgstr "Градиент"
