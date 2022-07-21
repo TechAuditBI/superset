@@ -64,13 +64,14 @@ echo_step "3" "Starting" "Setting up roles and perms"
 superset init
 echo_step "3" "Complete" "Setting up roles and perms"
 
-echo_step "1" "Starting" "Building translations"
+echo_step "4" "Starting" "Building translations"
+
 superset fab babel-compile --target superset/translations
-echo_step "2" "Complete" "Finish buildling translations"
+echo_step "4" "Complete" "Finish buildling translations"
 
 if [ "$SUPERSET_LOAD_EXAMPLES" = "yes" ]; then
     # Load some data to play with
-    echo_step "4" "Starting" "Loading examples"
+    echo_step "5" "Starting" "Loading examples"
     # If Cypress run which consumes superset_test_config – load required data for tests
     if [ "$CYPRESS_CONFIG" == "true" ]; then
         superset load_test_users
@@ -78,5 +79,5 @@ if [ "$SUPERSET_LOAD_EXAMPLES" = "yes" ]; then
     else
         superset load_examples
     fi
-    echo_step "4" "Complete" "Loading examples"
+    echo_step "5" "Complete" "Loading examples"
 fi

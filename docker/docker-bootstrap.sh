@@ -18,6 +18,14 @@
 
 set -eo pipefail
 
+apt-get install libpq-dev python-dev  -y
+pip install --upgrade pip
+python3 /app//setup.py sdist
+python3 -m pip install /app/dist/apache-superset-0.0.0.dev0.tar.gz
+
+python3 -m pip install -r /app/requirements/base.txt
+
+
 REQUIREMENTS_LOCAL="/app/docker/requirements-local.txt"
 # If Cypress run – overwrite the password for admin and export env variables
 if [ "$CYPRESS_CONFIG" == "true" ]; then
@@ -35,9 +43,8 @@ if [ -f "${REQUIREMENTS_LOCAL}" ]; then
 else
   echo "Skipping local overrides"
 fi
-apt-get install libpq-dev python-dev  -y 
-pip install --upgrade pip
-pip install -r requirements/base.txt
+
+
 if [[ "${1}" == "worker" ]]; then
   echo "Starting Celery worker..."
   celery --app=superset.tasks.celery_app:app worker -Ofair -l INFO

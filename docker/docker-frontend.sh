@@ -17,7 +17,7 @@
 #
 set -e
 cd ./app/
-npm install po2json
+npm install -g po2json
 ./scripts/po2json.sh
 
 cd ./superset-frontend
