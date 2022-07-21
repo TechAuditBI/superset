@@ -53,7 +53,7 @@ envpy3
 env36
 local_config.py
 /superset_config.py
-# /superset_text.yml
+/superset_text.yml
 superset.egg-info/
 superset/bin/supersetc
 tmp
@@ -105,7 +105,7 @@ apache-superset-*.tar.gz*
 release.json
 
 # Translation binaries
-# messages.mo
+messages.mo
 
 docker/requirements-local.txt
 
