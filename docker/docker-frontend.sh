@@ -17,11 +17,16 @@
 #
 set -e
 cd ./app/
-npm install po2json 
+npm install po2json
 ./scripts/po2json.sh
 
 cd ./superset-frontend
 npm install -g npm@7
+# Packages needed for puppeteer:
+apt update
+apt install -y chromium
+
+cd /app/superset-frontend
 npm install -f --no-optional --global webpack webpack-cli
 npm install -f --no-optional
 
