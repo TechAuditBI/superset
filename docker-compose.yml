@@ -19,6 +19,7 @@ x-superset-user: &superset-user root
 x-superset-depends-on: &superset-depends-on
   - db
   - redis
+  - node
 
 x-superset-volumes: &superset-volumes
   # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
@@ -56,6 +57,8 @@ services:
     restart: unless-stopped
     volumes: *superset-volumes
     command: ["/app/docker/docker-frontend.sh"]
+    ports:
+      - 9000:9000
 
   superset:
     env_file: docker/.env

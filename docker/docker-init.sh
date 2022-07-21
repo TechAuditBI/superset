@@ -65,7 +65,7 @@ superset init
 echo_step "3" "Complete" "Setting up roles and perms"
 
 echo_step "4" "Starting" "Building translations"
-
+apt-get install python3-babel -y
 superset fab babel-compile --target superset/translations
 echo_step "4" "Complete" "Finish buildling translations"
 
