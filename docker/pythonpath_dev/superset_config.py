@@ -80,6 +80,21 @@ DATA_CACHE_CONFIG: CacheConfig = {
         "CACHE_KEY_PREFIX":"superset_13_data",
         "CACHE_REDIS_URL": CACHE_REDIS_URL
 }
+FILTER_STATE_CACHE_CONFIG = {
+        "CACHE_TYPE": "redis",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_KEY_PREFIX":"superset_13_filter_state",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+EXPLORE_FORM_DATA_CACHE_CONFIG = {
+        "CACHE_TYPE": "redis",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_KEY_PREFIX":"superset_13_explore_form",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+
 WTF_CSRF_ENABLED = False
 
 FEATURE_FLAGS = {"ALERT_REPORTS": True}
