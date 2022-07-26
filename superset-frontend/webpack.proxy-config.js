@@ -21,12 +21,12 @@ const zlib = require('zlib');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const parsedArgs = require('yargs').argv;
 
-const { supersetPort = 8088, superset: supersetUrl = null } = parsedArgs;
+const { supersetPort = 8088, superset: supersetUrl = process.env.SUPERSET_URL } = parsedArgs;
 const backend = (supersetUrl || `http://localhost:${supersetPort}`).replace(
   '//+$/',
   '',
 ); // strip ending backslash
-
+console.log(process.env.SUPERSET_URL)
 let manifest;
 function isHTML(res) {
   const CONTENT_TYPE_HEADER = 'content-type';
@@ -103,9 +103,9 @@ function copyHeaders(originalResponse, response) {
 }
 
 /**
- * Manipulate HTML server response to replace asset files with
- * local webpack-dev-server build.
- */
+* Manipulate HTML server response to replace asset files with
+* local webpack-dev-server build.
+*/
 function processHTML(proxyResponse, response) {
   let body = Buffer.from([]);
   let originalResponse = proxyResponse;

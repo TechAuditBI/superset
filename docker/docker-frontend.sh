@@ -32,4 +32,4 @@ npm install -f --no-optional
 echo "Running frontend"
 
 
-npm run dev-server
+npm run docker-server
