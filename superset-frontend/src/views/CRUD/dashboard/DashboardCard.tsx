@@ -151,8 +151,8 @@ function DashboardCard({
         certifiedBy={dashboard.certified_by}
         certificationDetails={dashboard.certification_details}
         titleRight={
-          <Label>{dashboard.published ? t('published') : t('draft')}</Label>
-        }
+          <Label>{(dashboard.published ? t('Published') : t('Draft')).toLowerCase()}</Label>
+        } 
         cover={
           !isFeatureEnabled(FeatureFlag.THUMBNAILS) || !showThumbnails ? (
             <></>

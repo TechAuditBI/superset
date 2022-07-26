@@ -5062,8 +5062,8 @@ msgstr "Редактировать график"
 msgid "Edit Column"
 msgstr "Редактировать столбец"
 
-#: superset/views/dashboard/mixin.py:28
-msgid "Edit Dashboard"
+#: superset-frontend/src/dashboard/components/Header/index.jsx:612
+msgid "Edit dashboard"
 msgstr "Редактировать дашборд"
 
 #: superset/views/database/mixins.py:36
@@ -5576,7 +5576,7 @@ msgid "Execution ID"
 msgstr "Журнал Действий"
 
 msgid "Edit Chart"
-msgstr "Редактировать график"
+msgstr "Обзор графика"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:307
 msgid "Execution log"
@@ -7728,7 +7728,7 @@ msgstr "Изменено"
 #: superset-frontend/src/views/CRUD/chart/ChartCard.tsx:155
 #: superset-frontend/src/views/CRUD/dashboard/DashboardCard.tsx:164
 #: superset-frontend/src/views/CRUD/welcome/ActivityTable.tsx:130
-#, fuzzy, python-format
+
 msgid "Modified %s"
 msgstr "Изменено %s"
 
@@ -9292,7 +9292,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:498
 #: superset/views/dashboard/mixin.py:84
 msgid "Published"
-msgstr "Опубликовано"
+msgstr "опубликован"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Pie/controlPanel.ts:109
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/controlPanel.tsx:161
@@ -15505,7 +15505,7 @@ msgstr "Сохранить как изображение"
 #: superset-frontend/src/views/CRUD/dashboard/DashboardCard.tsx:153
 #, fuzzy
 msgid "draft"
-msgstr "Черновик"
+msgstr "черновик"
 
 #: superset/views/log/__init__.py:32
 msgid "dttm"
@@ -15780,11 +15780,6 @@ msgstr ""
 msgid "previous calendar year"
 msgstr ""
 
-#: superset-frontend/src/views/CRUD/dashboard/DashboardCard.tsx:153
-#, fuzzy
-msgid "published"
-msgstr "Неопубликованные"
-
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:543
 #, fuzzy
 msgid "queries"
@@ -15915,3 +15910,6 @@ msgstr "Копировать ссылку"
 
 msgid "Share chart by email"
 msgstr "Поделиться ссылкой по почте"
+
+msgid "Last viewed"
+msgstr "Просмотрено"

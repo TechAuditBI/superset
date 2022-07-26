@@ -4765,10 +4765,6 @@ msgstr ""
 msgid "Edit Column"
 msgstr ""
 
-#: superset/views/dashboard/mixin.py:28
-msgid "Edit Dashboard"
-msgstr ""
-
 #: superset/views/database/mixins.py:36
 msgid "Edit Database"
 msgstr ""
@@ -4843,7 +4839,7 @@ msgstr ""
 msgid "Edit chart properties"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/Header/index.jsx:605
+#: superset-frontend/src/dashboard/components/Header/index.jsx:612
 msgid "Edit dashboard"
 msgstr ""
 
@@ -14811,9 +14807,6 @@ msgstr ""
 msgid "previous calendar year"
 msgstr ""
 
-#: superset-frontend/src/views/CRUD/dashboard/DashboardCard.tsx:153
-msgid "published"
-msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:543
 msgid "queries"
@@ -14931,7 +14924,10 @@ msgid "View as table"
 msgstr ""
 
 msgid "Copy permalink to clipboard"
-msgstr "Копировать ссылку"
+msgstr ""
 
 msgid "Share chart by email"
-msgstr "Поделиться ссылкой по почте"
+msgstr ""
+
+msgid "Last viewed"
+msgstr ""
