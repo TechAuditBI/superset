@@ -5526,7 +5526,6 @@ msgid "Edit Column"
 msgstr "Редактировать столбец"
 
 #: superset/views/dashboard/mixin.py:28
-#, fuzzy
 msgid "Edit Dashboard"
 msgstr "Редактировать дашборд"
 
@@ -5591,7 +5590,6 @@ msgstr "Редактирование свойств"
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:612
 #: superset-frontend/src/dashboard/components/Header/index.jsx:614
-#, fuzzy
 msgid "Edit dashboard"
 msgstr "Редактировать дашборд"
 
