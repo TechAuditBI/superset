@@ -5535,7 +5535,7 @@ msgid "Filter by user"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl/index.jsx:282
-msgid "Filter configuration"
+msgid "Filter Configuration"
 msgstr ""
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:66
@@ -5576,9 +5576,6 @@ msgstr ""
 msgid "Filter sets (%(filterSetCount)d)"
 msgstr ""
 
-#: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:791
-msgid "Filter type"
-msgstr ""
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:417
 msgid "Filter value (case sensitive)"
@@ -14930,4 +14927,37 @@ msgid "Share chart by email"
 msgstr ""
 
 msgid "Last viewed"
+msgstr ""
+
+msgid "Set up an email report"
+msgstr ""
+
+msgid "Schedule a new email report"
+msgstr ""
+
+msgid "Edit email report"
+msgstr ""
+
+msgid "Add/Edit Filters"
+msgstr ""
+
+msgid "Apply filters"
+msgstr ""
+
+msgid "Clear all"
+msgstr ""
+
+msgid "Add filters and dividers"
+msgstr ""
+
+msgid "Filter Settings"
+msgstr ""
+
+msgid "No filters are currently added"
+msgstr ""
+
+msgid "Click the button above to add a filter to the dashboard"
+msgstr ""
+
+msgid ""
 msgstr ""

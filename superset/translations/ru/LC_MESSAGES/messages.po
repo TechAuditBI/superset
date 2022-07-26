@@ -599,7 +599,7 @@ msgstr "АВГ"
 
 #: superset-frontend/src/components/Menu/MenuRight.tsx:176
 msgid "About"
-msgstr ""
+msgstr "О приложении"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:354
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.jsx:397
@@ -5857,7 +5857,6 @@ msgid "Filter List"
 msgstr "Фильтры"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:787
-#, fuzzy
 msgid "Filter Type"
 msgstr "Значение фильтра"
 
@@ -5878,7 +5877,7 @@ msgid "Filter by user"
 msgstr "Значение фильтра"
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl/index.jsx:282
-msgid "Filter configuration"
+msgid "Filter Configuration"
 msgstr "Фильтруемые срезы"
 
 #: superset-frontend/src/visualizations/FilterBox/controlPanel.jsx:66
@@ -5920,11 +5919,6 @@ msgstr "Источник данных %(name)s уже существует"
 #, python-format
 msgid "Filter sets (%(filterSetCount)d)"
 msgstr ""
-
-#: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:791
-#, fuzzy
-msgid "Filter type"
-msgstr "Значение фильтра"
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:417
 msgid "Filter value (case sensitive)"
@@ -15913,3 +15907,30 @@ msgstr "Поделиться ссылкой по почте"
 
 msgid "Last viewed"
 msgstr "Просмотрено"
+
+msgid "Set up an email report"
+msgstr "Создать напоминание на почту"
+
+msgid "Schedule a new email report"
+msgstr "Новое напоминание"
+
+msgid "Edit email report"
+msgstr "Редактировать напоминение"
+
+msgid "Add/Edit Filters"
+msgstr "Удалить/создать Фильтр"
+
+msgid "Apply filters"
+msgstr "Применить фильтры"
+
+msgid "Clear all"
+msgstr "Очистить все фильтры"
+
+msgid "Filter Settings"
+msgstr "Настройки фильтра"
+
+msgid "No filters are currently added"
+msgstr "Фильтров не добавлено"
+
+msgid "Click the button above to add a filter to the dashboard"
+msgstr "Чтобы добавить фильтр, используйте кнопку выше"
