@@ -14925,3 +14925,13 @@ msgstr ""
 
 msgid "Ascending"
 msgstr ""
+
+
+msgid "View as table"
+msgstr ""
+
+msgid "Copy permalink to clipboard"
+msgstr "Копировать ссылку"
+
+msgid "Share chart by email"
+msgstr "Поделиться ссылкой по почте"

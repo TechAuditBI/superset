@@ -283,7 +283,6 @@ class SliceHeaderControls extends React.PureComponent<
     const fullscreenLabel = isFullSize
       ? t('Exit fullscreen')
       : t('Enter fullscreen');
-    const resizeLabel = isFullSize ? t('Minimize chart') : t('Maximize chart');
 
     const menu = (
       <Menu
@@ -321,7 +320,7 @@ class SliceHeaderControls extends React.PureComponent<
             onClick={({ domEvent }) => this.props.onExploreChart(domEvent)}
           >
             <Tooltip title={getSliceHeaderTooltip(this.props.slice.slice_name)}>
-              {t('Edit chart')}
+              {t('Edit Chart')}
             </Tooltip>
           </Menu.Item>
         )}

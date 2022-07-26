@@ -2271,7 +2271,7 @@ msgstr "Тайм-аут Кэша"
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:241
 #, python-format
 msgid "Cached %s"
-msgstr ""
+msgstr "Кэш от %s"
 
 #: superset/viz.py:539
 msgid "Cached value not found"
@@ -5055,7 +5055,7 @@ msgid "Edit CSS template properties"
 msgstr "Редактирование свойств"
 
 #: superset/views/chart/mixin.py:29
-msgid "Edit Chart"
+msgid "Edit сhart"
 msgstr "Редактировать график"
 
 #: superset/connectors/sqla/views.py:66
@@ -5387,7 +5387,6 @@ msgid "Enter duration in seconds"
 msgstr "Время в секундах"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:327
-#, fuzzy
 msgid "Enter fullscreen"
 msgstr "Полноэкранный режим"
 
@@ -5575,6 +5574,9 @@ msgstr "Выполнить выбранный запрос"
 #, fuzzy
 msgid "Execution ID"
 msgstr "Журнал Действий"
+
+msgid "Edit Chart"
+msgstr "Редактировать график"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:307
 msgid "Execution log"
@@ -15904,3 +15906,12 @@ msgstr "По возрастанию"
 
 msgid "Gradient"
 msgstr "Градиент"
+
+msgid "View as table"
+msgstr "Открыть как таблицу"
+
+msgid "Copy permalink to clipboard"
+msgstr "Копировать ссылку"
+
+msgid "Share chart by email"
+msgstr "Поделиться ссылкой по почте"

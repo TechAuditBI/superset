@@ -571,7 +571,7 @@
       "Cache Timeout": ["Тайм-аут кеша"],
       "Cache Timeout (seconds)": ["Тайм-аут кэша (секунды)"],
       "Cache timeout": ["Тайм-аут Кэша"],
-      "Cached %s": [""],
+      "Cached %s": ["Кэш от %s"],
       "Cached value not found": ["Значение не найдено в кеше"],
       "Calculated column [%s] requires an expression": [
         "Для расчётного столбца [%s] требуется выражение"
@@ -1159,7 +1159,7 @@
       "Edit CSS": ["Редактировать CSS"],
       "Edit CSS Template": ["Шаблоны CSS"],
       "Edit CSS template properties": ["Редактирование свойств"],
-      "Edit Chart": ["Редактировать график"],
+      "Edit сhart": ["Редактировать график"],
       "Edit Column": ["Редактировать столбец"],
       "Edit Dashboard": ["Редактировать дашборд"],
       "Edit Database": ["Редактировать Базу Данных"],
@@ -1232,6 +1232,7 @@
       ],
       "Enter CA_BUNDLE": [""],
       "Enter a new title for the tab": ["Введите название для таблицы"],
+      "Enter fullscreen": ["Полноэкранный режим"],
       "Entity": ["Элемент"],
       "Equal Date Sizes": [""],
       "Error Message": ["Предупреждающее сообщение"],
@@ -1259,6 +1260,7 @@
       "Excel to Database configuration": ["Настройка CSV для БД"],
       "Exclude selected values": [""],
       "Executed query": ["Выполнить выбранный запрос"],
+      "Edit Chart": ["Редактировать график"],
       "Execution log": ["Журнал Действий"],
       "Expand all": ["Развернуть всё"],
       "Expand tool bar": ["Показать панель инструментов"],
@@ -2366,6 +2368,7 @@
       "Settings": ["Настройки"],
       "Settings for time series": [""],
       "Share": ["Поделиться"],
+      "Share chart by email": ["Поделиться ссылкой по почте"],
       "Shared query": ["Общий запрос"],
       "Sheet Name": ["Полное имя"],
       "Short description must be unique for this layer": [
@@ -3634,7 +3637,12 @@
       "was created": ["создан"],
       "week": ["неделя"],
       "year": ["год"],
-      "yellow": [""]
+      "yellow": [""],
+      "Descending": ["По убыванию"],
+      "Ascending": ["По возрастанию"],
+      "Gradient": ["Градиент"],
+      "View as table": ["Открыть как таблицу"],
+      "Copy permalink to clipboard": ["Копировать ссылку"]
     }
   }
 }
