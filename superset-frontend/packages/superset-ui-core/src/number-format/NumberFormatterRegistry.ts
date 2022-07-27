@@ -21,7 +21,7 @@ import createD3NumberFormatter from './factories/createD3NumberFormatter';
 import createSmartNumberFormatter from './factories/createSmartNumberFormatter';
 import NumberFormats from './NumberFormats';
 import NumberFormatter from './NumberFormatter';
-import NumberLocales from './NumberLocales';
+import LanguageNumberLocales from './LanguageNumberLocalizations';
 import { getInstance } from '@superset-ui/core';
 
 export default class NumberFormatterRegistry extends RegistryWithDefaultKey<
@@ -61,7 +61,7 @@ export default class NumberFormatterRegistry extends RegistryWithDefaultKey<
     // Create new formatter if does not exist
     const formatter = createD3NumberFormatter({
       formatString: targetFormat,
-      locale: getInstance().locale === 'ru' ? NumberLocales.NumberLocaleRU : undefined
+      locale: LanguageNumberLocales.hasOwnProperty(getInstance().locale) ? LanguageNumberLocales[getInstance().locale]: undefined
     });
     this.registerValue(targetFormat, formatter);
 
