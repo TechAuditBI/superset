@@ -2167,7 +2167,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:559
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:169
 msgid "Bulk select"
-msgstr ""
+msgstr "Выбрать множество"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bullet/index.js:30
 #: superset/viz.py:1212
@@ -2518,7 +2518,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:512
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:529
 msgid "Certified"
-msgstr ""
+msgstr "Сертифицированный"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:325
 msgid "Certified By"
@@ -2636,7 +2636,7 @@ msgstr "Символ, который интерпретируется как д�
 #: superset/templates/appbuilder/navbar_right.html:40
 #: superset/views/chart/mixin.py:85 superset/views/chart/views.py:90
 msgid "Chart"
-msgstr ""
+msgstr "График"
 
 #: superset/views/core.py:1830
 #, python-format
@@ -2809,7 +2809,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:533
 msgid "Chart type"
-msgstr ""
+msgstr "График"
 
 #: superset-frontend/src/explore/components/ExploreChartPanel.jsx:304
 msgid "Chart type requires a dataset"
@@ -3787,11 +3787,11 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:479
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:354
 msgid "Created by"
-msgstr ""
+msgstr "Создано"
 
 #: superset/dashboards/filters.py:54
 msgid "Created by me"
-msgstr ""
+msgstr "Создано мною"
 
 #: superset-frontend/src/profile/components/App.tsx:62
 msgid "Created content"
@@ -9789,7 +9789,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:343
 msgid "Query History"
-msgstr ""
+msgstr "История запросов"
 
 #: superset/commands/exceptions.py:138
 msgid "Query does not exist"
@@ -15800,7 +15800,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/welcome/ChartTable.tsx:84
 #: superset/views/core.py:890 superset/views/core.py:896
 msgid "chart"
-msgstr ""
+msgstr "график"
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:26
 msgid "charts"
