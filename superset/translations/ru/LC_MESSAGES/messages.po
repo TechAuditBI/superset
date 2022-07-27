@@ -4550,7 +4550,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/welcome/SavedQueries.tsx:239
 #: superset/views/base.py:596
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:534
 #, python-format
@@ -5180,7 +5180,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:437
 #: superset-frontend/src/views/CRUD/welcome/SavedQueries.tsx:220
 msgid "Edit"
-msgstr ""
+msgstr "Редактировать"
 
 #: superset-frontend/src/views/CRUD/alert/AlertReportModal.tsx:1071
 msgid "Edit Alert"
