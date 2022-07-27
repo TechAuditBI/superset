@@ -2045,7 +2045,7 @@ msgstr ""
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:843
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1335
 msgid "Basic"
-msgstr ""
+msgstr "Основные"
 
 #: superset-frontend/src/dashboard/components/PropertiesModal/index.tsx:545
 #: superset-frontend/src/explore/components/PropertiesModal/index.tsx:241
@@ -3773,7 +3773,7 @@ msgstr "Созданные"
 
 #: superset/views/access_requests.py:49
 msgid "Created On"
-msgstr ""
+msgstr "Создано"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:292
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:436
@@ -3787,7 +3787,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:479
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:354
 msgid "Created by"
-msgstr "Создано"
+msgstr "Создано кем"
 
 #: superset/dashboards/filters.py:54
 msgid "Created by me"
@@ -3801,7 +3801,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/csstemplates/CssTemplatesList.tsx:184
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:351
 msgid "Created on"
-msgstr ""
+msgstr "Создано"
 
 #: superset-frontend/src/SqlLab/components/ExploreCtasResultsButton/index.tsx:70
 msgid "Creating a data source and creating a new tab"
@@ -4864,7 +4864,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:149
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/SqlAlchemyForm.tsx:55
 msgid "Display Name"
-msgstr ""
+msgstr "Отображаемое Имя"
 
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:193
 msgid "Display column level total"
@@ -5876,13 +5876,13 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/ExtraOptions.tsx:76
 msgid "Expose database in SQL Lab"
-msgstr ""
+msgstr "Добавить базу данных в Лабораторию SQL"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:343
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:449
 #: superset/views/database/mixins.py:189
 msgid "Expose in SQL Lab"
-msgstr ""
+msgstr "Подключена Лаборатория SQL"
 
 #: superset/views/database/mixins.py:104
 msgid "Expose this DB in SQL Lab"
@@ -6031,7 +6031,7 @@ msgstr "Получить данные для просмотра"
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:270
 #, python-format
 msgid "Fetched %s"
-msgstr ""
+msgstr "Обновлено %s"
 
 #: superset-frontend/src/SqlLab/components/QueryTable/index.tsx:145
 msgid "Fetching"
@@ -6082,7 +6082,7 @@ msgstr ""
 
 #: superset/templates/appbuilder/general/widgets/search.html:24
 msgid "Filter List"
-msgstr ""
+msgstr "Фильтровать по"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:279
 msgid "Filter Settings"
@@ -6186,7 +6186,7 @@ msgstr "Фильтруемый"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/Header/index.tsx:88
 #: superset-frontend/src/explore/controls.jsx:444 superset/viz.py:2132
 msgid "Filters"
-msgstr "Фильтры"
+msgstr "Фильтровать"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:88
 msgid "Filters (%d)"
@@ -6224,7 +6224,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:914
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1494
 msgid "Finish"
-msgstr ""
+msgstr "Сохранить"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberWithTrendline/controlPanel.tsx:111
 msgid ""
@@ -9248,7 +9248,7 @@ msgstr "Выберите показатель!"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/SqlAlchemyForm.tsx:69
 msgid "Pick a name to help you identify this database."
-msgstr ""
+msgstr "Выберите имя для базы данных. Это имя будет сохранено, и в дальнейшем будет представлять данную базу данных."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/CommonParameters.tsx:151
 msgid "Pick a nickname for this database to display as in Superset."
@@ -9999,7 +9999,7 @@ msgstr ""
 
 #: superset/templates/appbuilder/general/widgets/search.html:57
 msgid "Refresh"
-msgstr ""
+msgstr "Обновить"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:251
 msgid "Refresh dashboard"
@@ -10755,7 +10755,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/SaveQuery/index.tsx:175
 msgid "Save query"
-msgstr ""
+msgstr "Сохранить"
 
 #: superset-frontend/src/SqlLab/components/ShareSqlLabQuery/index.tsx:89
 msgid "Save the query to enable this feature"
@@ -11111,7 +11111,7 @@ msgstr "Выбрать оператор"
 
 #: superset-frontend/src/components/ListView/Filters/Select.tsx:98
 msgid "Select or type a value"
-msgstr ""
+msgstr "Выберите значение или начните печатать"
 
 #: superset-frontend/src/SqlLab/components/SaveDatasetModal/index.tsx:403
 msgid "Select or type dataset name"
@@ -12338,11 +12338,11 @@ msgstr ""
 
 #: superset/templates/superset/models/database/macros.html:22
 msgid "Test Connection"
-msgstr ""
+msgstr "Проверить Соединение"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/SqlAlchemyForm.tsx:109
 msgid "Test connection"
-msgstr ""
+msgstr "Проверить соединение"
 
 #: superset-frontend/src/visualizations/TimeTable/index.ts:36
 msgid "Text"
@@ -14015,7 +14015,7 @@ msgstr ""
 
 #: superset-frontend/src/components/ListView/Filters/Search.tsx:75
 msgid "Type a value"
-msgstr ""
+msgstr "Начните печатать"
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSimpleTabContent/index.tsx:347
 msgid "Type a value here"
@@ -14251,11 +14251,11 @@ msgstr "Загрузить"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:199
 msgid "Upload CSV"
-msgstr ""
+msgstr "Файлом CSV"
 
 #: superset-frontend/src/views/components/RightMenu.tsx:150
 msgid "Upload CSV to database"
-msgstr ""
+msgstr "Загрузить CSV файлом в базу данных"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/EncryptedField.tsx:134
 msgid "Upload Credentials"
@@ -14267,11 +14267,11 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:213
 msgid "Upload Excel file"
-msgstr ""
+msgstr "Файлом Excel"
 
 #: superset-frontend/src/views/components/RightMenu.tsx:162
 msgid "Upload Excel file to database"
-msgstr ""
+msgstr "Загрузить Excel файлом в базу данных"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/EncryptedField.tsx:102
 msgid "Upload JSON file"
@@ -14279,15 +14279,15 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:206
 msgid "Upload columnar file"
-msgstr ""
+msgstr "Загрузить columnar file"
 
 #: superset-frontend/src/views/components/RightMenu.tsx:156
 msgid "Upload columnar file to database"
-msgstr ""
+msgstr "Загрузить columnar file в базу данных"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:196
 msgid "Upload file to database"
-msgstr ""
+msgstr "Загрузить данные в БД файлом"
 
 #: superset-frontend/src/dashboard/util/getSliceHeaderTooltip.tsx:34
 msgid "Use %s to open in a new tab."
