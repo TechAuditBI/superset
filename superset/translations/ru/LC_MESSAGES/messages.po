@@ -5882,7 +5882,7 @@ msgstr "Добавить базу данных в Лабораторию SQL"
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:449
 #: superset/views/database/mixins.py:189
 msgid "Expose in SQL Lab"
-msgstr "Подключена Лаборатория SQL"
+msgstr "Лаборатория SQL"
 
 #: superset/views/database/mixins.py:104
 msgid "Expose this DB in SQL Lab"
@@ -10572,7 +10572,7 @@ msgstr ""
 #: superset/initialization/__init__.py:333
 #: superset/initialization/__init__.py:348
 msgid "SQL Lab"
-msgstr ""
+msgstr "Лаборатория SQL"
 
 #: superset/connectors/sqla/views.py:492
 msgid "SQL Lab View"
