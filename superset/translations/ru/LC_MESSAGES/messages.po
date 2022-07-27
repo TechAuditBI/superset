@@ -5697,7 +5697,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/welcome/ChartTable.tsx:183
 #: superset-frontend/src/views/CRUD/welcome/DashboardTable.tsx:197
 msgid "Examples"
-msgstr ""
+msgstr "Примеры"
 
 #: superset/views/database/forms.py:258
 msgid "Excel File"
@@ -16300,7 +16300,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:29
 msgid "saved queries"
-msgstr ""
+msgstr "сохраненные SQL-Запросы"
 
 #: superset-frontend/plugins/plugin-chart-table/src/TableChart.tsx:125
 msgid "search.num_records"
