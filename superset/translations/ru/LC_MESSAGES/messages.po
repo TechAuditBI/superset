@@ -604,7 +604,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:374
 msgid "Action Log"
-msgstr ""
+msgstr "Журнал аудита"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:372
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:203
@@ -617,7 +617,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/query/QueryList.tsx:309
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:415
 msgid "Actions"
-msgstr ""
+msgstr "Операции"
 
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:327
 msgid "Active"
@@ -2698,7 +2698,7 @@ msgstr ""
 #: superset-frontend/src/explore/fixtures.tsx:77
 #: superset-frontend/src/explore/fixtures.tsx:86
 msgid "Chart Options"
-msgstr ""
+msgstr "Настройки графика"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:268
 msgid "Chart Orientation"
@@ -3169,7 +3169,7 @@ msgstr ""
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:98
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:512
 msgid "Color Scheme"
-msgstr ""
+msgstr "Цветовая схема"
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:130
 msgid "Color Steps"
@@ -6186,11 +6186,11 @@ msgstr "Фильтруемый"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/Header/index.tsx:88
 #: superset-frontend/src/explore/controls.jsx:444 superset/viz.py:2132
 msgid "Filters"
-msgstr ""
+msgstr "Фильтры"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:88
 msgid "Filters (%d)"
-msgstr ""
+msgstr "Фильтры (%d)"
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSqlTabContent/index.jsx:134
 msgid "Filters by columns"
@@ -6746,7 +6746,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/chart/ChartList.tsx:674
 msgid "Import charts"
-msgstr ""
+msgstr "Импортировать графики"
 
 #: superset/dashboards/commands/exceptions.py:82
 msgid "Import dashboard failed for an unknown reason"
@@ -8061,7 +8061,7 @@ msgstr ""
 #: superset/views/dashboard/mixin.py:86 superset/views/dashboard/views.py:195
 #: superset/views/database/mixins.py:205 superset/views/sql_lab.py:81
 msgid "Modified"
-msgstr ""
+msgstr "Изменено"
 
 #: superset-frontend/src/views/CRUD/chart/ChartCard.tsx:158
 #: superset-frontend/src/views/CRUD/dashboard/DashboardCard.tsx:165
@@ -8074,7 +8074,7 @@ msgstr "Изменено %s"
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:294
 #: superset-frontend/src/views/CRUD/data/dataset/DatasetList.tsx:360
 msgid "Modified by"
-msgstr ""
+msgstr "Изменено"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:761
 #, python-format
@@ -8415,7 +8415,7 @@ msgstr "В избранном нет дашбордов. Нажмите звёз
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:35
 #: superset-frontend/src/explore/controls.jsx:324
 msgid "No filter"
-msgstr ""
+msgstr "Фильтра нету"
 
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:484
 msgid "No filter is selected."
@@ -9946,7 +9946,7 @@ msgstr "Недавно просмотренные графики, дашборд
 
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:296
 msgid "Recents"
-msgstr ""
+msgstr "Недавние"
 
 #: superset-frontend/src/views/CRUD/alert/components/NotificationMethod.tsx:160
 msgid "Recipients are separated by \",\" or \";\""
@@ -11977,7 +11977,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:305
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:500
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Step/controlPanel.tsx:69
 msgid "Step type"
@@ -13819,7 +13819,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:281
 #: superset/views/dashboard/mixin.py:79 superset/views/dashboard/views.py:193
 msgid "Title"
-msgstr ""
+msgstr "Название"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:544
 msgid "Title Column"
@@ -16271,7 +16271,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:28
 msgid "recents"
-msgstr ""
+msgstr "недавние"
 
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:44
 msgid "red"
