@@ -69,7 +69,7 @@ function t(input: string, ...args: unknown[]) {
 
 function tn(key: string, ...args: unknown[]) {
   return getInstance().translateWithNumber(key, ...args);
-}
+} 
 
 export {
   configure,
@@ -79,4 +79,5 @@ export {
   t,
   tn,
   resetTranslation,
+  getInstance
 };
