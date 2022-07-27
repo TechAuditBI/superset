@@ -7,20 +7,16 @@
         "plural_forms": "nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n%100<=4 ? 2 : 3)",
         "lang": "sl_SI"
       },
-      "\n            <b><a href=\"%(url)s\">Explore in Superset</a></b><p></p>\n            <img src=\"cid:%(msgid)s\">\n            ": [
-        "\n            <b><a href=\"%(url)s\">Razišči v Supersetu</a></b><p></p>\n            <img src=\"cid:%(msgid)s\">\n            "
-      ],
       "\n            Error: %(text)s\n            ": [
         "\n            Napaka: %(text)s\n            "
       ],
-      "\n        *%(name)s*\n\n        <%(url)s|Explore in Superset>\n        ": [
-        "\n        *%(name)s*\n\n        <%(url)s|Razišči v Supersetu>\n        "
-      ],
-      "\n        *%(slice_name)s*\n\n        <%(slice_url_user_friendly)s|Explore in Superset>\n        ": [
-        "\n        *%(slice_name)s*\n\n        <%(slice_url_user_friendly)s|Razišči v Supersetu>\n        "
-      ],
       " (excluded)": [""],
+      " Set the opacity to 0 if you do not want to override the color specified in the GeoJSON": [
+        ""
+      ],
       " expression which needs to adhere to the ": [" , ki mora upoštevati "],
+      " source code of Superset's sandboxed parser": [""],
+      " to visualize your data.": [""],
       "!= (Is not equal)": ["!= (ni enako)"],
       "%(dialect)s cannot be used as a data source for security reasons.": [
         "%(dialect)s ni mogoče uporabiti kot podatkovni vir zaradi varnostnih razlogov."
@@ -41,7 +37,6 @@
       "%(validator)s was unable to check your query.\nPlease recheck your query.\nException: %(ex)s": [
         "%(validator)s ni mogel preveriti vaše poizvedbe.\nPonovno preverite poizvedbo.\nIzjema: %(ex)s"
       ],
-      "%s - untitled": ["%s - neimenovan"],
       "%s Error": ["%s napaka"],
       "%s Selected": ["Izbranih: %s"],
       "%s Selected (%s Physical, %s Virtual)": [
@@ -51,7 +46,6 @@
       "%s Selected (Virtual)": ["Izbranih: %s (virtualni)"],
       "%s aggregates(s)": ["Agreg. funkcije: %s"],
       "%s column(s)": ["Stolpci: %s"],
-      "%s column(s) and metric(s)": ["Stolpcev in mer: %s"],
       "%s operator(s)": ["Operatorji: %s"],
       "%s option": ["%s možnost"],
       "%s option(s)": ["Možnosti: %s"],
@@ -59,7 +53,7 @@
       "%s%s": ["%s%s"],
       "%s-%s of %s": ["%s-%s od %s"],
       "(Removed)": ["(Odstranjeno)"],
-      "(deleted)": ["(izbrisano)"],
+      "(deleted or invalid type)": [""],
       "(no description, click to see stack trace)": [
         "(ni opisa, kliknite za ogled zapisov)"
       ],
@@ -93,6 +87,7 @@
       "30 minutes": ["30 minut"],
       "30 second": ["30 sekund"],
       "30 seconds": ["30 sekund"],
+      "3D": [""],
       "5 minute": ["5 minut"],
       "5 minutes": ["5 minut"],
       "5 second": ["5 sekund"],
@@ -103,16 +98,10 @@
       ":": [":"],
       "< (Smaller than)": ["< (manjše kot)"],
       "<= (Smaller or equal)": ["<= (manjše ali enako)"],
-      "<b><a href=\"%(url)s\">Explore in Superset</a></b><p></p>": [
-        "<b><a href=\"%(url)s\">Razišči v Supersetu</a></b><p></p>"
-      ],
       "== (Is equal)": ["== (je enako)"],
       "> (Larger than)": ["> (večje kot)"],
       ">= (Larger or equal)": [">= (večje ali enako)"],
       "A Big Number": ["Velika številka"],
-      "A SQL statement that defines whether the alert should get triggered or not. The query is expected to return either NULL or a number value.": [
-        "SQL izraz, ki definira ali naj se opozorilo sproži ali ne. Od poizvedbe se pričakuje, da vrne bodisi NULL bodisi številsko vrednost."
-      ],
       "A comma separated list of columns that should be parsed as dates.": [
         "Z vejico ločen seznam stolpcev, v katerih bodo prepoznani datumi."
       ],
@@ -125,12 +114,19 @@
       "A full URL pointing to the location of the built plugin (could be hosted on a CDN for example)": [
         "Celoten URL, ki kaže na lokacijo zgrajenega vtičnika (lahko gostuje npr. na CDN)"
       ],
+      "A handlebars template that is applied to the data": [""],
       "A human-friendly name": ["Človeku prijazno ime"],
+      "A list of domain names that can embed this dashboard. Leaving this field empty will allow embedding from any domain.": [
+        ""
+      ],
       "A list of users who can alter the chart. Searchable by name or username.": [
         "Seznam uporabnikov, ki lahko spreminjajo ta grafikon. Možno je iskanje po imenu ali uporabniškem imenu."
       ],
       "A map of the world, that can indicate values in different countries.": [
         "Zemljevid sveta, ki lahko prikazuje vrednosti po državah."
+      ],
+      "A map that takes rendering circles with a variable radius at latitude/longitude coordinates": [
+        ""
       ],
       "A metric to use for color": ["Mera za barvo"],
       "A polar coordinate chart where the circle is broken into wedges of equal angle, and the value represented by any wedge is illustrated by its area, rather than its radius or sweep angle.": [
@@ -141,9 +137,6 @@
       ],
       "A reference to the [Time] configuration, taking granularity into account": [
         "Sklic na nastavitve za [Čas], ki upošteva granulacijo"
-      ],
-      "A semicolon ';' delimited list of email addresses": [
-        "S podpičjem ';' ločen seznam naslovov e-pošte"
       ],
       "A set of parameters that become available in the query using Jinja templating syntax": [
         "Nabor parametrov, ki postanejo razpoložljivi za poizvedbo z uporabo sintakse za Jinja predloge"
@@ -170,16 +163,17 @@
       "APR": ["APR"],
       "AQE": ["AQE"],
       "AUG": ["AVG"],
+      "AXIS TITLE MARGIN": [""],
       "About": ["O programu"],
       "Access": ["Dostop"],
       "Access requests": ["Zahteve za dostop"],
+      "Access to user activity data is restricted": [""],
       "Access was requested": ["Zahtevan je bil dostop"],
       "Action": ["Aktivnost"],
       "Action Log": ["Dnevnik aktivnosti"],
       "Actions": ["Aktivnosti"],
       "Active": ["Aktiven"],
       "Actual time range": ["Dejansko časovno obdobje"],
-      "Adaptive formatting": ["Adaptivno oblikovanje"],
       "Add": ["Dodaj"],
       "Add Annotation": ["Dodaj oznako"],
       "Add Annotation Layer": ["Dodaj sloj z oznakami"],
@@ -189,10 +183,7 @@
       "Add Column": ["Dodaj stolpec"],
       "Add Dashboard": ["Dodaj nadzorno ploščo"],
       "Add Database": ["Dodaj podatkovno bazo"],
-      "Add Druid Cluster": ["Dodaj Druid gručo"],
-      "Add Druid Column": ["Dodaj Druid stolpec"],
-      "Add Druid Datasource": ["Dodaj podatkovni vir za Druid"],
-      "Add Druid Metric": ["Dodaj Druid mere"],
+      "Add Dataset and Create Chart": [""],
       "Add Log": ["Dodaj dnevnik"],
       "Add Metric": ["Dodaj mero"],
       "Add Row level security filter": [
@@ -200,22 +191,30 @@
       ],
       "Add Saved Query": ["Dodaj shranjeno poizvedbo"],
       "Add a Plugin": ["Dodaj vtičnik"],
+      "Add a new tab to create SQL Query": [""],
       "Add additional custom parameters": ["Dodaj dodatne parametre po meri"],
       "Add an item": ["Dodaj element"],
       "Add annotation": ["Dodaj oznako"],
       "Add annotation layer": ["Dodaj sloj z oznakami"],
+      "Add calculated columns to dataset in \"Edit datasource\" modal": [""],
+      "Add calculated temporal columns to dataset in \"Edit datasource\" modal": [
+        ""
+      ],
       "Add dataset": ["Dodaj podatkovni set"],
       "Add delivery method": ["Dodajte način dostave"],
       "Add filter": ["Dodaj filter"],
+      "Add filters and dividers": [""],
       "Add item": ["Dodaj"],
       "Add metric": ["Dodaj mero"],
+      "Add metrics to dataset in \"Edit datasource\" modal": [""],
       "Add new color formatter": ["Dodaj novo oblikovanje barve"],
       "Add new formatter": ["Dodaj novo oblikovanje"],
       "Add notification method": ["Dodajte način obveščanja"],
+      "Add required control values to preview chart": [""],
+      "Add required control values to save chart": [""],
       "Add sheet": ["Dodaj preglednico"],
       "Add to dashboard": ["Dodaj na nadzorno ploščo"],
       "Added": ["Dodano"],
-      "Adding new datasource [{}]": ["Dodajanje novega podatkovnega vira [{}]"],
       "Additional information": ["Dodatne informacije"],
       "Additional metadata": ["Dodatni metapodatki"],
       "Additional padding for legend.": ["Dodatni razmak za legendo."],
@@ -238,6 +237,9 @@
       ],
       "Aggregate function to apply when pivoting and computing the total rows and columns": [
         "Agregacijska funkcija za vrtenje in izračun vseh vrstic in stolpcev"
+      ],
+      "Aggregates data within the boundary of grid cells and maps the aggregated values to a dynamic color scale": [
+        ""
       ],
       "Aggregation function": ["Agregacijska funkcija"],
       "Alert Triggered, In Grace Period": [
@@ -305,6 +307,7 @@
       "Allow SQL Lab to fetch a list of all tables and all views across all database schemas. For large data warehouse with thousands of tables, this can be expensive and put strain on the system.": [
         "Dovoli SQL laboratoriju, da pridobi seznam vseh tabel in pogledov iz vseh shem podatkovne baze. Pri velikih podatkovnih skladiščih s tisoči tabel je to lahko potratno in obremeni sistem."
       ],
+      "Allow columns to be rearranged": [""],
       "Allow creation of new tables based on queries": [
         "Dovoli ustvarjanje novih tabel s poizvedbami"
       ],
@@ -315,12 +318,15 @@
         "Dovoli jezik za manipulacijo podatkov (DML)"
       ],
       "Allow data upload": ["Dovoli nalaganje podatkov"],
+      "Allow end user to drag-and-drop column headers to rearrange them. Note their changes won't persist for the next time they open the chart.": [
+        ""
+      ],
       "Allow manipulation of the database using non-SELECT statements such as UPDATE, DELETE, CREATE, etc.": [
         "Dovoli manipulacije podatkovne baze z uporabo ne-SELECT stavkov, kot so UPDATE, DELETE, CREATE, itd."
       ],
       "Allow multiple selections": ["Dovoli več izbir"],
       "Allow node selections": ["Dovoli izbiro vozlišča"],
-      "Allow selecting multiple values": ["Dovoli izbiro več vrednosti"],
+      "Allow sending multiple polygons as a filter event": [""],
       "Allow this database to be explored": [
         "Dovoli raziskovanje te podatkovne baze"
       ],
@@ -330,6 +336,7 @@
       "Allow users to run non-SELECT statements (UPDATE, DELETE, CREATE, ...) in SQL Lab": [
         "Dovoli uporabnikom poganjanje ne-SELECT stavkov (UPDATE, DELETE, CREATE, ...) v SQL laboratoriju"
       ],
+      "Allowed Domains (comma separated)": [""],
       "Alphabetical": ["Po abecedi"],
       "Also known as a box and whisker plot, this visualization compares the distributions of a related metric across multiple groups. The box in the middle emphasizes the mean, median, and inner 2 quartiles. The whiskers around each box visualize the min, max, range, and outer 2 quartiles.": [
         "Znan tudi kot grafikon škatla z brki. prikaže primerjavo porazdelitev povezanih mer v različnih skupinah. Škatla na sredini predstavlja povprečje, mediano in notranja 2 kvartila. Brki na vsaki škatli prikazujejo minimum, maksimum, območje in zunanja dva kvartila."
@@ -358,12 +365,6 @@
       "An error occurred while creating the data source": [
         "Pri ustvarjanju podatkovnega vira je prišlo do težave"
       ],
-      "An error occurred while editing this report.": [
-        "Pri urejanju tega poročila je prišlo do napake."
-      ],
-      "An error occurred while editing this report: %s": [
-        "Pri urejanju tega poročila je prišlo do napake: %s"
-      ],
       "An error occurred while expanding the table schema. Please contact your administrator.": [
         "Pri širitvi sheme tabele je prišlo do napake. Kontaktirajte administratorja."
       ],
@@ -390,9 +391,6 @@
       ],
       "An error occurred while fetching dashboard owner values: %s": [
         "Pri pridobivanju polja lastnik nadzorne plošče je prišlo do napake: %s"
-      ],
-      "An error occurred while fetching dashboards": [
-        "Prišlo je do napake pri pridobivanju nadzornih plošč"
       ],
       "An error occurred while fetching dashboards: %s": [
         "Prišlo je do napake pri pridobivanju nadzornih plošč: %s"
@@ -499,12 +497,8 @@
       ],
       "Animation": ["Animacija"],
       "Annotation": ["Oznaka"],
-      "Annotation Layer ${annotationLayerName}": [
-        "Sloj z oznakami ${annotationLayerName}"
-      ],
       "Annotation Layers": ["Sloji z oznakami"],
       "Annotation Slice Configuration": ["Nastavitve rezine z oznakami"],
-      "Annotation Source": ["Vir oznak"],
       "Annotation could not be created.": ["Oznake ni mogoče ustvariti."],
       "Annotation could not be updated.": ["Oznake ni mogoče posodobiti."],
       "Annotation delete failed.": ["Izbris oznake ni uspel."],
@@ -584,9 +578,6 @@
       "Are you sure you want to delete": [
         "Ali ste prepričani, da želite izbrisati"
       ],
-      "Are you sure you want to delete ${annotationCurrentlyDeleting?.short_descr}?": [
-        "Ste prepričani, da želite izbrisati ${annotationCurrentlyDeleting?.short_descr}?"
-      ],
       "Are you sure you want to delete the selected %s?": [
         "Ali ste prepričani, da želite izbrisati izbrane %s?"
       ],
@@ -661,18 +652,15 @@
       ],
       "Box Plot": ["Box Plot"],
       "Breakdowns": ["Razčlenitev"],
-      "Broker Endpoint": ["Končna točka posrednika"],
-      "Broker Host": ["Gostitelj posrednika"],
-      "Broker Password": ["Geslo posrednika"],
-      "Broker Port": ["Vrata posrednika"],
-      "Broker Username": ["Uporabniško ime posrednika"],
       "Bubble Chart": ["Mehurčkasti grafikon"],
       "Bubble Color": ["Barva mehurčka"],
       "Bubble Size": ["Velikost mehurčka"],
       "Bubble size": ["Velikost mehurčka"],
+      "Bucket break points": [""],
       "Bulk select": ["Izberi hkrati"],
       "Bullet Chart": ["'Bullet' grafikon"],
       "Business": ["Aktivnost"],
+      "Business Data Type": [""],
       "By default, each filter loads at most 1000 choices at the initial page load. Check this box if you have more than 1000 filter values and want to enable dynamically searching that loads filter values as users type (may add stress to your database).": [
         "Privzeto vsak filter pri nalaganju začetne strani naloži največ 1000 možnosti. Označite polje, če imate več kot 1000 vrednosti filtra in želite omogočiti dinamično iskanje, ki nalaga vrednosti filtra ko uporabnik tipka (to lahko preobremeni vašo podatkovno bazo)."
       ],
@@ -686,6 +674,7 @@
       "CRON expression": ["Izraz CRON"],
       "CSS": ["CSS"],
       "CSS Templates": ["CSS predloge"],
+      "CSS applied to the chart": [""],
       "CSS template": ["CSS predloga"],
       "CSS template could not be deleted.": [
         "CSS predloge ni mogoče izbrisati."
@@ -720,9 +709,6 @@
       "Cache timeout": ["Časovna omejitev predpomnilnika"],
       "Cached %s": ["Predpomnjeno %s"],
       "Cached value not found": ["Predpomnjena vrednost ni najdena"],
-      "Calculate contribution per series or total": [
-        "Izračunaj delež za podatkovno serijo ali skupnega"
-      ],
       "Calculated column [%s] requires an expression": [
         "Izračunan stolpec [%s] zahteva izraz"
       ],
@@ -732,21 +718,12 @@
       "Can not move top level tab into nested tabs": [
         "Najvišjega zavihka ni mogoče premakniti v gnezdene zavihke"
       ],
-      "Can't find DruidCluster with cluster_name = '%(name)s'": [
-        "Ni mogoče najti DruidCluster s cluster_name = '%(name)s'"
-      ],
-      "Can't find User '%(name)s', please ask your admin to create one.": [
-        "Uporabnika '%(name)s' ni mogoče najti. Prosite administratorja, da ga ustvari."
-      ],
       "Can't have overlap between Series and Breakdowns": [
         "Ne sme imeti prekrivanja med podatkovnimi serijami in členitvami"
       ],
       "Cancel": ["Prekliči"],
       "Cancel query on window unload event": [
         "Prekini poizvedbo pri dogodku zaprtja okna (window unload event)"
-      ],
-      "Cannot create cyclic hierarchy": [
-        "Ciklične hierarhije ni mogoče ustvariti"
       ],
       "Cannot delete a database that has datasets attached": [
         "Podatkovne baze s povezanimi podatkovnimi viri ni mogoče izbrisati"
@@ -776,8 +753,8 @@
       "Certified by %s": ["Certificiral/a %s"],
       "Change dataset": ["Spremeni podatkovni set"],
       "Changed By": ["Spremenil"],
-      "Changed On": ["Spremenjeno"],
       "Changed on": ["Spremenjen"],
+      "Changes saved.": [""],
       "Changing the dataset may break the chart if the chart relies on columns or metadata that does not exist in the target dataset": [
         "Sprememba podatkovnega seta lahko pokvari grafikon, če se le-ta zanaša na stolpce ali metapodatke, ki ne obstajajo v ciljnem podatkovnem nizu"
       ],
@@ -805,12 +782,9 @@
       "Character to interpret as decimal point.": [
         "Znak, ki bo prepoznan kot decimalno ločilo."
       ],
-      "Charge": ["Naboj"],
-      "Charge in the force layout": ["Naboj v postavitvi sil"],
       "Chart": ["Grafikon"],
       "Chart %(id)s not found": ["Grafikon %(id)s ni najden"],
       "Chart Cache Timeout": ["Trajanje predpomnilnika grafikona"],
-      "Chart Email Schedules": ["Urniki za e-pošto grafikonov"],
       "Chart ID": ["ID grafikona"],
       "Chart Options": ["Možnosti grafikona"],
       "Chart Owner: %s": ["Lastnik grafikona: %s"],
@@ -833,6 +807,7 @@
       "Chart options": ["Možnosti grafikona"],
       "Chart parameters are invalid.": ["Parametri grafikona so neveljavni."],
       "Chart type": ["Tip grafikona"],
+      "Chart type requires a dataset": [""],
       "Charts": ["Grafikoni"],
       "Charts could not be deleted.": ["Grafikonov ni mogoče izbrisati."],
       "Check configuration": ["Preveri nastavitve"],
@@ -851,20 +826,11 @@
       "Check to force date partitions to have the same height": [
         "Če želite, da imajo datumske particije enako višino"
       ],
-      "Check to include Druid granularity dropdown": [
-        "Izberite za vključitev spustnega seznama za Druid granulacijo"
-      ],
-      "Check to include SQL time grain dropdown": [
-        "Izberite za vključitev spustnega seznama za časovno granulacijo SQL"
-      ],
       "Check to include time column dropdown": [
         "Izberite za vključitev časovnega stolpca v spustni seznam"
       ],
       "Check to include time grain dropdown": [
         "Izberite za vključitev spustnega seznama za časovno granullacijo"
-      ],
-      "Check to include time origin dropdown": [
-        "Izberi za vključitev spustnega seznama za časovno izhodišče"
       ],
       "Child label position": ["Položaj podrejene oznake"],
       "Choice of [Label] must be present in [Group By]": [
@@ -884,7 +850,9 @@
       "Choose a source": ["Izberite izvor"],
       "Choose a source and a target": ["Izberite izhodišče in cilj"],
       "Choose a target": ["Izberite cilj"],
+      "Choose a unique name": [""],
       "Choose chart type": ["Izberite tip grafikona"],
+      "Choose one of the available databases from the panel on the left.": [""],
       "Choose one or more charts for left axis": [
         "Izberite enega ali več grafikonov za levo os"
       ],
@@ -893,6 +861,9 @@
       ],
       "Choose the annotation layer type": ["Izberite tip sloja z oznakami"],
       "Choose the source of your annotations": ["Izberite vir svojih oznak"],
+      "Choose whether a country should be shaded by the metric, or assigned a color based on a categorical color palette": [
+        ""
+      ],
       "Chord Diagram": ["Tetivni grafikon"],
       "Chosen non-numeric column": ["Izbran ne-numeričen stolpec"],
       "Circle": ["Krog"],
@@ -909,6 +880,10 @@
       "Clause": ["Stavek"],
       "Clear": ["Počisti"],
       "Clear all": ["Počisti vse"],
+      "Click on \"Create chart\" button in the control panel on the left to preview a visualization or": [
+        ""
+      ],
+      "Click the button above to add a filter to the dashboard": [""],
       "Click the lock to make changes.": [
         "Kliknite ključavnico, da omogočite spreminjanje."
       ],
@@ -921,9 +896,6 @@
       "Click this link to switch to an alternate form that exposes only the required fields needed to connect this database.": [
         "Kliknite to povezavo za drugo vnosno formo, ki prikaže samo zahtevana polja za povezavo s podatkovno bazo."
       ],
-      "Click to change visualization type": [
-        "Kliknite za spremembo tipa vizualizacije"
-      ],
       "Click to clear emitted filters": ["S klikom počistite oddane filtre"],
       "Click to edit": ["Kliknite za urejanje"],
       "Click to favorite/unfavorite": [
@@ -934,8 +906,6 @@
       "Close": ["Zapri"],
       "Close all other tabs": ["Zapri vse ostale zavihke"],
       "Close tab": ["Zapri zavihek"],
-      "Cluster": ["Gruča"],
-      "Cluster Name": ["Ime gruče"],
       "Cluster label aggregator": ["Agregator za oznako gruče"],
       "Clustering Radius": ["Radij gručenja"],
       "Code": ["Koda"],
@@ -947,8 +917,8 @@
       "Color Steps": ["Barvni koraki"],
       "Color metric": ["P"],
       "Color scheme": ["Barvna shema"],
-      "Color will be rendered based on a ratio of the cell against the sum of across this criteria": [
-        "Barva bo prikazana na osnovi razmerja med celico in vsoto glede na ta kriterij"
+      "Color will be shaded based the normalized (0% to 100%) value of a given cell against the other cells in the selected range: ": [
+        ""
       ],
       "Colors": ["Barve"],
       "Column": ["Stolpec"],
@@ -970,7 +940,6 @@
         "Naslovi stolpcev za indeksne stolpce. Če le-ti niso podani in indeksi Dataframe-a obstajajo, se uporabijo imena indeksov."
       ],
       "Column name [%s] is duplicated": ["Ime stolpca [%s] je podvojeno"],
-      "Column name(s) ": ["Imena stolpcev "],
       "Column referenced by aggregate is undefined: %(column)s": [
         "Stolpec referenciran z agregacijo ni definiran: %(column)s"
       ],
@@ -1023,7 +992,7 @@
       "Comparison": ["Primerjava"],
       "Comparison Period Lag": ["Zaostanek obdobja za primerjavo"],
       "Comparison suffix": ["Pripona za primerjavo"],
-      "Components": ["Komponente"],
+      "Compose multiple layers together to form complex visuals.": [""],
       "Compute the contribution to the total": ["Izračunaj prispevek k celoti"],
       "Condition": ["Pogoj"],
       "Conditional formatting": ["Pogojno oblikovanje"],
@@ -1032,7 +1001,6 @@
         "Interval zaupanja mora biti med 0 in 1 (odprt)"
       ],
       "Configuration": ["Nastavitve"],
-      "Configure Advanced Time Range ": ["Nastavi napredno časovno obdobje "],
       "Configure Time Range: Last...": ["Nastavi časovno obdobje: Zadnji ..."],
       "Configure Time Range: Previous...": [
         "Nastavi časovno obdobje: Prejšnji ..."
@@ -1042,11 +1010,15 @@
       "Configure the basics of your Annotation Layer.": [
         "Osnovne nastavitve sloja z oznakami."
       ],
+      "Configure this dashboard to embed it into an external web application.": [
+        ""
+      ],
       "Configure your how you overlay is displayed here.": [
         "Nastavite kako se tukaj prikazuje vrhnja plast."
       ],
       "Confirm save": ["Potrdite shranjevanje"],
       "Connect": ["Poveži"],
+      "Connect Google Sheet": [""],
       "Connect Google Sheets as tables to this database": [
         "Googlove preglednice poveži s to podatkovno bazo kot tabele"
       ],
@@ -1075,9 +1047,7 @@
       "Copy and paste the entire service account .json file here": [
         "Tukaj kopirajte in prilepite celotno json datoteko servisnega računa"
       ],
-      "Copy chart URL": ["Kopiraj URL grafikona"],
       "Copy chart URL to clipboard": ["Kopiraj URL grafikona na odložišče"],
-      "Copy dashboard URL": ["Kopiraj URL nadzorne plošče"],
       "Copy link": ["Kopiraj povezavo"],
       "Copy message": ["Kopiraj sporočilo"],
       "Copy of %s": ["Kopija %s"],
@@ -1116,7 +1086,6 @@
       "Could not load database driver: {}": [
         "Ni mogoče naložiti gonilnika podatkovne baze: {}"
       ],
-      "Could not verify the host": [""],
       "Country": ["Država"],
       "Country Color Scheme": ["Barvna shema držav"],
       "Country Column": ["Stolpec z državami"],
@@ -1136,27 +1105,23 @@
         "Ustvarjanje podatkovnega vira in novega zavihka"
       ],
       "Creator": ["Avtor"],
-      "Crontab": ["Crontab"],
       "Cross Filter Scoping": ["Doseg medsebojnega filtra"],
       "Cross-filter scoping": ["Doseg medsebojnega filtra"],
       "Cumulative": ["Kumulativno"],
+      "Currently rendered: %s": [""],
       "Custom": ["Prilagojen"],
       "Custom Plugin": ["Prilagojeni vtičnik"],
       "Custom Plugins": ["Prilagojeni vtičniki"],
       "Custom SQL": ["Prilagojen SQL"],
-      "Custom SQL ad-hoc filters are not available for the native Druid connector": [
-        "Ad-hoc SQL filtri po meri niso na voljo za nativni konektor za Druid"
-      ],
-      "Custom SQL ad-hoc metrics are not available for the native Druid connector": [
-        "Ad-hoc SQL mere po meri niso na voljo za nativni konektor za Druid"
-      ],
       "Custom SQL ad-hoc metrics are not enabled for this dataset": [
         "Ad-hoc SQL mere po meri za ta podatkovni set niso omogočene"
       ],
+      "Custom SQL fields cannot contain sub-queries.": [""],
       "Custom time filter plugin": ["Prilagojeni vtičnik za časovni filter"],
       "Customize": ["Prilagodi"],
       "Customize Metrics": ["Prilagodi mere"],
       "Customize columns": ["Prilagodi stolpce"],
+      "Cyclic dependency detected": [""],
       "D3 Format": ["D3 zapis"],
       "D3 format": ["D3 format"],
       "D3 format syntax: https://github.com/d3/d3-format": [
@@ -1173,11 +1138,9 @@
       ],
       "DEC": ["DEC"],
       "DELETE": ["IZBRIŠI"],
-      "DESCRIPTION ERROR": ["NAPAKA OPISA"],
       "DML": ["DML"],
       "Dark mode": ["Temni način"],
       "Dashboard": ["Nadzorna plošča"],
-      "Dashboard Emails": ["E-pošta za nadzorno ploščo"],
       "Dashboard [{}] just got created and chart [{}] was added to it": [
         "Nadzorna plošča [{}] je bila ravno ustvarjena in grafikon [{}] dodan nanjo"
       ],
@@ -1201,7 +1164,6 @@
       ],
       "Dashboards do not exist": ["Nadzorna plošča ne obstaja"],
       "Data": ["Podatki"],
-      "Data Source": ["Podatkovni vir"],
       "Data Table": ["Tabela podatkov"],
       "Data Zoom": ["Zoom funkcija"],
       "Data could not be deserialized from the results backend. The storage format might have changed, rendering the old data stake. You need to re-run the original query.": [
@@ -1210,6 +1172,7 @@
       "Data could not be retrieved from the results backend. You need to re-run the original query.": [
         "Podatkov ni bilo mogoče pridobiti iz zalednega sistema rezultatov. Ponovno morate zagnati izvorno poizvedbo."
       ],
+      "Data has no time steps": [""],
       "Data preview": ["Ogled podatkov"],
       "Data source": ["Podatkovni vir"],
       "Data type": ["Tip podatka"],
@@ -1245,6 +1208,9 @@
       "Database does not exist": ["Podatkovna baza ne obstaja"],
       "Database does not support subqueries": [
         "Podatkovna baza ne podpira podpoizvedb"
+      ],
+      "Database driver for importing maybe not installed. Visit the Superset documentation page for installation instructions: ": [
+        ""
       ],
       "Database error": ["Napaka podatkovne baze"],
       "Database is offline.": ["Podatkovna baza ni povezana."],
@@ -1296,10 +1262,7 @@
       ],
       "Datasource": ["Podatkovni vir"],
       "Datasource & Chart Type": ["Tip podatkovnega vira in grafikona"],
-      "Datasource Name": ["Ime podatkovnega vira"],
-      "Datasource id not found: %(id)s": [
-        "ID podatkovnega vira ni bil najden: %(id)s"
-      ],
+      "Datasource type is invalid": [""],
       "Datasource type is required when datasource_id is given": [
         "Ko se podaja datasource_id, je potreben tip podatkovnega vira"
       ],
@@ -1339,16 +1302,18 @@
       "Default minimal column width in pixels, actual width may still be larger than this if other columns don't need much space": [
         "Privzeta min. širina stolpca v pikslih. Dejanska širina bo lahko večja, če drugi stolpci ne potrebujejo veliko prostora"
       ],
-      "Default to first item": ["Privzet prvi element"],
       "Default value is required": ["Zahtevana je privzeta vrednost"],
       "Default value must be set when \"Filter has default value\" is checked": [
         "Privzeta vrednost mora biti določena, če je izbrano \"Filter ima privzeto vrednost\""
       ],
-      "Default value must be set when \"Required\" is checked": [
-        "Privzeta vrednost mora biti določena, če je izbrano \"Obvezno\""
+      "Define a function that receives the input and outputs the content for a tooltip": [
+        ""
       ],
-      "Default value set automatically when \"Default to first item\" is checked": [
-        "Privzeta vrednost je samodejno izbrana, če je izbrano \"Privzet prvi element\""
+      "Define a function that returns a URL to navigate to when user clicks": [
+        ""
+      ],
+      "Define a javascript function that receives the data array used in the visualization and is expected to return a modified version of that array. This can be used to alter properties of the data, filter, or enrich the array.": [
+        ""
       ],
       "Defines a rolling window function to apply, works along with the [Periods] text box": [
         "Določi funkcijo drsečega okna. Dela skupaj s tekstovnim okvirjem [Obdobja]"
@@ -1356,11 +1321,9 @@
       "Defines how each series is broken down": [
         "Določa, kako se vsaka podatkovna serija razčleni"
       ],
+      "Defines the grid size in pixels": [""],
       "Defines the grouping of entities. Each series is shown as a specific color on the chart and has a legend toggle": [
         "Določa združevanje entitet. Vsak niz je na grafikonu prikazan z določeno barvo in ima lahko prikazano legendo"
-      ],
-      "Defines the origin where time buckets start, accepts natural dates as in `now`, `sunday` or `1970-01-01`": [
-        "Določa izhodišče, kadar se začnejo časovni razdelki. Sprejema naravne zapise kot so `zdaj`, `nedelja` ali `1970-01-01`"
       ],
       "Defines the size of the rolling window function, relative to the time granularity selected": [
         "Določi velikost funkcije drsečega okna, glede na izbrano granulacijo časa"
@@ -1443,8 +1406,6 @@
       "Delimiter used by CSV file (for whitespace use \\s+).": [
         "Ločilnik, uporabljen v CSV datoteki (za presledek uporabi \\s+)."
       ],
-      "Deliver As Group": ["Dostavi kot skupino"],
-      "Delivery Type": ["Tip dostave"],
       "Delivery method": ["Način dostave"],
       "Demographics": ["Demografija"],
       "Density": ["Gostota"],
@@ -1468,10 +1429,16 @@
       "Diamond": ["Karo"],
       "Did you mean:": ["Ste mislili:"],
       "Difference": ["Razlika"],
+      "Dimension to use on x-axis.": [""],
+      "Dimension to use on y-axis.": [""],
       "Directed Force Layout": ["Izgled usmerjene sile"],
       "Directional": ["Usmerjeni"],
+      "Disable SQL Lab data preview queries": [""],
+      "Disable data preview when fetching table metadata in SQL Lab.  Useful to avoid browser performance issues when using  databases with very wide tables.": [
+        ""
+      ],
+      "Disable embedding?": [""],
       "Disabled": ["Onemogočeno"],
-      "Discard changes": ["Zavrzi spremembe"],
       "Discrete": ["Diskretno"],
       "Display Name": ["Ime za prikaz"],
       "Display column level total": ["Prikaži vsote na nivoju stolpcev"],
@@ -1496,6 +1463,8 @@
       "Download as image": ["Izvozi kot sliko"],
       "Download to CSV": ["Izvozi kot CSV"],
       "Draft": ["Osnutek"],
+      "Drag and drop components and charts to the dashboard": [""],
+      "Drag and drop components to this tab": [""],
       "Draw a marker on data points. Only applicable for line types.": [
         "Nariši markerje na točke grafikona. Samo za črtne grafikone."
       ],
@@ -1520,12 +1489,6 @@
         "Spustite stolpce/mere sem ali kliknite"
       ],
       "Drop temporal column here": ["Spustite časovni stolpec sem"],
-      "Druid Clusters": ["Druid gruče"],
-      "Druid Datasource": ["Podatkovni vir Druid"],
-      "Druid Datasources": ["Druid podatkovni viri"],
-      "Druid supports basic authentication. See [auth](http://druid.io/docs/latest/design/auth.html) and druid-basic-security extension": [
-        "Druid podpira osnovno avtentikacijo. Glejte [auth](http://druid.io/docs/latest/design/auth.html) in razširitev druid-basic-security"
-      ],
       "Dual Line Chart": ["Grafikon z dvojno krivuljo"],
       "Duplicate column name(s): %(columns)s": [
         "Podvojena imena stolpcev: %(columns)s"
@@ -1544,12 +1507,6 @@
       "Duration (in seconds) of the caching timeout for this chart. Note this defaults to the datasource/table timeout if undefined.": [
         "Časovna veljavnost (v sekundah) predpomnjenja za ta grafikon. Če ni definirana, je uporabljena vrednost za podatkovni vir/tabelo."
       ],
-      "Duration (in seconds) of the caching timeout for this cluster. A timeout of 0 indicates that the cache never expires. Note this defaults to the global timeout if undefined.": [
-        "Trajanje (v sekundah) predpomnjenja za to gručo. Vrednost 0 označuje, da predpomnilnik nikoli ne poteče. V primeru, da ni definirano, ima globalno nastavitev trajanja."
-      ],
-      "Duration (in seconds) of the caching timeout for this datasource. A timeout of 0 indicates that the cache never expires. Note this defaults to the cluster timeout if undefined.": [
-        "Trajanje (v sekundah) predpomnjenja za ta podatkovni vir. Vrednost 0 označuje, da predpomnilnik nikoli ne poteče. V primeru, da ni definirano, ima nastavitev trajanja za gručo."
-      ],
       "Duration (in seconds) of the caching timeout for this table. A timeout of 0 indicates that the cache never expires. Note this defaults to the database timeout if undefined.": [
         "Trajanje (v sekundah) predpomnjenja za to tabelo. Vrednost 0 označuje, da predpomnilnik nikoli ne poteče. V primeru, da ni definirano, ima nastavitev trajanja za podatkovno bazo."
       ],
@@ -1564,6 +1521,7 @@
       ],
       "Duration in ms (66000 => 1m 6s)": ["Trajanje v ms (66000 => 1m 6s)"],
       "Duration: %s": ["Trajanje: %s"],
+      "Dynamically search all filter values": [""],
       "ECharts": ["ECharts"],
       "END (EXCLUSIVE)": ["KONEC (NI VKLJUČEN)"],
       "ERROR: %s": [""],
@@ -1582,11 +1540,6 @@
       "Edit Dashboard": ["Uredi nadzorno ploščo"],
       "Edit Database": ["Uredi podatkovno bazo"],
       "Edit Dataset ": ["Uredi podatkovni set "],
-      "Edit Druid Cluster": ["Uredi Druid gručo"],
-      "Edit Druid Column": ["Uredi Druid stolpec"],
-      "Edit Druid Datasource": ["Uredi podatkovni vir za Druid"],
-      "Edit Druid Metric": ["Uredi Druid mere"],
-      "Edit Email Report": ["Uredi e-poštno poročilo"],
       "Edit Log": ["Uredi dnevnik"],
       "Edit Metric": ["Uredi mero"],
       "Edit Plugin": ["Uredi vtičnik"],
@@ -1600,7 +1553,6 @@
       "Edit annotation layer properties": ["Uredi lastnosti sloja z oznakami"],
       "Edit chart properties": ["Uredi lastnosti grafikona"],
       "Edit dashboard": ["Uredi nadzorno ploščo"],
-      "Edit dashboard properties": ["Uredi lastnosti nadzorne plošče"],
       "Edit database": ["Uredi podatkovno bazo"],
       "Edit dataset": ["Uredi podatkovni set"],
       "Edit email report": ["Uredi e-poštno poročilo"],
@@ -1625,21 +1577,17 @@
       "Either the username or the password is wrong.": [
         "Uporabniško ime ali/in geslo sta napačna."
       ],
-      "Email Format": ["Oblika e-pošte"],
       "Email reports active": ["E-poštna poročila aktivna"],
+      "Embed code": [""],
+      "Embedding deactivated.": [""],
       "Emit Target": ["Cilj oddajanja"],
-      "Emit dashboard cross filters": [
-        "Oddajaj medsebojne filtre nadzorne plošče"
-      ],
-      "Emit dashboard cross filters.": [
-        "Oddajaj medsebojne filtre nadzorne plošče."
-      ],
       "Emitted values": ["Oddane vrednosti"],
       "Emphasis": ["Poudari"],
       "Employment and education": ["Zaposlitev in izobrazba"],
       "Empty circle": ["Prazen krog"],
       "Empty collection": ["Prazen izbor"],
       "Empty query?": ["Prazna poizvedba?"],
+      "Enable 'Allow data upload' in any database's settings": [""],
       "Enable Filter Select": ["Omogoči izbiro filtra"],
       "Enable data zooming controls": [
         "Omogoči kontrolnik za povečavo podatkov"
@@ -1684,7 +1632,6 @@
       "Entity": ["Entiteta"],
       "Entity ID": ["ID entitete"],
       "Equal Date Sizes": ["Enaki datumi"],
-      "Error Message": ["Sporočilo napake"],
       "Error in jinja expression in HAVING clause: %(msg)s": [
         "Napaka v jinja izrazu HAVING stavka: %(msg)s"
       ],
@@ -1705,6 +1652,7 @@
       "Error while rendering virtual dataset query: %(msg)s": [
         "Napaka pri izvajanju poizvedbe virtualnega podatkovnega seta: %(msg)s"
       ],
+      "Error: %(msg)s": [""],
       "Estimate cost": ["Oceni potratnost"],
       "Estimate selected query cost": ["Oceni potratnost izbrane poizvedbe"],
       "Estimate the cost before running a query": [
@@ -1733,6 +1681,7 @@
       "Execution log": ["Dnevnik izvajanja"],
       "Exit fullscreen": ["Izhod iz celozaslonskega načina"],
       "Expand all": ["Razširi vse"],
+      "Expand data panel": [""],
       "Expand tool bar": ["Razširi orodno vrstico"],
       "Experimental": ["Eksperimentalno"],
       "Explore": ["Raziskovanje"],
@@ -1743,13 +1692,15 @@
       ],
       "Export": ["Izvoz"],
       "Export CSV": ["Izvozi CSV"],
+      "Export current table": [""],
       "Export dashboards?": ["Izvozim nadzorne plošče?"],
       "Export full CSV": ["Izvozi celoten CSV"],
       "Export query": ["Izvozi poizvedbe"],
-      "Export to .CSV format": ["Izvozi v .csv format"],
       "Export to .JSON format": ["Izvozi v .json format"],
       "Export to YAML": ["Izvozi v YAML"],
       "Export to YAML?": ["Izvozim v YAML?"],
+      "Export to original .CSV": [""],
+      "Export to pivoted .CSV": [""],
       "Expose database in SQL Lab": [
         "Razkrij podatkovno bazo v SQL laboratoriju"
       ],
@@ -1761,6 +1712,7 @@
       "Extra": ["Dodatno"],
       "Extra Controls": ["Dodatni kontrolniki"],
       "Extra Parameters": ["Dodatni parametri"],
+      "Extra data for JS": [""],
       "Extra data to specify table metadata. Currently supports metadata of the format: `{ \"certification\": { \"certified_by\": \"Data Platform Team\", \"details\": \"This table is the source of truth.\" }, \"warning_markdown\": \"This is a warning.\" }`.": [
         "Dodatni podatki za tabelo metapodatkov. Trenutno je podprta naslednja oblika zapisa metapodatkov: `{ \"certification\": { \"certified_by\": \"Tim za razvoj\", \"details\": \"Ta tabela je vir resnice.\" }, \"warning_markdown\": \"To je opozorilo.\" }`."
       ],
@@ -1779,20 +1731,23 @@
       "FEB": ["FEB"],
       "FRI": ["PET"],
       "Factor": ["Faktor"],
+      "Factor to multiply the metric by": [""],
       "Fail": ["Prekini"],
       "Failed": ["Ni uspelo"],
       "Failed at retrieving results": ["Napaka pri pridobivanju rezultatov"],
       "Failed at stopping query. %s": [""],
+      "Failed to create report": [""],
+      "Failed to load chart data.": [""],
       "Failed to start remote query on a worker.": [
         "Na delavcu ni bilo mogoče zagnati oddaljene poizvedbe."
       ],
+      "Failed to update report": [""],
       "Failed to verify select options: %s": [
         "Preverjanje možnosti izbire ni uspelo: %s"
       ],
       "Favorite": ["Priljubljene"],
       "Favorites": ["Priljubljene"],
       "February": ["Februar"],
-      "Fetch Values From": ["Pridobi vrednosti iz"],
       "Fetch Values Predicate": ["Pridobi vrednosti predikatov"],
       "Fetch data preview": ["Pridobi predogled podatkov"],
       "Fetched %s": ["Pridobljeno %s"],
@@ -1815,11 +1770,13 @@
       "Filter configuration": ["Nastavitve filtra"],
       "Filter configuration for the filter box": ["Nastavitve za polje filtra"],
       "Filter has default value": ["Filter ima privzeto vrednost"],
-      "Filter is hierarchical": ["Filter je hierarhičen"],
       "Filter metadata changed in dashboard. It will not be applied.": [
         "Metapodatki filtra so se spremenili v nadzorni plošči. Ne bo uveljavljen."
       ],
       "Filter name": ["Ime filtra"],
+      "Filter only displays values relevant to selections made in other filters.": [
+        ""
+      ],
       "Filter results": ["Filtriraj rezultate"],
       "Filter set already exists": ["Set filtrov že obstaja"],
       "Filter set with this name already exists": [
@@ -1840,7 +1797,6 @@
       "Filters by columns": ["Filtrira po stolpcu"],
       "Filters by metrics": ["Filtrira po merah"],
       "Filters configuration": ["Nastavitve filtrov"],
-      "Filters configuration and scoping": ["Nastavitve in doseg filtrov"],
       "Filters out of scope (%d)": [""],
       "Filters with the same group key will be ORed together within the group, while different filter groups will be ANDed together. Undefined group keys are treated as unique groups, i.e. are not grouped together. For example, if a table has three filters, of which two are for departments Finance and Marketing (group key = 'department'), and one refers to the region Europe (group key = 'region'), the filter clause would apply the filter (department = 'Finance' OR department = 'Marketing') AND (region = 'Europe').": [
         "Filtri z enakim skupinskim ključem bodo znotraj skupine združeni z OR funkcijo, medtem ko bodo različne skupine združene z AND funkcijo. Nedefinirani skupinski ključi so obravnavani kot unikatne skupine in niso združeni v svojo skupino. Npr., če ima tabela tri filtre, pri čemer sta dva za oddelka marketinga in financ (skupinski ključ = 'oddelek') tretji pa se nanaša na regijo Evropa (skupinski ključ = 'regija'), bo filtrski izraz (oddelek = 'Finance' OR oddelek = 'Marketing') AND (regija = 'Evropa')."
@@ -1867,6 +1823,10 @@
       "For Presto and Postgres, shows a button to compute cost before running a query.": [
         "Za Presto in Postgres prikaže gumb za izračun potratnosti pred zagonom poizvedbe."
       ],
+      "For further instructions, consult the": [""],
+      "For more information about objects are in context in the scope of this function, refer to the": [
+        ""
+      ],
       "For regular filters, these are the roles this filter will be applied to. For base filters, these are the roles that the filter DOES NOT apply to, e.g. Admin if admin should see all data.": [
         "Za regularne filtre so te vloge tiste, ki bodo filtrirane. Za osnovne filtre, so te vloge tiste, ki NE bodo filtrirane, npr. Admin, če naj administrator vidi vse podatke."
       ],
@@ -1877,8 +1837,9 @@
       "Force refresh": ["Osveži"],
       "Force refresh schema list": ["Osveži seznam shem"],
       "Force refresh table list": ["Osveži seznam tabel"],
-      "Force-directed Graph": ["Graf usmerjenih sil"],
       "Forecast periods": ["Periode napovedi"],
+      "Form data not found in cache, reverting to chart metadata.": [""],
+      "Form data not found in cache, reverting to dataset metadata.": [""],
       "Formattable": ["Prilagodljiv"],
       "Formatted CSV attached in email": ["Oblikovan CSV pripet e-pošti"],
       "Found invalid orderby options": [
@@ -1901,12 +1862,14 @@
       ],
       "Gauge Chart": ["Števčni grafikon"],
       "General": ["Splošno"],
+      "Generating link, please wait..": [""],
       "Geo": ["Geo"],
       "Geohash": ["Geohash"],
       "Get the last date by the date unit.": [
         "Pridobi zadnji datum glede na časovno enoto."
       ],
       "Get the specify date for the holiday": ["Določi datum praznika"],
+      "Go to the edit mode to configure the dashboard and add charts": [""],
       "Google Sheet Name and URL": ["Ime Googlove preglednice in URL"],
       "Grace period": ["Obdobje mirovanja"],
       "Graph Chart": ["Graf"],
@@ -1945,9 +1908,7 @@
       "How do you want to enter service account credentials?": [
         "Kako želite vnesti prijavne podatke servisnega računa?"
       ],
-      "How long to keep the logs around for this alert": [
-        "Kako dolgo ohraniti dnevnike za to opozorilo"
-      ],
+      "How many buckets should the data be grouped in.": [""],
       "How many periods into the future do we want to predict": [
         "Za koliko period v prihodnosti želite napoved"
       ],
@@ -1968,7 +1929,6 @@
       "If a metric is specified, sorting will be done based on the metric value": [
         "Če je določena mera, bo razvrščanje izvedeno na podlagi vrednosti mere"
       ],
-      "If activated you can use the ": ["Če je aktivirana, lahko uporabite "],
       "If selected, please set the schemas allowed for csv upload in Extra.": [
         "Če je izbrano, nastavite dovoljene sheme za nalaganje CSV v Dodatno."
       ],
@@ -1981,6 +1941,7 @@
       "If you wish to specify a different target column than the original column, it can be entered here": [
         "Če želite nastaviti drug ciljni stolpec od izvornega, ga lahko vnesete tukaj"
       ],
+      "Ignore null locations": [""],
       "Ignore time": ["Ne upoštevaj časa"],
       "Image (PNG) embedded in email": ["Slika (PNG) vključena v e-pošto"],
       "Image download failed, please refresh and try again.": [
@@ -2008,7 +1969,6 @@
       "Import database failed for an unknown reason": [
         "Uvoz podatkovne baze ni uspel zaradi neznanega razloga"
       ],
-      "Import databases": ["Uvozi podatkovne baze"],
       "Import dataset failed for an unknown reason": [
         "Uvoz podatkovnega seta ni uspel zaradi neznanega razloga"
       ],
@@ -2021,12 +1981,12 @@
         "Pomembno! Izberite, če tabela še ni razvrščena po ID entitete, v nasprotnem primeru ni nujno, da bodo vrnjeni vsi dogodki za posamezno entiteto."
       ],
       "Include Series": ["Vključi serijo"],
+      "Include a description that will be sent with your report": [""],
       "Include series name as an axis": [
         "Vključi ime podatkovne serije v naslov osi"
       ],
       "Include time": ["Vključi čas"],
       "Incompatible Filters (%d)": ["Neskladni filtri (%d)"],
-      "Incorrect Fields": [""],
       "Index Column": ["Indeksni stolpec"],
       "Infer Datetime Format": ["Prepoznaj obliko datuma/časa"],
       "Info": ["Informacije"],
@@ -2036,9 +1996,6 @@
         "Vnosno polje omogoča poljubno rotacijo (vnesite 30 za 30°)"
       ],
       "Instant filtering": ["Takojšnje filtriranje"],
-      "Instructions to add a dataset are available in the Superset tutorial.": [
-        "Navodila za dodajanje podatkovnega seta so v vodiču za Superset."
-      ],
       "Intensity": ["Intenzivnost"],
       "Interval End column": ["Stolpec konca intervala"],
       "Interval bounds": ["Meje intervalov"],
@@ -2069,6 +2026,7 @@
       ],
       "Invalid geodetic string": ["Neveljaven geodetski niz"],
       "Invalid geohash string": ["Neveljaven niz za geohash"],
+      "Invalid input": [""],
       "Invalid lat/long configuration.": [
         "Neveljavna nastavitev zemljepisne dolžine/širine."
       ],
@@ -2080,6 +2038,7 @@
       "Invalid options for %(rolling_type)s: %(options)s": [
         "Neveljavne možnosti za %(rolling_type)s: %(options)s"
       ],
+      "Invalid permalink key": [""],
       "Invalid result type: %(result_type)s": [
         "Neveljaven tip rezultata: %(result_type)s"
       ],
@@ -2088,7 +2047,6 @@
         "Neustrezna prostorska točka: %s"
       ],
       "Inverse selection": ["Invertiraj izbiro"],
-      "Is Hidden": ["Skrito"],
       "Is dimension": ["Dimenzija"],
       "Is favorite": ["Je priljubljen"],
       "Is filterable": ["Filtriranje"],
@@ -2102,9 +2060,6 @@
       "It seems you don't have access to any database": [
         "Zdi se, da nimate dostopa do nobene podatkovne baz"
       ],
-      "It’s not recommended to truncate y-axis in Bar chart.": [
-        "V stolpčnem grafikonu ni priporočljivo omejiti y-osi."
-      ],
       "JAN": ["JAN"],
       "JSON": ["JSON"],
       "JSON Metadata": ["JSON metapodatki"],
@@ -2115,6 +2070,9 @@
       "JUL": ["JUL"],
       "JUN": ["JUN"],
       "January": ["Januar"],
+      "Javascript data interceptor": [""],
+      "Javascript onClick href": [""],
+      "Javascript tooltip generator": [""],
       "Json list of the column names that should be read. If not None, only these columns will be read from the file.": [
         "JSON seznam imen stolpcev, ki morajo biti prebrani. Če ni prazen, bodo iz datoteke prebrani le ti stolpci."
       ],
@@ -2124,8 +2082,8 @@
       "July": ["Julij"],
       "June": ["Junij"],
       "KPI": ["KPI"],
+      "Keep control settings?": [""],
       "Keep editing": ["Nadaljuj z urejanjem"],
-      "Keys for table": ["Ključi za tabele"],
       "Label": ["Naziv"],
       "Label Line": ["Črta oznake"],
       "Label Type": ["Oblika oznake"],
@@ -2153,6 +2111,7 @@
       "Layer": ["Sloj"],
       "Layer configuration": ["Nastavitve sloja"],
       "Layout": ["Izgled"],
+      "Layout elements": [""],
       "Layout type of graph": ["Tip izgleda grafikona"],
       "Layout type of tree": ["Način izgleda drevesa"],
       "Leaf nodes that represent fewer than this number of events will be initially hidden in the visualization": [
@@ -2195,10 +2154,9 @@
       "Linear Color Scheme": ["Linearna barvna shema"],
       "Linear color scheme": ["Linearna barvna shema"],
       "Link Copied!": ["Povezava kopirana!"],
-      "Link Length": ["Dolžina povezave"],
-      "Link length in the force layout": ["Dolžina povezave v postavitvi sil"],
-      "List Observations": ["Naštej opažanja"],
       "List Saved Query": ["Seznam shranjenih poizvedb"],
+      "List of extra columns made available in Javascript functions": [""],
+      "List of n+1 values for bucketing metric into n buckets.": [""],
       "List of values to mark with lines": [
         "Seznam vrednosti, ki bodo markirane s črticami"
       ],
@@ -2211,7 +2169,6 @@
       "Loaded data cached": ["Podatki so naloženi v predpomnilnik"],
       "Loaded from cache": ["Naloženo iz predpomnilnika"],
       "Loading...": ["Nalagam ..."],
-      "Log Retentions (days)": ["Ohranjanje dnevnika (dnevi)"],
       "Log Scale": ["Logaritemska skala"],
       "Log retention": ["Hranjenje dnevnikov"],
       "Logarithmic scale on primary y-axis": [
@@ -2235,12 +2192,6 @@
         "Deformirana zahteva. Pričakovani so argumenti slice_id ali table_name in db_name"
       ],
       "Manage": ["Upravljaj"],
-      "Manage Email Reports for Charts": [
-        "Upravljaj e-poštna poročila za grafikone"
-      ],
-      "Manage Email Reports for Dashboards": [
-        "Upravljaj e-poštna poročila za nadzorne plošče"
-      ],
       "Mandatory": ["Obvezno"],
       "Mangle Duplicate Columns": ["Odstrani podvojene stolpce"],
       "Map": ["Zemljevid"],
@@ -2249,6 +2200,7 @@
       "Mapbox": ["Mapbox"],
       "March": ["Marec"],
       "Margin": ["Rob"],
+      "Mark a column as temporal in \"Edit datasource\" modal": [""],
       "Marker": ["Marker"],
       "Marker Size": ["Velikost markerja"],
       "Marker labels": ["Oznake markerjev"],
@@ -2260,10 +2212,13 @@
       "Max": ["Max"],
       "Max Bubble Size": ["Max. velikost mehurčka"],
       "Max Events": ["Max. dogodkov"],
-      "Maximize chart": ["Povečaj grafikon"],
       "Maximum": [""],
       "Maximum Font Size": ["Max. velikost pisave"],
+      "Maximum Radius": [""],
       "Maximum value on the gauge axis": ["Največja vrednost na številčnici"],
+      "Maxium radius size of the circle, in pixels. As the zoom level changes, this insures that the circle respects this maximum radius.": [
+        ""
+      ],
       "May": ["Maj"],
       "Mean of values over specified period": [
         "Povprečna vrednost v dani periodi"
@@ -2275,15 +2230,11 @@
         "Mediana velikosti vozlišča. Največje vozlišče bo 4-krat večje od najmanjšega"
       ],
       "Medium": ["Srednje"],
-      "Message Content": ["Vsebina sporočila"],
+      "Menu actions trigger": [""],
       "Message content": ["Vsebina sporočila"],
       "Metadata": ["Metapodatki"],
-      "Metadata Last Refreshed": ["Meta-podatki nazadnje osveženi"],
       "Metadata Parameters": ["Parametri metapodatkov"],
       "Metadata has been synced": ["Metapodatki so sinhronizirani"],
-      "Metadata refreshed for the following table(s): %(tables)s": [
-        "Metapodatki osveženi za naslednje tabele: %(tables)s"
-      ],
       "Method": ["Metoda"],
       "Metric": ["Mera"],
       "Metric '%(metric)s' does not exist": ["Mera '%(metric)s' ne obstaja"],
@@ -2297,27 +2248,24 @@
       "Metric factor change from `since` to `until`": [
         "Sprememba faktorja mere od vrednosti \"OD\" do \"DO\""
       ],
-      "Metric for Color": ["Mera za barvo"],
       "Metric for node values": ["Mera za vrednosti vozlišč"],
       "Metric name [%s] is duplicated": ["Ime mere [%s] je podvojeno"],
       "Metric percent change in value from `since` to `until`": [
         "Procentualna sprememba mere od vrednosti \"OD\" do \"DO\""
-      ],
-      "Metric that defines the color of the country": [
-        "Mera, ki določa barvo države"
       ],
       "Metric that defines the size of the bubble": [
         "Mera, ki določa velikost mehurčka"
       ],
       "Metric to display bottom title": ["Mera za prikaz spodnjega naslova"],
       "Metric to sort the results by": ["Mera za razvrščanje rezultatov"],
+      "Metric used as a weight for the grid's coloring": [""],
       "Metric used to calculate bubble size": [
         "Mera za izračun velikosti mehurčkov"
       ],
+      "Metric used to control height": [""],
       "Metric used to define how the top series are sorted if a series or row limit is present. If undefined reverts to the first metric (where appropriate).": [
         "Mera, ki določa kako so razvrščene prve serije, če je določena omejitev serij ali vrstic. Če ni določena, se uporabi prva mera (kjer je ustrezno)."
       ],
-      "Metric(s) {} must be aggregations.": ["Mere {} morajo biti agregacije."],
       "Metrics": ["Mere"],
       "Metrics for which percentage of total are to be displayed. Calculated from only data within the row limit.": [
         "Mera, za katero je prikazan odstotek od celote. Izračunan je samo iz podatkov znotraj omejitve števila vrstic."
@@ -2328,9 +2276,11 @@
       "Min Width": ["Min. širina"],
       "Min periods": ["Min. št. period"],
       "Mine": ["Moje"],
-      "Minimize chart": ["Pomanjšaj grafikon"],
       "Minimum Font Size": ["Min. velikost pisave"],
       "Minimum leaf node event count": ["Min. število dogodkov za list"],
+      "Minimum radius size of the circle, in pixels. As the zoom level changes, this insures that the circle respects this minimum radius.": [
+        ""
+      ],
       "Minimum threshold in percentage points for showing labels.": [
         "Minimalni prag v odstotnih točkah za prikaz oznak."
       ],
@@ -2348,7 +2298,6 @@
       "Modified columns: %s": ["Spremenjeni stolpci: %s"],
       "Monday": ["Ponedeljek"],
       "Month": ["Mesec"],
-      "More dataset related options": ["Več nastavitev za podatkovni set"],
       "Move only": ["Samo premikanje"],
       "Moves the given set of dates by a specified interval.": [
         "Premakne dani nabor datumov za definirano obdobje."
@@ -2365,7 +2314,6 @@
       "Multiple formats accepted, look the geopy.points Python library for more details": [
         "Sprejema različne zapise - podrobnosti najdete v Pythonovi knjižnici geopy.points"
       ],
-      "Multiple select": ["Več izborov"],
       "Multiple selections allowed, otherwise filter is limited to a single value": [
         "Lahko izberete več elementov, drugače pa je filter omejen na eno vrednost"
       ],
@@ -2379,6 +2327,7 @@
       "Must specify a value for filters with comparison operators": [
         "Potrebno je podati vrednost za filter s primerjalnim operandom"
       ],
+      "My beautiful colors": [""],
       "My metric": ["Moja mera"],
       "N/A": ["N/A"],
       "NOV": ["NOV"],
@@ -2407,7 +2356,6 @@
       "Name your database": ["Poimenujte podatkovno bazo"],
       "Network error.": ["Napaka omrežja."],
       "New": ["Nov"],
-      "New Email Report": ["Novo e-poštno poročilo"],
       "New chart": ["Nov grafikon"],
       "New columns added: %s": ["Dodani novi stolpci: %s"],
       "New filter set": ["Nov set filtrov"],
@@ -2417,7 +2365,6 @@
       "Next": ["Naslednji"],
       "Nightingale Rose Chart": ["Nightingale Rose grafikon"],
       "No": ["Ne"],
-      "No %(tableName)s yet": [""],
       "No %s yet": ["%s še ne obstajajo"],
       "No Access!": ["Ni dostopa!"],
       "No Data": ["Ni podatkov"],
@@ -2433,6 +2380,7 @@
         "Ni podatkov po filtriranju ali pa imajo vrednost NULL za zadnji časovni zapis"
       ],
       "No data in file": ["V datoteki ni podatkov"],
+      "No databases match your search": [""],
       "No description available.": ["Opisa ni na razpolago."],
       "No favorite charts yet, go click on stars!": [
         "Priljubljenih grafikonov še ni. Kliknite na zvezdice!"
@@ -2442,10 +2390,13 @@
       ],
       "No filter": ["Brez filtra"],
       "No filter is selected.": ["Noben filter ni izbran."],
+      "No filters are currently added": [""],
+      "No form settings were maintained": [""],
       "No of Bins": ["Št. razdelkov"],
-      "No query history yet...": ["Zgodovine poizvedb še ni."],
       "No records found": ["Ni zapisov"],
       "No results found": ["Rezultati niso najdeni"],
+      "No results match your filter criteria": [""],
+      "No results were returned for this query": [""],
       "No results were returned for this query. If you expected results to be returned, ensure any filters are configured properly and the datasource contains data for the selected time range.": [
         "Poizvedba ni vrnila rezultatov. Če ste pričakovali rezultate, poskrbite, da so filtri pravilno nastavljeni in podatkovni vir vsebuje podatke za izbrano časovno obdobje."
       ],
@@ -2456,6 +2407,8 @@
         "Tak stolpec ni najden. Za filtriranje po meri uporabite prilagojen SQL zavihek."
       ],
       "No time columns": ["Ni časovnih stolpcev"],
+      "No validator found (configured for the engine)": [""],
+      "No validator named {} found (configured for the {} engine)": [""],
       "Node label position": ["Položaj oznake vozlišča"],
       "Node select mode": ["Način izbire vozlišč"],
       "Node size": ["Velikost vozlišča"],
@@ -2476,6 +2429,7 @@
       "Null values": ["Prazne (Null) vrednosti"],
       "Number Format": ["Oblika zapisa števila"],
       "Number format": ["Oblika zapisa števila"],
+      "Number of buckets to group data": [""],
       "Number of decimal digits to round numbers to": [
         "Število decimalnih mest za zaokroževanje števil"
       ],
@@ -2505,9 +2459,6 @@
       "October": ["Oktober"],
       "Offline": ["Offline"],
       "Offset": ["Odmik"],
-      "Once an alert is triggered, how long, in seconds, before Superset nags you again.": [
-        "Kako dolgo naj traja (v sekundah), da vas Superset ponovno opomni, ko je opozorilo sproženo."
-      ],
       "One or many columns to group by. High cardinality groupings should include a series limit to limit the number of fetched and rendered series.": [
         "Eden ali več stolpcev za združevanje. Združevanje z visoko kardinalnostjo naj vsebuje omejitev serij, s čimer omejite število pridobljenih in prikazanih serij."
       ],
@@ -2572,6 +2523,7 @@
         "Prosojnost vseh gruč, točk in oznak (vrednost med 0 in 1)."
       ],
       "Opacity of area chart.": ["Prosojnost ploščinskega grafikona."],
+      "Opacity, expects values between 0 and 100": [""],
       "Open Datasource tab": ["Odpri zavihek s podatkovnim virom"],
       "Open in SQL Lab": ["Odpri v SQL laboratoriju"],
       "Open query in SQL Lab": ["Odpri poizvedbo v SQL laboratoriju"],
@@ -2597,6 +2549,7 @@
       "Optional warning about use of this metric": [
         "Opcijsko opozorilo za uporabo te mere"
       ],
+      "Optionally add a detailed description": [""],
       "Options": ["Možnosti"],
       "Or choose from a list of other databases we support:": [""],
       "Order by entity id": ["Uredi po ID entitete"],
@@ -2605,7 +2558,6 @@
       ],
       "Ordering": ["Razvrščanje"],
       "Orientation of tree": ["Orientacija drevesa"],
-      "Origin": ["Izhodišče"],
       "Original table column order": ["Vrstni red stolpcev izvorne tabele"],
       "Original value": ["Izvorna vrednost"],
       "Orthogonal": ["Pravokotna"],
@@ -2615,6 +2567,9 @@
       "Overlap": ["Prekrivanje"],
       "Overlay one or more timeseries from a relative time period. Expects relative time deltas in natural language (example:  24 hours, 7 days, 52 weeks, 365 days). Free text is supported.": [
         "Zamaknite eno ali več časovnih vrst za relativno časovno obdobje. Vnaša se relativne časovne razlike v naravnem jeziku (npr. 24 ur, 7 dni, 52 tednov, 365 dni). Prosto besedilo je podprto."
+      ],
+      "Overlays a hexagonal grid on a map, and aggregates data within the boundary of each cell.": [
+        ""
       ],
       "Overwrite": ["Prepiši"],
       "Overwrite & Explore": ["Prepiši & Razišči"],
@@ -2638,9 +2593,8 @@
       "Parallel Coordinates": ["Vzporedne koordinate"],
       "Parameter error": ["Napaka parametra"],
       "Parameters": ["Parametri"],
+      "Parameters related to the view and perspective on the map": [""],
       "Parent": ["Nadrejeni"],
-      "Parent filter": ["Nadrejeni filter"],
-      "Parent filter is required": ["Zahtevan je nadrejeni filter"],
       "Parse Dates": ["Prepoznaj datume"],
       "Part of a Whole": ["Del celote"],
       "Partition Chart": ["Grafikon razdelkov"],
@@ -2660,15 +2614,13 @@
       "Percentage threshold": ["Procentualni prag"],
       "Percentages": ["Procenti"],
       "Periods": ["Št. period"],
-      "Periods must be a positive integer value": [
-        "Periode morajo biti pozitivno celo število"
-      ],
       "Person or group that has certified this metric": [
         "Oseba ali skupina, ki je certificirala to mero"
       ],
       "Physical": ["Fizičen"],
       "Physical (table or view)": ["Fizičen (tabela ali pogled)"],
       "Physical dataset": ["Fizičen podatkovni set"],
+      "Pick a dimension from which categorical colors are defined": [""],
       "Pick a granularity in the Time section or uncheck 'Include Time'": [
         "Izberite granulacijo v razdelku 'Čas' ali odstranite 'Vključi čas'"
       ],
@@ -2683,6 +2635,7 @@
       "Pick a nickname for this database to display as in Superset.": [
         "Izberite vzdevek za to podatkovno bazo, ki bo prikazan v Supersetu."
       ],
+      "Pick a set of deck.gl charts to layer on top of one another": [""],
       "Pick a time granularity for your time series": [
         "Izberite granulacijo časa za časovno vrsto"
       ],
@@ -2730,14 +2683,11 @@
       "Please choose different metrics on left and right axis": [
         "Izberite različni meri za levo in desno os"
       ],
-      "Please complete all required fields.": [""],
       "Please confirm": ["Prosim, potrdite"],
       "Please enter a SQLAlchemy URI to test": [
         "Vnesite SQLAlchemy URI za test"
       ],
-      "Please enter a chart name": ["Vnesite ime grafikona"],
       "Please filter set name": ["Vnesite ime seta filtrov"],
-      "Please make sure all fields are filled out correctly": [""],
       "Please re-enter the password.": ["Ponovno vpišite geslo."],
       "Please reach out to the Chart Owner for assistance.": [
         "Za pomoč se obrnite na lastnika grafikona."
@@ -2757,13 +2707,16 @@
       "Please use 3 different metric labels": [
         "Uporabite 3 različne oznake mer"
       ],
-      "Please verify that port is open to connect.": [""],
+      "Plot the distance (like flight paths) between origin and destination.": [
+        ""
+      ],
       "Plots the individual metrics for each row in the data vertically and links them together as a line. This chart is useful for comparing multiple metrics across all of the samples or rows in the data.": [
         "Izriše posamezne mere za vsako vrstico podatkov navpično in jih med seboj poveže kot črto. Grafikon je uporaben za primerjavo več mer med vsemi vzorci ali vrsticami podatkov."
       ],
       "Plugins": ["Vtičniki"],
       "Point Radius": ["Radij točk"],
       "Point Radius Unit": ["Enota radija točk"],
+      "Point to your spatial columns": [""],
       "Points": ["Točke"],
       "Points and clusters will update as the viewport is being changed": [
         "Točke in gruče se bodo posodabljale, če se bo spremenil pogled"
@@ -2820,9 +2773,8 @@
       "Put the labels outside of the pie?": ["Postavim oznake zunaj torte?"],
       "Put the labels outside the pie?": ["Postavim oznake zunaj torte?"],
       "Put your code here": ["Vstavite svojo kodo sem"],
-      "Python Functions": ["Pythonove funkcije"],
       "Python datetime string pattern": ["Pythonov vzorec zapisa datum-časa"],
-      "Python functions": ["Pythonove funkcije"],
+      "QUERY DATA IN SQL LAB": [""],
       "Quarter": ["Četrtletje"],
       "Query": ["Poizvedba"],
       "Query %s: %s": [""],
@@ -2841,7 +2793,6 @@
       "Query was stopped": ["Poizvedba je bila ustavljena"],
       "Query was stopped.": ["Poizvedba je bila ustavljena."],
       "RANGE TYPE": ["TIP OBDOBJA"],
-      "REPORT NAME ERROR": ["NAPAKA NAZIVA POROČILA"],
       "RGB Color": ["RGB barva"],
       "Radar": ["Radar"],
       "Radar Chart": ["Radarski grafikon"],
@@ -2877,19 +2828,16 @@
         "Nedavno ogledani grafikoni, nadzorne plošče in shranjene poizvedbe bodo prikazane tukaj"
       ],
       "Recents": ["Nedavno"],
-      "Recipients": ["Prejemniki"],
       "Recipients are separated by \",\" or \";\"": [
         "Prejemniki so ločeni z \",\" ali \";\""
       ],
       "Recommended tags": ["Priporočene značke"],
       "Record Count": ["Število zapisov"],
       "Rectangle": ["Pravokotnik"],
-      "Redirects to this endpoint when clicking on the datasource from the datasource list": [
-        "Preusmeri v to končno točko, ko kliknete na podatkovni vir v seznamu podatkovnih virov"
-      ],
       "Redirects to this endpoint when clicking on the table from the table list": [
         "Preusmeri v to končno točko, ko kliknete na tabelo v seznamu tabel"
       ],
+      "Redo the action": [""],
       "Reduce X ticks": ["Manj oznak X-osi"],
       "Reduces the number of X-axis ticks to be rendered. If true, the x-axis will not overflow and labels may be missing. If false, a minimum width will be applied to columns and the width may overflow into an horizontal scroll.": [
         "Zmanjša število izrisanih oznak na X-osi. Če je vklopljeno, se x-os ne bo prelila in lahko oznake manjkajo. Če je izklopljeno, bo upoštevana min. širina stolpcev, ki pa se lahko prelije v horizontalni drsnik."
@@ -2900,17 +2848,10 @@
       ],
       "Refetch results": ["Ponovno pridobi rezultate"],
       "Refresh": ["Osveži"],
-      "Refresh Druid Metadata": ["Osveži metapodatke za Druid"],
-      "Refresh Metadata": ["Osveži metapodatke"],
-      "Refresh column metadata": ["Osveži metapodatke stolpca"],
       "Refresh dashboard": ["Osveži nadzorno ploščo"],
       "Refresh frequency": ["Frekvenca osveževanja"],
       "Refresh interval": ["Interval osveževanja"],
       "Refresh the default values": ["Osveži privzete vrednosti"],
-      "Refreshed metadata from cluster [{}]": [
-        "Osveženi meta-podatki iz gruče [{}]"
-      ],
-      "Refreshing datasource [{}]": ["Osveževanje podatkovnega vira [{}]"],
       "Regular filters add where clauses to queries if a user belongs to a role referenced in the filter. Base filters apply filters to all queries except the roles defined in the filter, and can be used to define what users can see if no RLS filters within a filter group apply to them.": [
         "Navadni filtri dodajo WHERE stavek v poizvedbe, če ima uporabnik vlogo podano v filtru. Osnovni filtri filtrirajo vse poizvedbe, razen vlog, definiranih v filtru, in jih je mogoče uporabiti za nastavitev tega kaj uporabnik vidi, če v skupini filtrov ni RLS-filtrov, ki bi se nanašali nanje."
       ],
@@ -2988,8 +2929,10 @@
       "Request is not JSON": ["Zahtevek ni JSON"],
       "Request missing data field.": ["Zahtevaj manjkajoča podatkovna polja."],
       "Required": ["Obvezno"],
+      "Required control values have been removed": [""],
       "Resample": ["Prevzorči"],
       "Reset state": ["Ponastavi stanje"],
+      "Resource already has an attached report.": [""],
       "Restore Filter": ["Povrni filter"],
       "Results": ["Rezultati"],
       "Results backend is not configured.": [
@@ -3014,9 +2957,6 @@
         "Vloga %(r)s je bila razširjena za zagotovitev dostopa do podatkovnega vira %(ds)s"
       ],
       "Roles": ["Vloge"],
-      "Roles is a list which defines access to the dashboard. Granting a role access to a dashboard will bypass dataset level checks. If no roles defined then the dashboard is available to all roles.": [
-        "\"Vloge\" je seznam, ki definira dostop do nadzorne plošče. Dodelitev vloge za dostop do nadzorne plošče bo obšlo preverjanje na nivoju podatkovnega seta. Če vloga ni definirana, bo nadzorna plošča dostopna vsem vlogam."
-      ],
       "Roles is a list which defines access to the dashboard. Granting a role access to a dashboard will bypass dataset level checks.If no roles defined then the dashboard is available to all roles.": [
         "\"Vloge\" je seznam, ki definira dostop do nadzorne plošče. Dodelitev vloge za dostop do nadzorne plošče bo obšlo preverjanje na nivoju podatkovnega seta. Če vloga ni definirana, bo nadzorna plošča dostopna vsem vlogam."
       ],
@@ -3047,9 +2987,6 @@
       "Rows to Read": ["Vrstice za branje"],
       "Rule": ["Pravilo"],
       "Run": ["Zaženi"],
-      "Run a query to display results here": [
-        "Za prikaz rezultatov morate zagnati poizvedbo"
-      ],
       "Run in SQL Lab": ["Zaženi v SQL laboratoriju"],
       "Run query": ["Zaženi poizvedbo"],
       "Run query (Ctrl + Return)": ["Zaženi poizvedbo (Ctrl + Return)"],
@@ -3085,17 +3022,18 @@
       "Save & go to dashboard": ["Shrani in pojdi na nadzorno ploščo"],
       "Save (Overwrite)": ["Shrani (prepiši)"],
       "Save as": ["Shrani kot"],
-      "Save as ...": ["Shrani kot ..."],
       "Save as new": ["Shrani kot novo"],
       "Save as new chart": ["Shrani kot nov grafikon"],
       "Save as:": ["Shrani kot:"],
       "Save chart": ["Shrani grafikon"],
       "Save dashboard": ["Shrani nadzorno ploščo"],
       "Save for this session": ["Shranite za to sejo"],
+      "Save or Overwrite Dataset": [""],
       "Save query": ["Shrani poizvedbo"],
       "Save the query to enable this feature": [
         "Za omogočenje te funkcije shranite poizvedbo"
       ],
+      "Save this query as a virtual dataset to continue exploring": [""],
       "Saved": ["Shranjeno"],
       "Saved Queries": ["Shranjene poizvedbe"],
       "Saved expressions": ["Shranjeni izrazi"],
@@ -3110,37 +3048,27 @@
       ],
       "Scale and Move": ["Povečava in premikanje"],
       "Scale only": ["Samo povečava"],
-      "Scan New Datasources": ["Preišči nove podatkovne vire"],
       "Scatter": ["Raztreseni"],
       "Scatter Plot": ["Raztreseni grafikon"],
       "Schedule": ["Urnik"],
-      "Schedule Email Reports for Charts": [
-        "Razporedi e-poštna poročila za grafikone"
-      ],
-      "Schedule Email Reports for Dashboards": [
-        "Razporedi e-poštna poročila za nadzorne plošče"
-      ],
       "Schedule email report": ["Dodaj e-poštno poročilo na urnik"],
       "Schedule query": ["Urnik poizvedb"],
       "Schedule settings": ["Nastavitve urnika"],
       "Schedule the query periodically": ["Periodično zaganjaj poizvedbo"],
       "Scheduled": ["V urniku"],
       "Scheduled at (UTC)": ["Izvede se ob (UTC)"],
-      "Scheduled reports will be sent to your email as a PNG": [
-        "Poročila na urniku bodo poslana na vaš e-naslov kot PNG"
-      ],
       "Schema": ["Shema"],
       "Schema cache timeout": ["Trajanje prepomnilnika sheme"],
       "Schema, as used only in some databases like Postgres, Redshift and DB2": [
         "Shema, ki se uporablja pri nekaterih podatkovnih bazah, kot so Postgres, Redshift in DB2"
       ],
       "Schemas allowed for CSV upload": ["Dovoljene sheme za nalaganje CSV"],
+      "Scope": [""],
       "Scoping": ["Doseg"],
       "Search": ["Iskanje"],
       "Search / Filter": ["Iskanje / Filter"],
       "Search Metrics & Columns": ["Iskanje mer in stolpcev"],
       "Search all charts": ["Išči vse grafikone"],
-      "Search all dashboards": ["Išči vse nadzorne plošče"],
       "Search all filter options": ["Poišči vse možnosti filtra"],
       "Search box": ["Iskalno polje"],
       "Search by query text": ["Išči z besedilom poizvedbe"],
@@ -3190,13 +3118,10 @@
       "Select filter plugin using AntD": [
         "Izberite Vtičnik za filter z uporabo AntD"
       ],
-      "Select first item by default (when using this option, default value can’t be set)": [
-        "Izberi prvi element kot privzet (ko uporabljate to možnost, privzete vrednost ni mogoče nastaviti)"
-      ],
+      "Select first filter value by default": [""],
       "Select operator": ["Izberite operator"],
       "Select or type a value": ["Izberite ali vnesite vrednost"],
       "Select owners": ["Izberite lastnike"],
-      "Select parent filters": ["Izberi starševske filtre"],
       "Select saved metrics": ["Izberite shranjene mere"],
       "Select schema or type schema name": ["Izberite ali vnesite ime sheme"],
       "Select start and end date": ["Izberite začetni in končni datum"],
@@ -3208,6 +3133,9 @@
       "Select the numeric columns to draw the histogram": [
         "Izberite numerične stolpce za izris histograma"
       ],
+      "Select values in highlighted field(s) in the control panel. Then run the query by clicking on the %s button.": [
+        ""
+      ],
       "Send as CSV": ["Pošlji kot CSV"],
       "Send as PNG": ["Pošlji kot PNG"],
       "Send as text": ["Pošlji kot besedilo"],
@@ -3216,7 +3144,6 @@
       ],
       "September": ["September"],
       "Sequential": ["Sekvenčni"],
-      "Series": ["Niz"],
       "Series Height": ["Višina serije"],
       "Series Style": ["Slog serije"],
       "Series chart type (line, bar etc)": [
@@ -3233,7 +3160,6 @@
       "Settings for time series": ["Nastavitve časovne vrste"],
       "Share": ["Deljenje"],
       "Share chart by email": ["Deli grafikon po e-pošti"],
-      "Share dashboard by email": ["Deli nadzorno ploščo po e-pošti"],
       "Shared query": ["Deljene poizvedbe"],
       "Sheet Name": ["Ime zvezka"],
       "Short description must be unique for this layer": [
@@ -3257,28 +3183,15 @@
       "Show Column": ["Pokaži stolpec"],
       "Show Dashboard": ["Prikaži nadzorno ploščo"],
       "Show Database": ["Prikaži podatkovno bazo"],
-      "Show Druid Cluster": ["Pokaži Druid gručo"],
-      "Show Druid Column": ["Pokaži Druid stolpec"],
-      "Show Druid Datasource": ["Prikaži podatkovni vir za Druid"],
-      "Show Druid Metric": ["Prikaži Druid mere"],
-      "Show Druid granularity dropdown": [
-        "Prikaži spustni seznam za Druid granulacijo"
-      ],
-      "Show Druid time origin": ["Prikaži časovno izhodišče za Druid"],
       "Show Labels": ["Pokaži oznake"],
       "Show Less...": ["Prikaži manj..."],
       "Show Log": ["Prikaži dnevnik"],
       "Show Markers": ["Prikaži markerje"],
       "Show Metric": ["Pokaži mero"],
       "Show Metric Names": ["Pokaži imena mer"],
-      "Show Observation": ["Prikaži opažanja"],
       "Show Range Filter": ["Pokaži filter obdobja"],
       "Show Row level security filter": [
         "Prikaži filter za varnost na nivoju vrstic"
-      ],
-      "Show SQL time column": ["Prikaži stolpec SQL čas"],
-      "Show SQL time grain dropdown": [
-        "Prikaži SQL spustni seznam za časovno granulacijo"
       ],
       "Show Saved Query": ["Prikaži shranjeno poizvedbo"],
       "Show Table": ["Prikaži tabelo"],
@@ -3366,10 +3279,10 @@
         "Raje izpusti prazne vrstice, kot pa da so prepoznane kot NaN vrednosti."
       ],
       "Skip spaces after delimiter.": ["Izpusti presledek za ločilnikom."],
-      "Slack Channel": ["Slack Channel"],
       "Slug": ["Slug"],
       "Small": ["Majhno"],
       "Small number format": ["Oblika zapisa majhnih števil"],
+      "Smooth Line": [""],
       "Some roles do not exist": ["Nekatere vloge ne obstajajo"],
       "Sorry there was an error fetching database information: %s": [
         "Pri pridobivanju informacij o podatkovni bazi je prišlo do napake: %s"
@@ -3471,6 +3384,7 @@
       "Sunburst Chart": ["Večnivojski tortni grafikon"],
       "Sunday": ["Nedelja"],
       "Superset Chart": ["Superset grafikon"],
+      "Superset Embedded SDK documentation.": [""],
       "Superset chart": ["Superset grafikon"],
       "Superset dashboard": ["Superset nadzorna plošča"],
       "Superset encountered an error while running a command.": [
@@ -3509,6 +3423,7 @@
         "Tabela [%{table}s] ni najdena. Preverite povezavo, shemo in ime tabele v podatkovni bazi. Napaka: {}"
       ],
       "Table cache timeout": ["Trajanje predpomnilnika tabele"],
+      "Table name cannot contain a schema": [""],
       "Table name undefined": ["Ime tabele ni definirano"],
       "Table that visualizes paired t-tests, which are used to understand statistical differences between groups.": [
         "Tabela, ki prikazuje uparjene t-teste, ki se uporabljajo za prikaz statističnih razlik med skupinami."
@@ -3531,9 +3446,6 @@
       "Templated link, it's possible to include {{ metric }} or other values coming from the controls.": [
         "Vzorčna povezava, vključiti je mogoče {{ metric }} ali drugo vrednost iz kontrolnikov."
       ],
-      "Temporal expression not supported for type: %(col_type)s": [
-        "Časovni izraz ni podprt za podatkovne tipe: %(col_type)s"
-      ],
       "Terminate running queries when browser window closed or navigated to another page. Available for Presto, Hive, MySQL, Postgres and Snowflake databases.": [
         "Ustavi zagnane poizvedbe, ko se zapre okno brskalnika ali gre na drugo stran. na razpolago za Presto, Hive, MySQL, Postgres in Snowflake podatkovne baze."
       ],
@@ -3548,12 +3460,10 @@
       "The CTAS (create table as select) doesn't have a SELECT statement at the end. Please make sure your query has a SELECT as its last statement. Then, try running your query again.": [
         "CTAS (create table as select) na koncu nima SELECT stavka. Poskrbite, da bo v poizvedbi SELECT zadnji stavek. Potem ponovno poženite poizvedbo."
       ],
-      "The JSON metric or post aggregation definition.": [
-        "JSON mera ali po-agregacijska definicija."
-      ],
-      "The URL could not be identified. Please check for typos and make sure that \"Type of google sheet allowed\" selection matches the input": [
+      "The GeoJsonLayer takes in GeoJSON formatted data and renders it as interactive polygons, lines and points (circles, icons and/or texts).": [
         ""
       ],
+      "The URL is missing the dataset_id or slice_id parameters.": [""],
       "The access requests seem to have been deleted": [
         "Zdi se, da je bila zahteva za dostop izbrisana"
       ],
@@ -3633,23 +3543,12 @@
       "The following entries in `series_columns` are missing in `columns`: %(columns)s. ": [
         "V 'columns' manjkajo naslednji vnosi iz 'series_columns': %(columns)s. "
       ],
-      "The following tables added new columns: %(tables)s": [
-        "Nove stolpce so dodale naslednje tabele: %(tables)s"
-      ],
-      "The following tables removed columns: %(tables)s": [
-        "Stolpce so odstranile naslednje tabele: %(tables)s"
-      ],
-      "The following tables update column metadata: %(tables)s": [
-        "Metapodatke stolpcev so posodobile naslednje tabele: %(tables)s"
-      ],
+      "The function to use when aggregating points into groups": [""],
       "The host \"%(hostname)s\" might be down and can't be reached.": [
         "Gostitelj \"%(hostname)s\" mogoče ne deluje in ga ni mogoče doseči."
       ],
       "The host \"%(hostname)s\" might be down, and can't be reached on port %(port)s.": [
         "Gostitelj \"%(hostname)s\" mogoče ne deluje in ga ni mogoče doseči na vratih %(port)s."
-      ],
-      "The host is invalid. Please verify that this field is entered correctly.": [
-        ""
       ],
       "The host might be down, and can't be reached on the provided port.": [
         "Gostitelj mogoče ne deluje in ga ni mogoče doseči preko podanih vrat."
@@ -3661,7 +3560,6 @@
         "Imena gostitelja ni mogoče razrešiti."
       ],
       "The id of the active chart": ["Identifikator aktivnega grafikona"],
-      "The import was successful": ["Uvoz je uspel"],
       "The list of charts associated with this table. By altering this datasource, you may change how these associated charts behave. Also note that charts need to point to a datasource, so this form will fail at saving if removing charts from a datasource. If you want to change the datasource for a chart, overwrite the chart from the 'explore view'": [
         "Seznam grafikonov, povezanih s to tabelo. S spreminjanjem podatkovnega vira lahko spremenite, kako se povezani grafikoni obnašajo. Poleg tega morajo biti grafikoni povezani s podatkovnim virom. Če odstranite grafikon s podatkovnega vira ne bo mogoče shraniti tega vnosa. Če želite spremeniti podatkovni vir grafikona, prepišite grafikon v raziskovalnem pogledu."
       ],
@@ -3737,9 +3635,6 @@
       ],
       "The passwords for the databases below are needed in order to import them together with the saved queries. Please note that the \"Secure Extra\" and \"Certificate\" sections of the database configuration are not present in export files, and should be added manually after the import if they are needed.": [
         "Gesla za spodnje podatkovne baze so potrebna za uvoz skupaj s shranjenimi poizvedbami. Sekciji \"Dodatna varnost\" in \"Certifikati\" v nastavitvah podatkovne baze nista prisotni v izvoženih datotekah in jih je potrebno dodati ročno po uvozu, če je to potrebno."
-      ],
-      "The passwords for the databases below are needed in order to import them. Please note that the \"Secure Extra\" and \"Certificate\" sections of the database configuration are not present in export files, and should be added manually after the import if they are needed.": [
-        "Gesla za spodnje podatkovne baze so potrebna za njihov uvoz. Sekciji \"Dodatna varnost\" in \"Certifikati\" v nastavitvah podatkovne baze nista prisotni v izvoženih datotekah in jih je potrebno dodati ročno po uvozu, če je to potrebno."
       ],
       "The pattern of timestamp format. For strings use ": [
         "Vzorec zapisa časovne značke. Za znakovne nize uporabite "
@@ -3857,6 +3752,8 @@
       "There are associated alerts or reports: %s,": [
         "Prisotna so opozorila in poročila: %s,"
       ],
+      "There are no components added to this tab": [""],
+      "There are no databases available": [""],
       "There are no filters in this dashboard.": [
         "V nadzorni plošči ni filtrov."
       ],
@@ -3928,12 +3825,6 @@
       "There was an issue previewing the selected query. %s": [
         "Pri predogledu izbrane poizvedbe je prišlo do težave. %s"
       ],
-      "There was an issues fetching your chart: %s": [
-        "Prišlo je do napake pri pridobivanju grafikona: %s"
-      ],
-      "There was an issues fetching your dashboards: %s": [
-        "Prišlo je do napake pri pridobivanju nadzornih plošč: %s"
-      ],
       "There was an issues fetching your saved queries: %s": [
         "Prišlo je do napake pri pridobivanju shranjenih poizvedb: %s"
       ],
@@ -3970,8 +3861,12 @@
       "This chart has been moved to a different filter scope.": [
         "Ta grafikon je bil prestavljen v drug doseg filtrov."
       ],
+      "This chart is managed externally, and can't be edited in Superset": [""],
       "This chart might be incompatible with the filter (datasets don't match)": [
         "Ta grafikon je lahko nekompatibilen s filtrom (podatkovni seti se ne ujemajo)"
+      ],
+      "This chart type is not supported when using an unsaved query as a chart source. ": [
+        ""
       ],
       "This color scheme is being overriden by custom label colors.\n              Check the JSON metadata in the Advanced settings": [
         ""
@@ -3982,6 +3877,9 @@
       "This dashboard is currently auto refreshing; the next auto refresh will be in %s.": [
         "Nadzorna plošča se trenutno samodejno osvežuje. Naslednja samodejna osvežitev bo čez %s."
       ],
+      "This dashboard is managed externally, and can't be edited in Superset": [
+        ""
+      ],
       "This dashboard is not published which means it will not show up in the list of dashboards. Favorite it to see it there or access it by using the URL directly.": [
         "Ta nadzorna plošča ni objavljena in se ne bo prikazala na seznamu nadzornih plošč. Uvrstite jo med priljubljene, da jo boste videli tam, ali pa uporabite URL za neposredni dostop."
       ],
@@ -3991,19 +3889,25 @@
       "This dashboard is published. Click to make it a draft.": [
         "Ta nadzorna plošča je objavljena. Kliknite, da jo uvrstite med osnutke."
       ],
+      "This dashboard is ready to embed. In your application, pass the following id to the SDK:": [
+        ""
+      ],
       "This dashboard was changed recently. Please reload dashboard to get latest version.": [
         "Nadzorna plošča je bila pred kratkim spremenjena. Ponovno jo naložite, da dobite zadnjo verzijo."
       ],
       "This dashboard was saved successfully.": [
         "Nadzorna plošča je bila uspešno shranjena."
       ],
+      "This database is managed externally, and can't be edited in Superset": [
+        ""
+      ],
+      "This dataset is managed externally, and can't be edited in Superset": [
+        ""
+      ],
       "This defines the element to be plotted on the chart": [
         "Določa element, ki bo izrisan na grafikonu"
       ],
       "This defines the level of the hierarchy": ["Določa stopnjo hierarhije"],
-      "This feature is deprecated and will be removed on 2.0. Take a look at the replacement feature <a href='https://superset.apache.org/docs/installation/alerts-reports'>Alerts & Reports documentation</a>": [
-        "Ta funkcija je zastarela in bo odstranjena v verziji 2.0. Oglejte si zamenjavo <a href='https://superset.apache.org/docs/installation/alerts-reports'>Dokumentacija za Opozorila & Poročila</a>"
-      ],
       "This fields acts a Superset view, meaning that Superset will run a query against this string as a subquery.": [
         "To polje se obnaša kot Supersetov pogled, kar pomeni, da bo Superset izvedel poizvedbo za ta niz kot podpoizvedbo."
       ],
@@ -4012,6 +3916,9 @@
       ],
       "This filter set is identical to: \"%s\"": [
         "Ta set filtrov je enak: \"%s\""
+      ],
+      "This functionality is disabled in your environment for security reasons.": [
+        ""
       ],
       "This is the condition that will be added to the WHERE clause. For example, to only return rows for a particular client, you might define a regular filter with the clause `client_id = 9`. To display no rows unless a user belongs to a RLS filter role, a base filter can be created with the clause `1 = 0` (always false).": [
         "To je pogoj, ki bo dodan WHERE stavku. Npr., če želite dobiti vrstice za določeno stranko, lahko definirate regularni filter z izrazom 'id_stranke = 9'. Če ne želimo prikazati vrstic, razen če uporabnik pripada RLS vlogi, lahko filter ustvarimo z izrazom `1 = 0` (vedno neresnično)."
@@ -4026,11 +3933,11 @@
         "Markdown komponenta ima napako. Povrnite nedavne spremembe."
       ],
       "This may be triggered by:": ["To je lahko sproženo z/s:"],
-      "This query took %s seconds to run, ": [
-        "Trajanje poizvedbe v sekundah: %s, "
-      ],
       "This section contains options that allow for advanced analytical post processing of query results": [
         "Ta sekcija vsebuje možnosti, ki omogočajo napredno analitično poprocesiranje rezultatov poizvedb"
+      ],
+      "This session has encountered an interruption, and some controls may not work as intended. If you are the developer of this app, please check that the guest token is being generated correctly.": [
+        ""
       ],
       "This value should be greater than the left target value": [
         "Ta vrednost mora biti večja od leve ciljne vrednosti"
@@ -4042,9 +3949,11 @@
         "Ta tip vizualizacije ni podprt."
       ],
       "This was triggered by:": ["To je bilo sproženo z/s:"],
+      "This will remove your current embed configuration.": [""],
       "Threshold alpha level for determining significance": [
         "Mejna vrednost alfa za določanje značilnosti"
       ],
+      "Threshold value should be double precision number": [""],
       "Thursday": ["Četrtek"],
       "Time": ["Čas"],
       "Time Column": ["Časovni stolpec"],
@@ -4052,7 +3961,6 @@
       "Time Format": ["Oblika zapisa časa"],
       "Time Grain": ["Granulacija časa"],
       "Time Granularity": ["Granulacija časa"],
-      "Time Offset": ["Časovni zamik"],
       "Time Range": ["Časovno obdobje"],
       "Time Series": ["Časovna vrsta"],
       "Time Series - Bar Chart": ["Časovna vrsta - Stolpčni grafikon"],
@@ -4086,9 +3994,6 @@
       "Time delta is ambiguous. Please specify [%(human_readable)s ago] or [%(human_readable)s later].": [
         "Časovna razlika je nejasna. Podajte [%(human_readable)s ago] ali [%(human_readable)s later]."
       ],
-      "Time expression to use as a predicate when retrieving distinct values to populate the filter component. Only applies when `Enable Filter Select` is on. If you enter `7 days ago`, the distinct list of values in the filter will be populated based on the distinct value over the past week": [
-        "Prednastavljeni časovni izraz za pridobitev različnih vrednosti filtrirne komponente. Upošteva se le v primeru, da je vključeno `Omogoči izbiro filtra`. Če vnesete `7 days ago`, bo seznam vrednosti filtra napolnjen na podlagi različnih vrednosti v prejšnjem tednu"
-      ],
       "Time filter": ["Časovni filter"],
       "Time format": ["Oblika zapisa časa"],
       "Time grain": ["Granulacija časa"],
@@ -4097,10 +4002,6 @@
       "Time granularity": ["Granulacija časa"],
       "Time in seconds": ["Čas v sekundah"],
       "Time range": ["Časovno obdobje"],
-      "Time range endpoints": ["Krajne točke časovnega obdobja"],
-      "Time range endpoints (SIP-15)": [
-        "Krajne točke časovnega obdobja (SIP-15)"
-      ],
       "Time related form attributes": ["S časom povezani atributi prikaza"],
       "Time series columns": ["Stolpci s časovnimi vrstami"],
       "Time shift": ["Časovni zamik"],
@@ -4125,9 +4026,6 @@
         "Raztreseni grafikon časovne vrste prikazuje podatkovne točke v povezanem redu in prikazuje statistično razmerje med spremenljivkami."
       ],
       "Time-series Smooth Line": ["Zglajeni črtni grafikon časovne vrste"],
-      "Time-series Smooth-line is a variation of line chart. Without angles and hard edges, Smooth-line looks more smarter and more professional.": [
-        "Zglajeni grafikon časovne vrste je izpeljanka črtnega grafikona, ki zgladi ostre robove krivulje."
-      ],
       "Time-series Stepped Line": ["Stopnični črtni grafikon časovne vrste"],
       "Time-series Stepped-line graph (also called step chart) is a variation of line chart but with the line forming a series of steps between data points. A step chart can be useful when you want to show the changes that occur at irregular intervals.": [
         "Stopnični grafikon časovne vrste je izpeljanka črtnega grafikona, pri čemer krivuljo tvorijo stopnice med posameznimi točkami. Koristen je za prikaz sprememb na posameznih intervalih."
@@ -4137,7 +4035,6 @@
         "Črtni grafikon časovne vrste je osnovni grafikon, ki se uporablja na različnih področjih. Uporablja se za vizualizacijo meritev zajetih skozi čas. Posamezne točke so med seboj povezane z ravnimi črtami."
       ],
       "Timeout error": ["Napaka pretečenega časa"],
-      "Timestamp Format": ["Oblika časovne značke"],
       "Timestamp format": ["Oblika zapisa časovne značke"],
       "Timezone": ["Časovni pas"],
       "Timezone offset (in hours) for this datasource": [
@@ -4154,7 +4051,6 @@
       "To get a readable URL for your dashboard": [
         "Za pridobitev berljivega URL-ja za nadzorno ploščo"
       ],
-      "Toggle chart description": ["Preklopi opis grafikona"],
       "Tools": ["Orodja"],
       "Tooltip": ["Opis orodja"],
       "Tooltip sort by metric": ["Mera za razvrščanje opisa orodja"],
@@ -4179,12 +4075,14 @@
       "Truncate Y Axis. Can be overridden by specifying a min or max bound.": [
         "Prireži Y-os. Če določite spodnjo ali zgornjo mejo, preprečite prirezovanje."
       ],
+      "Truncate long cells to the \"min width\" set above": [""],
       "Truncates the specified date to the accuracy specified by the date unit.": [
         "Zaokroži določen datum, glede na natančnost, definirano s časovno enoto."
       ],
       "Try applying different filters or ensuring your datasource has data": [
         "Poskusite uporabiti druge filtre oz. zagotovite, da so v podatkovnem viru podatki"
       ],
+      "Try different criteria to display results.": [""],
       "Tuesday": ["Torek"],
       "Type": ["Tip"],
       "Type \"%s\" to confirm": ["Vnesite \"%s\" za potrditev"],
@@ -4219,9 +4117,6 @@
       "Unable to migrate table schema state to backend. Superset will retry later. Please contact your administrator if this problem persists.": [
         "Stanja sheme tabele ni mogoče prenesti v sistem. Superset bo ponovil poskus kasneje. Če se težava ponavlja, kontaktirajte administratorja."
       ],
-      "Unable to refresh metadata for the following table(s): %(tables)s": [
-        "Ni mogoče osvežiti metapodatkov za naslednje tabele: %(tables)s"
-      ],
       "Unable to upload CSV file \"%(filename)s\" to table \"%(table_name)s\" in database \"%(db_name)s\". Error message: %(error_msg)s": [
         "CSV datoteke \"%(filename)s\" ni mogoče naložiti v tabelo \"%(table_name)s\" v podatkovni bazi \"%(db_name)s\". Sporočilo napake: %(error_msg)s"
       ],
@@ -4251,6 +4146,7 @@
         "Za razvrščanje je uporabljen neznan stolpec: %(col)s"
       ],
       "Unknown error": ["Neznana napaka"],
+      "Unknown input format": [""],
       "Unknown value": ["Neznana vrednost"],
       "Unsafe return type for function %(func)s: %(value_type)s": [
         "Nevaren tip rezultata, ki ga vrne funkcija %(func)s: %(value_type)s"
@@ -4261,9 +4157,6 @@
       "Unset Filters (%d)": ["Neuporabljeni filtri (%d)"],
       "Unsupported clause type: %(clause)s": [
         "Nepodprt tip izraza: %(clause)s"
-      ],
-      "Unsupported extraction function: ": [
-        "Nepodprta ekstrakcijska funkcija: "
       ],
       "Unsupported post processing operation: %(operation)s": [
         "Nepodprta poprocesirna operacija: %(operation)s"
@@ -4277,7 +4170,6 @@
       "Unsupported time grain: %(time_grain)s": [
         "Nepodprta časovna granulacija: %(time_grain)s"
       ],
-      "Untitled Query %s": ["Neimenovana poizvedba %s"],
       "Untitled query": ["Neimenovana poizvedba"],
       "Update": ["Posodobi"],
       "Updating chart was stopped": [
@@ -4285,10 +4177,8 @@
       ],
       "Upload": ["Naloži"],
       "Upload Credentials": ["Naloži prijavne podatke"],
-      "Upload Excel": ["Naloži Excel"],
+      "Upload Excel file to database": [""],
       "Upload JSON file": ["Naloži JSON datoteko"],
-      "Upload a CSV": ["Naloži CSV"],
-      "Upload a Columnar File": ["Naloži datoteko s stolpci"],
       "Use Area Proportions": ["Uporabi razmerje površin"],
       "Use Columns": ["Uporabi stolpce"],
       "Use Pandas to interpret the datetime format automatically.": [
@@ -4300,6 +4190,10 @@
       "Use an encrypted connection to the database": [
         "Uporabite šifrirano povezavo s podatkovno bazo"
       ],
+      "Use another existing chart as a source for annotations and overlays.\n          Your chart must be one of these visualization types: [%s]": [
+        ""
+      ],
+      "Use date formatting even when metric value is not a timestamp": [""],
       "Use legacy datasource editor": [
         "Uporabi starejši urejevalnik podatkovnega vira"
       ],
@@ -4313,9 +4207,8 @@
       "Use the JSON file you automatically downloaded when creating your service account.": [
         "Uporabite JSON datoteko, ki ste jo prenesli pri ustvarjanju servisnega računa."
       ],
-      "Use the edit buttom to change this field": [
-        "Za spreminjanje tega polja uporabite gumb za urejanje"
-      ],
+      "Use this section if you want a query that aggregates": [""],
+      "Use this section if you want to query atomic rows": [""],
       "Use this to define a static color for all circles": [
         "S tem definirate določeno barvo za vse kroge"
       ],
@@ -4336,9 +4229,6 @@
       "User must select a value for this filter": [
         "Uporabnik mora izbrati vrednost za ta filter"
       ],
-      "User must select a value for this filter.": [
-        "Uporabnik mora izbrati vrednost za ta filter."
-      ],
       "User query": ["Uporabnikova poizvedba"],
       "Username": ["Uporabniško ime"],
       "Uses a gauge to showcase progress of a metric towards a target. The position of the dial represents the progress and the terminal value in the gauge represents the target value.": [
@@ -4354,19 +4244,19 @@
       "Value format": ["Oblika zapisa vrednosti"],
       "Value is required": ["Zahtevana je vrednost"],
       "Value must be greater than 0": ["Vrednost mora biti večja od 0"],
+      "Values are dependent on other filters": [""],
+      "Values selected in other filters will affect the filter options to only show relevant values": [
+        ""
+      ],
       "Vehicle Types": ["Vrste vozil"],
       "Verbose Name": ["Podrobno ime"],
       "Version": ["Verzija"],
       "Version number": ["Številka verzije"],
       "Vertical": ["Navpično"],
       "Video game consoles": ["Igralne konzole"],
-      "View All »": [""],
-      "View chart in Explore": ["Ogled grafikona v Raziskovalcu"],
       "View in SQL Lab": ["Ogled v SQL laboratoriju"],
       "View keys & indexes (%s)": ["Ogled ključev in indeksov (%s)"],
       "View query": ["Ogled poizvedbe"],
-      "View results": ["Ogled rezultatov"],
-      "View samples": ["Ogled vzorcev"],
       "Viewed": ["Ogledane"],
       "Viewport": ["Pogled"],
       "Virtual (SQL)": ["Virtualen (SQL)"],
@@ -4390,14 +4280,14 @@
       "Visualize a related metric across pairs of groups. Heatmaps excel at showcasing the correlation or strength between two groups. Color is used to emphasize the strength of the link between each pair of groups.": [
         "Vizualizacija povezanih mer med pari skupin."
       ],
+      "Visualize geospatial data like 3D buildings, landscapes, or objects in grid view.": [
+        ""
+      ],
       "Visualize how a metric changes over time using bars. Add a group by column to visualize group level metrics and how they change over time.": [
         "Prikaže spreminjanje mere skozi čas s pomočjo stolpcev. Z dodajanjem stolpcev za združevanje prikaže mere skupin in njihovo spreminjanje."
       ],
       "Visualize multiple levels of hierarchy using a familiar tree-like structure.": [
         "Prikaz več hierarhičnih nivojev z drevesno strukturo."
-      ],
-      "Visualize two different time series using the same x-axis time range. Note that each time series can be visualized differently (e.g. 1 using bars and 1 using a line).": [
-        "Prikaže dve različni časovni vrsti na isti x-osi. Časovni vrsti sta lahko prikazani različno (npr. ena s stolpci in druga s črto)."
       ],
       "Visualize two different time series using the same x-axis time range. This chart is being deprecated and we recommend using the Mixed Timeseries Chart instead!": [
         "Prikaže dve različni časovni vrsti z isto x-osjo oz. časovnim obdobjem. Grafikon se opušča, zato priporočamo uporabo kombiniranega grafikona časovne vrste!"
@@ -4407,6 +4297,10 @@
       ],
       "Visualizes a metric across three dimensions of data in a single chart (X axis, Y axis, and bubble size). Bubbles from the same group can be showcased using bubble color.": [
         "Prikaže mero v treh dimenzijah podatkov na istem grafikonu (x os, y os, velikost mehurčka). Mehurčki v isti skupini so predstavljeni z barvo."
+      ],
+      "Visualizes connected points, which form a path, on a map.": [""],
+      "Visualizes geographic areas from your data as polygons on a Mapbox rendered map. Polygons can be colored using a metric.": [
+        ""
       ],
       "Visualizes how a metric has changed over a time using a color scale and a calendar view. Gray values are used to indicate missing values and the linear color scheme is used to encode the magnitude of each day's value.": [
         "Prikaže kako se je mera spreminjala s časom s pomočjo barvne lestvice in koledarskega pogleda. Sive vrednosti ponazarjajo manjkajoče vrednosti. Amplituda dnevnih vrednosti je ponazorjena z linearno barvno shemo."
@@ -4424,7 +4318,6 @@
         "Prikaže besede v stolpcu, glede na pogostost pojavljanja. Večja pisava pomeni večjo frekvenco."
       ],
       "Viz is missing a datasource": ["Vizualizaciji manjka podatkovni vir"],
-      "Viz type": ["Tip vizualizacije"],
       "WED": ["SRE"],
       "Want to add a new database?": ["Želite dodati novo podatkovno bazo?"],
       "Warning": ["Opozorilo"],
@@ -4442,11 +4335,12 @@
       "We can't seem to resolve the column \"%(column_name)s\" at line %(location)s.": [
         "Zdi se, da ni mogoče razrešiti stolpca \"%(column_name)s\" v vrstici %(location)s."
       ],
-      "We recommend your summarize your data further before following that flow. ": [
-        "Priporočamo, da zahtevane podatke pred nadaljevanjem strnete. "
-      ],
+      "We have the following keys: %s": [""],
       "We were unable to active or deactivate this report.": [
         "Aktiviranje ali deaktiviranje poročila ni uspelo."
+      ],
+      "We were unable to carry over any controls when switching to this new dataset.": [
+        ""
       ],
       "We were unable to connect to your database named \"%(database)s\". Please verify your database name and try again.": [
         "Povezava s podatkovno bazo \"%(database)s\" ni uspela. Preverite ime podatkovne baze in poskusite ponovno."
@@ -4461,6 +4355,7 @@
       "Week starting Monday": ["Teden z začetkom v ponedeljek"],
       "Week starting Sunday": ["Teden z začetkom v nedeljo"],
       "Week_ending Sunday": ["Teden s koncem v nedeljo"],
+      "Weekly Report for %s": [""],
       "We’re having trouble loading these results. Queries are set to timeout after %s second.": [
         "Težava pri nalaganju rezultatov. Časovni iztek poizvedb je nastavljen na %s sekund."
       ],
@@ -4477,6 +4372,7 @@
       "When allowing CREATE TABLE AS option in SQL Lab, this option forces the table to be created in this schema": [
         "Z dovolitvijo opcije CREATE TABLE AS v SQL laboratoriju se tabele ustvarjajo s to shemo"
       ],
+      "When checked, the map will zoom to your data after each query": [""],
       "When enabled, users are able to visualize SQL Lab results in Explore.": [
         "Ko je omogočeno, lahko uporabniki prikazujejo rezultate SQL laboratorija v raziskovalcu."
       ],
@@ -4560,9 +4456,6 @@
       "Whether to enable node dragging in force layout mode.": [
         "Če želite omogočiti premikanje vozlišč v načinu vsiljenega prikaza."
       ],
-      "Whether to format the timestamp": [
-        "Če želite oblikovati časovno značko"
-      ],
       "Whether to include a client-side search box": [
         "Če želite vključiti iskalno polje za uporabnika"
       ],
@@ -4621,7 +4514,6 @@
       ],
       "Whisker/outlier options": ["Možnosti grafikona kvantilov"],
       "White": ["Belo"],
-      "Width": ["Širina"],
       "Width of the confidence interval. Should be between 0 and 1": [
         "Širina intervala zaupanja. Mora bit med 0 in 1"
       ],
@@ -4679,20 +4571,13 @@
       "You are importing one or more saved queries that already exist. Overwriting might cause you to lose some of your work. Are you sure you want to overwrite?": [
         "Uvažate eno ali več shranjenih poizvedb, ki že obstajajo. S prepisom lahko izgubite podatke. Ali ste prepričani, da želite prepisati?"
       ],
-      "You are not authorized to fetch samples from this table. If you think this is an error, please reach out to your administrator.": [
-        "Nimate dovoljenja za pridobitev vzorcev iz te tabele. Če menite, da je to napaka, kontaktirajte administratorja."
-      ],
       "You are not authorized to see this query. If you think this is an error, please reach out to your administrator.": [
         "Nimate dovoljenja za ogled te poizvedbe. Če menite, da je to napaka, kontaktirajte administratorja."
       ],
-      "You cannot specify a namespace both in the name of the table: \"%(columnar_table.table)s\" and in the schema field: \"%(columnar_table.schema)s\". Please remove one": [
-        "Imenskega prostora ni mogoče podati hkrati v imenu tabele: \"%(columnar_table.table)s\" in polju sheme: \"%(columnar_table.schema)s\". Odstranite enega"
-      ],
-      "You cannot specify a namespace both in the name of the table: \"%(csv_table.table)s\" and in the schema field: \"%(csv_table.schema)s\". Please remove one": [
-        "Imenskega prostora ni mogoče podati hkrati v tabeli: \"%(csv_table.table)s\" in polju sheme: \"%(csv_table.schema)s\". Odstranite enega"
-      ],
-      "You cannot specify a namespace both in the name of the table: \"%(excel_table.table)s\" and in the schema field: \"%(excel_table.schema)s\". Please remove one": [
-        "Imenskega prostora ni mogoče podati hkrati v tabeli: \"%(excel_table.table)s\" in polju sheme: \"%(excel_table.schema)s\". Odstranite enega"
+      "You can add the components in the": [""],
+      "You can add the components in the edit mode.": [""],
+      "You can create a new chart or use existing ones from the panel on the right": [
+        ""
       ],
       "You cannot use 45° tick layout along with the time range filter": [
         "Skupaj s filtriranjem časovnega obdobja ne morete uporabiti oznak pod 45° kotom"
@@ -4725,12 +4610,22 @@
       ],
       "You have removed this filter.": ["Odstranili ste ta filter."],
       "You have unsaved changes.": ["Imate neshranjene spremembe."],
+      "You must be a dataset owner in order to edit. Please reach out to a dataset owner to request modifications or edit access.": [
+        ""
+      ],
       "You must pick a name for the new dashboard": [
         "Izbrati morate ime nove nadzorne plošče"
       ],
       "You must run the query successfully first": [
         "Najprej morate uspešno izvesti poizvedbo"
       ],
+      "You updated the values in the control panel, but the chart was not updated automatically. Run the query by clicking on the \"Update chart\" button or": [
+        ""
+      ],
+      "You've changed datasets. Any controls with data (columns, metrics) that match this new dataset have been retained.": [
+        ""
+      ],
+      "Your chart is ready to go!": [""],
       "Your dashboard is too large. Please reduce its size before saving it.": [
         "Vaša nadzorna plošča je prevelika. Pred shranjevanjem jo zmanjšajte."
       ],
@@ -4751,7 +4646,6 @@
       ],
       "Zoom": ["Povečava"],
       "Zoom level of the map": ["Stopnja povečave zemljevida"],
-      "[Alert] %(label)s": ["[Alert] %(label)s"],
       "[From]-": ["[Od]-"],
       "[Longitude] and [Latitude] columns must be present in [Group By]": [
         "Stolpca [Zemljepisna dolžina] in [Zemljepisna širina] morata biti prisotna v [Združevanje]"
@@ -4804,9 +4698,6 @@
       "alter this ": ["spreminjanje tega "],
       "ancestor": ["nadrejeni"],
       "and": ["in"],
-      "and the explore view times out at %s seconds ": [
-        "čas izteka raziskovalnega pogleda v sekundah: %s "
-      ],
       "annotation": ["oznaka"],
       "annotation start time or end time is required.": [
         "začetni in končni čas oznake je obvezen."
@@ -4814,11 +4705,12 @@
       "annotation_layer": ["annotation_layer"],
       "at": ["ob"],
       "bolt": ["vijak"],
+      "boolean type icon": [""],
       "bottom": ["spodaj"],
-      "cached": ["predpomnjen"],
       "cannot be empty": ["ne sme biti prazno"],
       "chart": ["grafikona"],
       "choose WHERE or HAVING...": ["izberite WHERE ali HAVING..."],
+      "click here": [""],
       "column": ["stolpec"],
       "count": ["število"],
       "create a ": ["ustvarite "],
@@ -4832,6 +4724,7 @@
       "day": ["dan"],
       "day of the month": ["dan v mesecu"],
       "day of the week": ["dan v tednu"],
+      "deckGL": [""],
       "delete": ["izbriši"],
       "descendant": ["podrejeni"],
       "description": ["opis"],
@@ -4839,7 +4732,6 @@
         "dialect+driver://username:password@host:port/database"
       ],
       "download as csv": ["prenos kot csv"],
-      "draft": ["osnutek"],
       "dttm": ["dttm"],
       "e.g. ********": [""],
       "e.g. 127.0.0.1": [""],
@@ -4853,20 +4745,15 @@
       "every hour": ["vsako uro"],
       "every minute": ["vsako minuto"],
       "every month": ["vsak mesec"],
-      "feature to store a summarized data set that you can then explore.": [
-        "funkcijo shranjevanja strnjenega podatkovnega seta, ki ga lahko raziščete."
-      ],
-      "fetching": ["pridobivam"],
       "filter_box will be deprecated in a future version of Superset. Please replace filter_box by dashboard filter components.": [
         "Element filter_box bo v prihodnjih verzijah Superseta opuščen. Nadomestite ga s filtri nadzorne plošče."
-      ],
-      "following this flow will most likely lead to your query timing out. ": [
-        "s takšnim potekom, bo poizvedba najverjetneje potekla. "
       ],
       "for more information on how to structure your URI.": [
         "za več informacij o oblikovanju URI."
       ],
+      "function type icon": [""],
       "green": ["zelena"],
+      "heatmap: values are normalized across the entire heatmap": [""],
       "hour": ["ura"],
       "id:": ["id:"],
       "image-rendering CSS attribute of the canvas object that defines how the browser scales up the image": [
@@ -4896,8 +4783,10 @@
       "minute(s)": ["minuta/e"],
       "month": ["mesec"],
       "must have a value": ["mora imeti vrednost"],
+      "numeric type icon": [""],
       "nvd3": ["nvd3"],
       "on": ["v"],
+      "or use existing ones from the panel on the right": [""],
       "orderby column must be populated": [
         "stolpec za razvrščanje (orderby) mora biti izpolnjen"
       ],
@@ -4912,20 +4801,20 @@
       "previous calendar month": ["prejšnji koledarski mesec"],
       "previous calendar week": ["prejšnji koledarski teden"],
       "previous calendar year": ["prejšnje koledarsko leto"],
-      "published": ["objavljeno"],
       "queries": ["poizvedbe"],
       "query": ["poizvedba"],
       "reboot": ["ponovni zagon"],
       "red": ["rdeča"],
       "report": ["poročilo"],
       "reports": ["poročila"],
+      "restore zoom": [""],
       "right": ["desno"],
-      "rows": ["vrstic"],
-      "rows retrieved": ["vrnjenih vrstic"],
       "search.num_records": ["search.num_records"],
       "series: Treat each series independently; overall: All series use the same scale; change: Show changes compared to the first data point in each series": [
         "serije: Obravnavaj vsako podatkovno serijo neodvisno; skupno: Vse vrste uporabljajo enako skalo; razlika: Pokaži razlike glede na prvo točko vsake serije"
       ],
+      "string type icon": [""],
+      "temporal type icon": [""],
       "textarea": ["področje besedila"],
       "top": ["zgoraj"],
       "upper percentile must be greater than 0 and less than 100. Must be higher than lower percentile.": [
@@ -4936,8 +4825,15 @@
       "virtual": ["virtualni"],
       "was created": ["ustvarjeno"],
       "week": ["teden"],
+      "x: values are normalized within each column": [""],
+      "y: values are normalized within each row": [""],
       "year": ["leto"],
-      "yellow": ["rumena"]
+      "yellow": ["rumena"],
+      "zoom area": [""],
+      "Вход": [""],
+      "Выход": [""],
+      "Информаиця": [""],
+      "Профиль": [""]
     }
   }
 }

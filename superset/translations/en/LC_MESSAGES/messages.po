@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-26 23:19+0300\n"
+"POT-Creation-Date: 2022-07-27 11:58+0300\n"
 "PO-Revision-Date: 2016-05-02 08:49-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -630,7 +630,7 @@ msgid "Actual time range"
 msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:26
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:47
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:46
 msgid "Adaptative formating"
 msgstr ""
 
@@ -723,7 +723,6 @@ msgid "Add additional custom parameters"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:116
-#, fuzzy, python-format
 msgid "Add an annotation layer"
 msgstr ""
 
@@ -1564,7 +1563,7 @@ msgid "Annotation"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:259
-#, fuzzy, python-format
+#, python-format
 msgid "Annotation Layer %s"
 msgstr ""
 
@@ -2198,7 +2197,6 @@ msgid "CANCEL"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1166
-#, fuzzy, python-format
 msgid "CREATE A DATASET"
 msgstr ""
 
@@ -3716,7 +3714,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/DatasourcePanel/index.tsx:379
 #: superset-frontend/src/explore/components/ExploreChartPanel.jsx:320
-#, fuzzy, python-format
 msgid "Create a dataset"
 msgstr ""
 
@@ -3881,7 +3878,7 @@ msgstr ""
 msgid "D3 time format for datetime columns"
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:44
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:43
 msgid "D3 time format syntax: https://github.com/d3/d3-time-format"
 msgstr ""
 
@@ -5073,11 +5070,11 @@ msgid ""
 "database. If left unset, the cache never expires. "
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:41
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:40
 msgid "Duration in ms (1.40008 => 1ms 400µs 80ns)"
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:40
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:39
 msgid "Duration in ms (66000 => 1m 6s)"
 msgstr ""
 
@@ -5251,7 +5248,6 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:612
 #: superset-frontend/src/dashboard/components/Header/index.jsx:614
-#, fuzzy
 msgid "Edit dashboard"
 msgstr ""
 
@@ -5292,7 +5288,6 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/DashboardBuilder/DashboardBuilder.tsx:495
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:209
-#, fuzzy, python-format
 msgid "Edit the dashboard"
 msgstr ""
 
@@ -5352,7 +5347,6 @@ msgid "Embed code"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:340
-#, fuzzy, python-format
 msgid "Embed dashboard"
 msgstr ""
 
@@ -8308,7 +8302,6 @@ msgid "No Results"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:113
-#, fuzzy, python-format
 msgid "No annotation layers"
 msgstr ""
 
@@ -10983,7 +10976,6 @@ msgid "Select a column"
 msgstr ""
 
 #: superset-frontend/src/explore/components/SaveModal.tsx:337
-#, fuzzy
 msgid "Select a dashboard"
 msgstr ""
 

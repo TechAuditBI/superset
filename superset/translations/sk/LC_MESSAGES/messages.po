@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-07-26 23:19+0300\n"
+"POT-Creation-Date: 2022-07-27 11:58+0300\n"
 "PO-Revision-Date: 2021-05-24 15:59+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: sk\n"
@@ -630,7 +630,7 @@ msgid "Actual time range"
 msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:26
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:47
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:46
 msgid "Adaptative formating"
 msgstr ""
 
@@ -723,7 +723,6 @@ msgid "Add additional custom parameters"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:116
-#, fuzzy, python-format
 msgid "Add an annotation layer"
 msgstr ""
 
@@ -1564,15 +1563,15 @@ msgid "Annotation"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:259
-#, fuzzy, python-format
+#, python-format
 msgid "Annotation Layer %s"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/annotationsAndLayers.tsx:36
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:114
 #: superset/initialization/__init__.py:229 superset/views/annotations.py:116
 msgid "Annotation Layers"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:500
 msgid "Annotation Slice Configuration"
@@ -1625,9 +1624,8 @@ msgid "Annotation layer has associated annotations."
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:527
-#, fuzzy
 msgid "Annotation layer interval end"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:251
 msgid "Annotation layer name"
@@ -1638,28 +1636,24 @@ msgid "Annotation layer not found."
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:669
-#, fuzzy
 msgid "Annotation layer opacity"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset/annotation_layers/commands/exceptions.py:29
 msgid "Annotation layer parameters are invalid."
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:654
-#, fuzzy
 msgid "Annotation layer stroke"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:507
-#, fuzzy
 msgid "Annotation layer time column"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:541
-#, fuzzy
 msgid "Annotation layer title column"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:780
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:783
@@ -1667,9 +1661,8 @@ msgid "Annotation layer type"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:437
-#, fuzzy
 msgid "Annotation layer value"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:71
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:335
@@ -1693,24 +1686,20 @@ msgid "Annotation parameters are invalid."
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:795
-#, fuzzy
 msgid "Annotation source"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:792
-#, fuzzy
 msgid "Annotation source type"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:154
-#, fuzzy
 msgid "Annotation template created"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayerModal.tsx:139
-#, fuzzy
 msgid "Annotation template updated"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset/views/annotations.py:60
 msgid "Annotations"
@@ -1718,9 +1707,8 @@ msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/annotationsAndLayers.tsx:25
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:103
-#, fuzzy
 msgid "Annotations and Layers"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/explore/controlPanels/sections.tsx:75
 msgid "Annotations and layers"
@@ -2209,7 +2197,6 @@ msgid "CANCEL"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1166
-#, fuzzy, python-format
 msgid "CREATE A DATASET"
 msgstr ""
 
@@ -2240,7 +2227,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:266 superset/views/css_templates.py:38
 msgid "CSS Templates"
-msgstr "CSS šablóny"
+msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/style.tsx:60
 msgid "CSS applied to the chart"
@@ -2626,9 +2613,9 @@ msgid "Chart Cache Timeout"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:353
-#, fuzzy, python-format
+#, python-format
 msgid "Chart Data: %s"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:57
 #: superset-frontend/src/explore/controlPanels/sections.tsx:35
@@ -2690,9 +2677,8 @@ msgid "Chart Owner: %s"
 msgstr ""
 
 #: superset-frontend/src/explore/components/ExploreViewContainer/index.jsx:617
-#, fuzzy
 msgid "Chart Source"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/chartTitle.tsx:29
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Regular/Bar/controlPanel.tsx:290
@@ -2816,7 +2802,7 @@ msgstr ""
 #: superset/initialization/__init__.py:247 superset/views/chart/mixin.py:26
 #: superset/views/dashboard/mixin.py:81
 msgid "Charts"
-msgstr "Grafy"
+msgstr ""
 
 #: superset/charts/commands/exceptions.py:139
 msgid "Charts could not be deleted."
@@ -3728,7 +3714,6 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/DatasourcePanel/index.tsx:379
 #: superset-frontend/src/explore/components/ExploreChartPanel.jsx:320
-#, fuzzy, python-format
 msgid "Create a dataset"
 msgstr ""
 
@@ -3893,7 +3878,7 @@ msgstr ""
 msgid "D3 time format for datetime columns"
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:44
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:43
 msgid "D3 time format syntax: https://github.com/d3/d3-time-format"
 msgstr ""
 
@@ -3950,9 +3935,8 @@ msgid "Dashboard does not exist"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:147
-#, fuzzy
 msgid "Dashboard imported"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset/dashboards/commands/exceptions.py:43
 msgid "Dashboard parameters are invalid."
@@ -3971,9 +3955,8 @@ msgid "Dashboard scheme"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:499
-#, fuzzy
 msgid "Dashboard title"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset-frontend/src/profile/components/CreatedContent.tsx:84
 #: superset-frontend/src/profile/components/Favorites.tsx:85
@@ -3998,7 +3981,7 @@ msgstr ""
 #: superset/initialization/__init__.py:356
 #: superset/initialization/__init__.py:365
 msgid "Data"
-msgstr "Dáta"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:47
 msgid "Data Table"
@@ -4185,7 +4168,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/common.ts:26
 #: superset/initialization/__init__.py:353 superset/views/database/mixins.py:33
 msgid "Databases"
-msgstr "Databázy"
+msgstr ""
 
 #: superset/views/database/forms.py:224 superset/views/database/forms.py:360
 #: superset/views/database/forms.py:451
@@ -4266,7 +4249,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/common.ts:32
 #: superset/initialization/__init__.py:361
 msgid "Datasets"
-msgstr "Datasety"
+msgstr ""
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:777
 msgid "Datasets do not contain a temporal column"
@@ -5095,11 +5078,11 @@ msgid ""
 "database. If left unset, the cache never expires. "
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:41
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:40
 msgid "Duration in ms (1.40008 => 1ms 400µs 80ns)"
 msgstr ""
 
-#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:40
+#: superset-frontend/packages/superset-ui-chart-controls/src/utils/D3Formatting.ts:39
 msgid "Duration in ms (66000 => 1m 6s)"
 msgstr ""
 
@@ -5132,9 +5115,8 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/index.ts:42
 #: superset-frontend/plugins/plugin-chart-echarts/src/Treemap/index.ts:61
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:129
-#, fuzzy
 msgid "ECharts"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/AdvancedFrame.tsx:76
 #: superset-frontend/src/explore/components/controls/DateFilterControl/components/CustomFrame.tsx:170
@@ -5265,9 +5247,8 @@ msgid "Edit annotation layer properties"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:369
-#, fuzzy
 msgid "Edit chart"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:270
 msgid "Edit chart properties"
@@ -5315,9 +5296,8 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/DashboardBuilder/DashboardBuilder.tsx:495
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:209
-#, fuzzy
 msgid "Edit the dashboard"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/DateFilterLabel.tsx:353
 msgid "Edit time range"
@@ -5375,9 +5355,8 @@ msgid "Embed code"
 msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:340
-#, fuzzy
 msgid "Embed dashboard"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset-frontend/src/dashboard/components/DashboardEmbedControls.tsx:108
 msgid "Embedding deactivated."
@@ -6562,7 +6541,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:287
 #: superset/initialization/__init__.py:222
 msgid "Home"
-msgstr "Domov"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-horizon/src/index.js:32
 msgid "Horizon Chart"
@@ -6727,7 +6706,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:316
 msgid "Import Dashboards"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset/connectors/sqla/views.py:386
 msgid "Import a table definition"
@@ -7607,7 +7586,7 @@ msgstr ""
 #: superset/initialization/__init__.py:320
 #: superset/initialization/__init__.py:393
 msgid "Manage"
-msgstr "Spravovať"
+msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:347
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:340
@@ -8331,9 +8310,8 @@ msgid "No Results"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:113
-#, fuzzy
 msgid "No annotation layers"
-msgstr "Anotačná vrstva"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:314
 msgid "No annotation layers yet"
@@ -8451,9 +8429,8 @@ msgid "No samples were returned for this dataset"
 msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DndColumnSelectControl/ColumnSelectPopover.tsx:270
-#, fuzzy
 msgid "No saved expressions found"
-msgstr "Uložené dotazy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx:376
 msgid "No saved metrics found"
@@ -9408,7 +9385,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:255
 msgid "Plugins"
-msgstr "Pluginy"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Scatter/controlPanel.ts:132
 msgid "Point Color"
@@ -9757,7 +9734,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:343
 msgid "Query History"
-msgstr "História dotazov"
+msgstr ""
 
 #: superset/commands/exceptions.py:138
 msgid "Query does not exist"
@@ -9843,9 +9820,8 @@ msgstr ""
 #: superset-frontend/plugins/legacy-plugin-chart-country-map/src/index.js:35
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/index.js:38
 #: superset-frontend/plugins/plugin-chart-echarts/src/BoxPlot/index.ts:55
-#, fuzzy
 msgid "Range"
-msgstr "Spravovať"
+msgstr ""
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:303
 #: superset-frontend/src/filters/components/Range/index.ts:28
@@ -9861,9 +9837,8 @@ msgid "Range labels"
 msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bullet/controlPanel.ts:39
-#, fuzzy
 msgid "Ranges"
-msgstr "Spravovať"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/Bullet/controlPanel.ts:41
 msgid "Ranges to highlight with shading"
@@ -10424,9 +10399,8 @@ msgid "Row"
 msgstr ""
 
 #: superset/initialization/__init__.py:275
-#, fuzzy
 msgid "Row Level Security"
-msgstr "Bezpečnosť na úrovni riadkov"
+msgstr ""
 
 #: superset/views/database/forms.py:156 superset/views/database/forms.py:312
 msgid ""
@@ -10747,12 +10721,11 @@ msgstr ""
 
 #: superset/initialization/__init__.py:336
 msgid "Saved Queries"
-msgstr "Uložené dotazy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/DndColumnSelectControl/ColumnSelectPopover.tsx:226
-#, fuzzy
 msgid "Saved expressions"
-msgstr "Uložené dotazy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx:360
 msgid "Saved metric"
@@ -10955,7 +10928,7 @@ msgstr ""
 #: superset/initialization/__init__.py:376
 #: superset/initialization/__init__.py:403
 msgid "Security"
-msgstr "Bezpečnosť"
+msgstr ""
 
 #: superset-frontend/src/profile/components/App.tsx:82
 msgid "Security & Access"
@@ -11011,7 +10984,6 @@ msgid "Select a column"
 msgstr ""
 
 #: superset-frontend/src/explore/components/SaveModal.tsx:337
-#, fuzzy
 msgid "Select a dashboard"
 msgstr ""
 
@@ -11256,9 +11228,8 @@ msgid "Shared query"
 msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:297
-#, fuzzy
 msgid "Shared query fields"
-msgstr "Uložené dotazy"
+msgstr ""
 
 #: superset/views/database/forms.py:278
 msgid "Sheet Name"
@@ -11722,9 +11693,8 @@ msgid "Sort"
 msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/DistBar/controlPanel.ts:83
-#, fuzzy
 msgid "Sort Bars"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:358
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:112
@@ -14164,28 +14134,24 @@ msgid "Upload"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:199
-#, fuzzy
 msgid "Upload CSV"
-msgstr "Nahrať Excel"
+msgstr ""
 
 #: superset-frontend/src/views/components/RightMenu.tsx:150
 msgid "Upload CSV to database"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/DatabaseConnectionForm/EncryptedField.tsx:134
-#, fuzzy
 msgid "Upload Credentials"
-msgstr "Nahrať Excel"
+msgstr ""
 
 #: superset/databases/filters.py:66
-#, fuzzy
 msgid "Upload Enabled"
-msgstr "Nahrať Excel"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:213
-#, fuzzy
 msgid "Upload Excel file"
-msgstr "Nahrať Excel"
+msgstr ""
 
 #: superset-frontend/src/views/components/RightMenu.tsx:162
 msgid "Upload Excel file to database"
@@ -15700,9 +15666,8 @@ msgid "chart"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:26
-#, fuzzy
 msgid "charts"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/src/explore/components/controls/FilterControl/AdhocFilterEditPopoverSqlTabContent/index.jsx:101
 msgid "choose WHERE or HAVING..."
@@ -15757,9 +15722,8 @@ msgid "dashboard"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:27
-#, fuzzy
 msgid "dashboards"
-msgstr "Importovať dashboard"
+msgstr ""
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseList.tsx:91
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:439
@@ -15827,9 +15791,8 @@ msgid "deck.gl Screen Grid"
 msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/Multi/controlPanel.js:37
-#, fuzzy
 msgid "deck.gl charts"
-msgstr "Grafy"
+msgstr ""
 
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/Multi/index.js:31
 #: superset-frontend/plugins/legacy-preset-chart-deckgl/src/layers/Arc/index.js:33
@@ -16197,9 +16160,8 @@ msgid "right"
 msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:29
-#, fuzzy
 msgid "saved queries"
-msgstr "Uložené dotazy"
+msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-table/src/TableChart.tsx:125
 msgid "search.num_records"

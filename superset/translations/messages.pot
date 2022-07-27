@@ -10771,7 +10771,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:107
 #: superset-frontend/src/views/CRUD/welcome/Welcome.tsx:337
 msgid "Saved queries"
-msgstr ""
+msgstr "Сохраненные SQL-запросы"
 
 #: superset/queries/saved_queries/commands/exceptions.py:28
 msgid "Saved queries could not be deleted."
@@ -16196,7 +16196,7 @@ msgstr ""
 
 #: superset-frontend/src/views/CRUD/welcome/EmptyState.tsx:29
 msgid "saved queries"
-msgstr ""
+msgstr "сохраненные SQL-запросы"
 
 #: superset-frontend/plugins/plugin-chart-table/src/TableChart.tsx:125
 msgid "search.num_records"
@@ -16294,3 +16294,5 @@ msgstr ""
 msgid "Профиль"
 msgstr ""
 
+msgid "%s rows"
+msgstr ""
