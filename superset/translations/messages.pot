@@ -16296,3 +16296,12 @@ msgstr ""
 
 msgid "%s rows"
 msgstr ""
+
+msgid "recent"
+msgstr ""
+
+msgid "name"
+msgstr ""
+
+msgid "viz type"
+msgstr ""

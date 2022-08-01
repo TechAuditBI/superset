@@ -805,7 +805,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/ExploreChartHeader/index.jsx:156
 msgid "Add the name of the chart"
-msgstr ""
+msgstr "Впишите название графика"
 
 #: superset-frontend/src/dashboard/components/Header/index.jsx:498
 msgid "Add the name of the dashboard"
@@ -1591,7 +1591,7 @@ msgstr ""
 #: superset-frontend/packages/superset-ui-chart-controls/src/sections/sections.tsx:114
 #: superset/initialization/__init__.py:229 superset/views/annotations.py:116
 msgid "Annotation Layers"
-msgstr ""
+msgstr "Слои Аннотации"
 
 #: superset-frontend/src/explore/components/controls/AnnotationLayerControl/AnnotationLayer.jsx:500
 msgid "Annotation Slice Configuration"
@@ -1687,7 +1687,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:71
 #: superset-frontend/src/views/CRUD/annotationlayers/AnnotationLayersList.tsx:335
 msgid "Annotation layers"
-msgstr ""
+msgstr "Слои аннотации"
 
 #: superset-frontend/src/dashboard/components/SliceHeader/index.tsx:56
 msgid "Annotation layers are still loading."
@@ -2252,7 +2252,7 @@ msgstr ""
 
 #: superset/initialization/__init__.py:266 superset/views/css_templates.py:38
 msgid "CSS Templates"
-msgstr ""
+msgstr "Шаблоны CSS"
 
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/style.tsx:60
 msgid "CSS applied to the chart"
@@ -2277,7 +2277,7 @@ msgstr "Шаблон CSS не найден."
 #: superset-frontend/src/views/CRUD/csstemplates/CssTemplatesList.tsx:71
 #: superset-frontend/src/views/CRUD/csstemplates/CssTemplatesList.tsx:240
 msgid "CSS templates"
-msgstr ""
+msgstr "Шаблоны СSS"
 
 #: superset/views/database/forms.py:104
 msgid "CSV File"
@@ -3720,7 +3720,7 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts:135
 msgid "Country Column"
-msgstr ""
+msgstr "Столбец страны"
 
 #: superset-frontend/plugins/legacy-plugin-chart-world-map/src/controlPanel.ts:41
 msgid "Country Field Type"
@@ -3748,7 +3748,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:168
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:191
 msgid "Create a new chart"
-msgstr ""
+msgstr "Создать новый график"
 
 #: superset-frontend/src/explore/components/RunQueryButton/index.tsx:54
 msgid "Create chart"
@@ -3757,7 +3757,7 @@ msgstr ""
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:414
 #: superset-frontend/src/dashboard/components/SliceAdder.jsx:304
 msgid "Create new chart"
-msgstr ""
+msgstr "Создать график"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/Footer.tsx:111
 msgid "Create new filter set"
@@ -3934,7 +3934,7 @@ msgstr ""
 #: superset/templates/appbuilder/navbar_right.html:41
 #: superset/views/dashboard/mixin.py:78 superset/views/dashboard/views.py:192
 msgid "Dashboard"
-msgstr "Дашборд"
+msgstr "Отчет"
 
 #: superset-frontend/src/explore/actions/saveModalActions.js:113
 msgid "Dashboard [%s] just got created and chart [%s] was added to it"
@@ -3946,19 +3946,19 @@ msgstr ""
 
 #: superset/dashboards/commands/exceptions.py:54
 msgid "Dashboard could not be created."
-msgstr "Дашборд не может быть создан."
+msgstr "Отчет не может быть создан."
 
 #: superset/dashboards/commands/exceptions.py:70
 msgid "Dashboard could not be deleted."
-msgstr "Дашборд не может быть удалён."
+msgstr "Отчет не может быть удалён."
 
 #: superset/dashboards/commands/exceptions.py:66
 msgid "Dashboard could not be updated."
-msgstr "Дашборд не может быть обновлён."
+msgstr "Отчет не может быть обновлён."
 
 #: superset/reports/commands/exceptions.py:45
 msgid "Dashboard does not exist"
-msgstr "Дашборд не существует"
+msgstr "Отчет не существует"
 
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:147
 msgid "Dashboard imported"
@@ -3991,11 +3991,11 @@ msgstr ""
 #: superset/initialization/__init__.py:239 superset/views/chart/mixin.py:79
 #: superset/views/dashboard/mixin.py:25
 msgid "Dashboards"
-msgstr "Дашборды"
+msgstr "Отчеты"
 
 #: superset/dashboards/commands/exceptions.py:58
 msgid "Dashboards could not be deleted."
-msgstr "Дашборды не могут быть удалены."
+msgstr "Отчеты не могут быть удалены."
 
 #: superset/charts/commands/exceptions.py:91
 msgid "Dashboards do not exist"
@@ -4050,7 +4050,7 @@ msgstr "Метаданные обновлены"
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:137
 msgid "Data source"
-msgstr ""
+msgstr "Датасет"
 
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:265
 #: superset-frontend/src/components/Datasource/DatasourceEditor.jsx:268
@@ -4649,7 +4649,7 @@ msgstr[0] "Удалено %(num)d шаблонов CSS"
 #, python-format
 msgid "Deleted %(num)d dashboard"
 msgid_plural "Deleted %(num)d dashboards"
-msgstr[0] "Удалено %(num)d дашбордов"
+msgstr[0] "Удалено %(num)d отчетов"
 
 #: superset/datasets/api.py:690
 #, python-format
@@ -4785,7 +4785,7 @@ msgstr ""
 msgid ""
 "Determines whether or not this dashboard is visible in the list of all "
 "dashboards"
-msgstr "Определяет видимость дашборда в списке всех дашбордов"
+msgstr "Определяет видимость дашборда в списке всех отчетов"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:231
 msgid "Diamond"
@@ -4819,7 +4819,7 @@ msgstr ""
 #: superset-frontend/src/explore/controls.jsx:120
 #: superset-frontend/src/explore/controls.jsx:378
 msgid "Dimensions"
-msgstr ""
+msgstr "Группировка"
 
 #: superset/viz.py:1995
 msgid "Directed Force Layout"
@@ -4855,7 +4855,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/Header/index.jsx:579
 #: superset-frontend/src/dashboard/components/Header/index.jsx:581
 msgid "Discard"
-msgstr ""
+msgstr "Отменить"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/DistBar/index.js:44
 msgid "Discrete"
@@ -4966,7 +4966,7 @@ msgstr "Черновик"
 
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:161
 msgid "Drag and drop components and charts to the dashboard"
-msgstr ""
+msgstr "Перетаскивайте компоненты и графики на дашборд"
 
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:184
 #: superset-frontend/src/dashboard/components/gridComponents/Tab.jsx:178
@@ -5217,7 +5217,7 @@ msgstr "Редактировать столбец"
 
 #: superset/views/dashboard/mixin.py:28
 msgid "Edit Dashboard"
-msgstr "Редактировать Дашборд"
+msgstr "Редактировать Отчет"
 
 #: superset/views/database/mixins.py:36
 msgid "Edit Database"
@@ -5279,7 +5279,7 @@ msgstr "Редактировать свойства графика"
 #: superset-frontend/src/dashboard/components/Header/index.jsx:612
 #: superset-frontend/src/dashboard/components/Header/index.jsx:614
 msgid "Edit dashboard"
-msgstr "Редактировать Дашборд"
+msgstr "Редактировать Отчет"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:1312
 msgid "Edit database"
@@ -5301,7 +5301,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:269
 msgid "Edit properties"
-msgstr ""
+msgstr "Редактировать свойства"
 
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:385
 msgid "Edit query"
@@ -6518,7 +6518,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/gridComponents/new/NewHeader.jsx:31
 msgid "Header"
-msgstr ""
+msgstr "Заголовок"
 
 #: superset/views/database/forms.py:155 superset/views/database/forms.py:311
 msgid "Header Row"
@@ -7137,7 +7137,7 @@ msgstr ""
 #: superset-frontend/src/views/CRUD/annotation/AnnotationList.tsx:157
 #: superset/views/annotations.py:79 superset/views/sql_lab.py:77
 msgid "Label"
-msgstr ""
+msgstr "Название"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Pie/controlPanel.tsx:176
 msgid "Label Line"
@@ -7257,7 +7257,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/BuilderComponentPane/index.tsx:115
 msgid "Layout elements"
-msgstr ""
+msgstr "Компоненты"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:115
 msgid "Layout type of graph"
@@ -7624,7 +7624,7 @@ msgstr ""
 #: superset/initialization/__init__.py:320
 #: superset/initialization/__init__.py:393
 msgid "Manage"
-msgstr ""
+msgstr "Управление"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:347
 #: superset-frontend/src/explore/components/useExploreAdditionalActionsMenu/index.jsx:340
@@ -8379,7 +8379,7 @@ msgstr ""
 
 #: superset-frontend/src/profile/components/CreatedContent.tsx:74
 msgid "No dashboards"
-msgstr "Нет дашбордов"
+msgstr "Нет отчетов"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/BigNumberViz.tsx:149
 #: superset-frontend/src/filters/components/Select/SelectFilterPlugin.tsx:259
@@ -8409,13 +8409,13 @@ msgstr "В избранном нет графиков. Нажмите звёзд
 
 #: superset-frontend/src/profile/components/Favorites.tsx:75
 msgid "No favorite dashboards yet, go click on stars!"
-msgstr "В избранном нет дашбордов. Нажмите звёздочку для добавления!"
+msgstr "В избранном нет отчетов. Нажмите звёздочку для добавления!"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/index.tsx:332
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:35
 #: superset-frontend/src/explore/controls.jsx:324
 msgid "No filter"
-msgstr "Фильтра нету"
+msgstr "Без фильтра"
 
 #: superset-frontend/src/dashboard/components/filterscope/FilterScopeSelector.jsx:484
 msgid "No filter is selected."
@@ -10452,7 +10452,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/gridComponents/new/NewRow.jsx:31
 msgid "Row"
-msgstr ""
+msgstr "Ряд"
 
 #: superset/initialization/__init__.py:275
 msgid "Row Level Security"
@@ -10773,7 +10773,7 @@ msgstr ""
 #: superset-frontend/src/explore/components/controls/DndColumnSelectControl/ColumnSelectPopover.tsx:242
 #: superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx:358
 msgid "Saved"
-msgstr ""
+msgstr "Сохраненные"
 
 #: superset/initialization/__init__.py:336
 msgid "Saved Queries"
@@ -10785,7 +10785,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/MetricControl/AdhocMetricEditPopover/index.jsx:360
 msgid "Saved metric"
-msgstr ""
+msgstr "Сохраненный показатель"
 
 #: superset-frontend/src/views/CRUD/data/common.ts:38
 #: superset-frontend/src/views/CRUD/data/savedquery/SavedQueryList.tsx:107
@@ -11242,11 +11242,11 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:389
 msgid "Set auto-refresh interval"
-msgstr ""
+msgstr "Установить интервал автообновления"
 
 #: superset-frontend/src/dashboard/components/Header/HeaderActionsDropdown/index.jsx:376
 msgid "Set filter mapping"
-msgstr ""
+msgstr "Установить распределение фильтров"
 
 #: superset-frontend/src/components/ReportModal/HeaderReportDropdown/index.tsx:207
 msgid "Set up an email report"
@@ -11760,7 +11760,7 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:112
 #: superset-frontend/plugins/plugin-chart-pivot-table/src/plugin/controlPanel.tsx:125
 msgid "Sort Descending"
-msgstr ""
+msgstr "Сортировать по убыванию"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:1016
 msgid "Sort Metric"
@@ -11789,7 +11789,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/SliceAdder.jsx:323
 #: superset-frontend/src/explore/controls.jsx:362
 msgid "Sort by"
-msgstr ""
+msgstr "Сортировать по"
 
 #: superset-frontend/plugins/legacy-plugin-chart-chord/src/controlPanel.ts:43
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.tsx:96
@@ -11817,7 +11817,7 @@ msgstr ""
 #: superset-frontend/plugins/plugin-chart-table/src/controlPanel.tsx:357
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:1007
 msgid "Sort descending"
-msgstr ""
+msgstr "Сортировать по убыванию"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigForm/FiltersConfigForm.tsx:985
 msgid "Sort filter values"
@@ -12063,7 +12063,7 @@ msgstr ""
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/BigNumber/sharedControls.ts:62
 msgid "Subheader Font Size"
-msgstr "Размер шрифта подзаголовока"
+msgstr "Размер шрифта подзаголовка"
 
 #: superset-frontend/src/SqlLab/components/QueryTable/index.tsx:121
 #: superset-frontend/src/views/CRUD/alert/AlertList.tsx:53
@@ -12538,7 +12538,7 @@ msgid ""
 "The description can be displayed as widget headers in the dashboard view. "
 "Supports markdown."
 msgstr ""
-"Описание может быть отображено как заголовок виджета в ракурсе дашбордов. "
+"Описание может быть отображено как заголовок виджета в ракурсе отчетов. "
 "Поддерживает markdown-разметку."
 
 #: superset-frontend/plugins/legacy-plugin-chart-calendar/src/controlPanel.ts:105
@@ -13339,7 +13339,7 @@ msgid ""
 "directly."
 msgstr ""
 "Этот дашборд не опубликован, что означает, что он не будет отображён в "
-"списке дашбордов. Добавьте его в избранное, чтобы увидеть там или "
+"списке отчетов. Добавьте его в избранное, чтобы увидеть там или "
 "воспользуйтесь доступом по прямой ссылке."
 
 #: superset-frontend/src/dashboard/components/PublishedStatus/index.jsx:33
@@ -13347,7 +13347,7 @@ msgid ""
 "This dashboard is not published, it will not show up in the list of "
 "dashboards. Click here to publish this dashboard."
 msgstr ""
-"Этот дашборд не опубликован, он не будет отображён в списке дашбордов. "
+"Этот дашборд не опубликован, он не будет отображён в списке отчетов. "
 "Нажмите здесь, чтобы опубликовать этот дашборд."
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:144
@@ -13360,7 +13360,7 @@ msgstr "Этот дашборд теперь ${nowPublished}"
 
 #: superset-frontend/src/dashboard/components/PublishedStatus/index.jsx:43
 msgid "This dashboard is published. Click to make it a draft."
-msgstr "Дашборд опубликован. Нажмите, чтобы сделать черновиком."
+msgstr "Отчет опубликован. Нажмите, чтобы сделать черновиком."
 
 #: superset-frontend/src/dashboard/components/DashboardEmbedControls.tsx:163
 msgid ""
@@ -13379,7 +13379,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/actions/dashboardState.js:284
 #: superset-frontend/src/dashboard/actions/dashboardState.js:322
 msgid "This dashboard was saved successfully."
-msgstr "Дашборд успешно сохранен."
+msgstr "Отчет успешно сохранен."
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:908
 msgid "This database is managed externally, and can't be edited in Superset"
@@ -14227,7 +14227,7 @@ msgstr "Недействительная гранулярность времен
 
 #: superset-frontend/src/SqlLab/components/SaveDatasetModal/index.tsx:141
 msgid "Untitled Dataset"
-msgstr ""
+msgstr "Безымянный датасет"
 
 #: superset-frontend/src/SqlLab/reducers/getInitialState.js:44
 msgid "Untitled query"
@@ -15426,7 +15426,7 @@ msgid ""
 "might cause you to lose some of your work. Are you sure you want to "
 "overwrite?"
 msgstr ""
-"Вы импортируете один или несколько дашбордов, которые уже существуют. "
+"Вы импортируете один или несколько отчетов, которые уже существуют. "
 "Перезапись может привести к потере части вашей работы. Вы уверены, что "
 "хотите перезаписать?"
 
@@ -15475,7 +15475,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:185
 msgid ""
 "You can create a new chart or use existing ones from the panel on the right"
-msgstr ""
+msgstr "Создайте новый график или перетащите существующий из панели справа"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/NVD3Vis.js:367
 msgid "You cannot use 45° tick layout along with the time range filter"
@@ -15594,7 +15594,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/Header/index.jsx:396
 msgid "Your dashboard is too large. Please reduce its size before saving it."
 msgstr ""
-"Дашборд слишком большой. Пожалуйста, уменьшите его размер перед сохранением."
+"Отчет слишком большой. Пожалуйста, уменьшите его размер перед сохранением."
 
 #: superset-frontend/src/SqlLab/actions/sqlLab.js:880
 msgid "Your query could not be saved"
@@ -15642,7 +15642,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/actions/dashboardState.js:233
 msgid "[ untitled dashboard ]"
-msgstr ""
+msgstr "[ безымянный дашборд ]"
 
 #: superset-frontend/src/SqlLab/components/QuerySearch/index.tsx:223
 msgid "[From]-"
@@ -15671,7 +15671,7 @@ msgstr "[До]-"
 
 #: superset-frontend/src/views/CRUD/welcome/ActivityTable.tsx:93
 msgid "[Untitled]"
-msgstr ""
+msgstr "[Безымянный]"
 
 #: superset-frontend/src/dashboard/components/SaveModal.tsx:195
 msgid "[dashboard name]"
@@ -15686,7 +15686,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FiltersConfigModal.tsx:245
 msgid "[untitled]"
-msgstr ""
+msgstr "[безымянный]"
 
 #: superset/utils/pandas_postprocessing/compare.py:53
 msgid "`compare_columns` must have the same length as `source_columns`."
@@ -15837,7 +15837,7 @@ msgstr ""
 
 #: superset-frontend/src/dashboard/components/gridComponents/Tab.jsx:191
 msgid "create a new chart"
-msgstr ""
+msgstr "Создать новый график"
 
 #: superset-frontend/src/views/CRUD/csstemplates/CssTemplateModal.tsx:253
 msgid "css"
@@ -16114,7 +16114,7 @@ msgstr ""
 
 #: superset-frontend/plugins/legacy-plugin-chart-map-box/src/controlPanel.ts:162
 msgid "label"
-msgstr ""
+msgstr "Название"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:39
 msgid "last day"
@@ -16404,3 +16404,13 @@ msgstr "Просмотрено %s"
 
 msgid "%s row"
 msgstr "%s строк"
+
+# Sort by in dashboard list
+msgid "recent"
+msgstr "последним"
+
+msgid "name"
+msgstr "имени"
+
+msgid "viz type"
+msgstr "Типу визуализации"
