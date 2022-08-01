@@ -706,7 +706,7 @@ msgstr "Добавить плагин"
 
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:337
 msgid "Add a dataset"
-msgstr ""
+msgstr "Создайте датасет"
 
 #: superset-frontend/src/SqlLab/components/TabbedSqlEditors/index.jsx:410
 msgid "Add a new tab"
@@ -1087,7 +1087,7 @@ msgstr "Весь текст"
 #: superset-frontend/src/dashboard/util/getFilterScopeNodesTree.js:85
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:127
 msgid "All charts"
-msgstr ""
+msgstr "Все графики"
 
 #: superset-frontend/src/dashboard/util/getFilterFieldNodesTree.js:44
 msgid "All filters"
@@ -2465,7 +2465,7 @@ msgstr ""
 
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:676
 msgid "Category"
-msgstr ""
+msgstr "Категория"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Graph/controlPanel.tsx:88
 msgid "Category of target nodes"
@@ -2906,12 +2906,12 @@ msgstr "Удалить график из дашборда"
 
 #: superset-frontend/src/views/CRUD/data/database/DatabaseModal/index.tsx:730
 msgid "Choose a database..."
-msgstr ""
+msgstr "Выберите базу данных..."
 
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:369
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:380
 msgid "Choose a dataset"
-msgstr ""
+msgstr "Выберите датасет"
 
 #: superset-frontend/plugins/legacy-preset-chart-nvd3/src/DualLine/controlPanel.ts:69
 msgid "Choose a metric for left axis"
@@ -2946,7 +2946,7 @@ msgstr ""
 
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:389
 msgid "Choose chart type"
-msgstr ""
+msgstr "Выберите тип визуализации"
 
 #: superset-frontend/src/SqlLab/components/SqlEditor/index.jsx:777
 msgid "Choose one of the available databases from the panel on the left."
@@ -5319,7 +5319,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/DashboardBuilder/DashboardBuilder.tsx:495
 #: superset-frontend/src/dashboard/components/DashboardGrid.jsx:209
 msgid "Edit the dashboard"
-msgstr ""
+msgstr "Редактировать отчет"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/DateFilterLabel.tsx:353
 msgid "Edit time range"
@@ -9419,7 +9419,7 @@ msgstr ""
 
 #: superset-frontend/src/addSlice/AddSliceContainer.tsx:406
 msgid "Please select both a Dataset and a Chart type to proceed"
-msgstr ""
+msgstr "Чтобы продолжить, выберите датасет и тип визуализации"
 
 #: superset/viz.py:1183
 msgid "Please use 3 different metric labels"
@@ -9954,7 +9954,7 @@ msgstr "Получатели, разделенные “,” или “;”"
 
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:671
 msgid "Recommended tags"
-msgstr ""
+msgstr "Рекомендуемые"
 
 #: superset/templates/appbuilder/general/widgets/base_list.html:55
 msgid "Record Count"
@@ -10930,7 +10930,7 @@ msgstr "Поиск Столбцов и Показателей"
 
 #: superset-frontend/src/explore/components/controls/VizTypeControl/VizTypeGallery.tsx:777
 msgid "Search all charts"
-msgstr ""
+msgstr "Поиск визуализации"
 
 #: superset-frontend/src/explore/components/controls/FilterBoxItemControl/index.jsx:232
 msgid "Search all filter options"
