@@ -31,5 +31,9 @@ npm install -f --no-optional
 
 echo "Running frontend"
 
+if [ "$SUPERSET_ENV" == "production" ]; then
+    npm run docker-server
+else 
+    npm run docker-server-dev
+fi
 
-npm run docker-server
