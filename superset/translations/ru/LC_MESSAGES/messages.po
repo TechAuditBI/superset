@@ -253,7 +253,7 @@ msgstr ""
 #: superset-frontend/src/components/TableView/TableView.tsx:240
 #, python-format
 msgid "%s-%s of %s"
-msgstr ""
+msgstr "%s-%s из %s"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FiltersConfigModal/FilterTitleContainer.tsx:115
 msgid "(Removed)"
@@ -4346,7 +4346,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:108
 msgid "Day"
-msgstr ""
+msgstr "День"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:65
 msgid "Days %s"
@@ -6589,7 +6589,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:106
 msgid "Hour"
-msgstr ""
+msgstr "Час"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:64
 msgid "Hours %s"
@@ -6734,7 +6734,7 @@ msgstr "Импорт дашборда(ов)"
 
 #: superset/initialization/__init__.py:316
 msgid "Import Dashboards"
-msgstr ""
+msgstr "Импорт отчетов"
 
 #: superset/connectors/sqla/views.py:386
 msgid "Import a table definition"
@@ -6755,7 +6755,7 @@ msgstr "Импорт дашборда не удался по неизвестн�
 #: superset-frontend/src/views/CRUD/dashboard/DashboardList.tsx:617
 #: superset/templates/superset/import_dashboards.html:21
 msgid "Import dashboards"
-msgstr ""
+msgstr "Импорт отчетов"
 
 #: superset/databases/commands/exceptions.py:166
 msgid "Import database failed for an unknown reason"
@@ -8029,7 +8029,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:101
 msgid "Minute"
-msgstr ""
+msgstr "Минута"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:63
 msgid "Minutes %s"
@@ -8087,7 +8087,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:110
 msgid "Month"
-msgstr ""
+msgstr "Месяц"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:67
 msgid "Months %s"
@@ -8940,7 +8940,7 @@ msgstr "Расположение столбцов как в исходной т�
 #: superset-frontend/src/explore/components/DataTableControl/index.tsx:143
 #: superset/db_engine_specs/base.py:97
 msgid "Original value"
-msgstr ""
+msgstr "Настоящее значение"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/Tree/controlPanel.tsx:121
 msgid "Orthogonal"
@@ -9705,7 +9705,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:111
 msgid "Quarter"
-msgstr ""
+msgstr "Четверть"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:68
 msgid "Quarters %s"
@@ -10950,7 +10950,7 @@ msgstr "Поиск…"
 
 #: superset/db_engine_specs/base.py:98
 msgid "Second"
-msgstr ""
+msgstr "Секунда"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:260
 msgid "Secondary"
@@ -13547,7 +13547,7 @@ msgstr ""
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:33
 msgid "Time Grain"
-msgstr ""
+msgstr "Гранулярность"
 
 #: superset-frontend/packages/superset-ui-chart-controls/src/constants.ts:34
 msgid "Time Granularity"
@@ -13652,7 +13652,7 @@ msgstr ""
 #: superset-frontend/src/explore/constants.ts:120
 #: superset-frontend/src/filters/components/TimeGrain/index.ts:28
 msgid "Time grain"
-msgstr ""
+msgstr "Гранулярность времени"
 
 #: superset-frontend/src/filters/components/TimeGrain/index.ts:29
 msgid "Time grain filter plugin"
@@ -14809,7 +14809,7 @@ msgstr "Среда"
 
 #: superset/db_engine_specs/base.py:109
 msgid "Week"
-msgstr ""
+msgstr "Неделя"
 
 #: superset/db_engine_specs/base.py:115
 msgid "Week ending Saturday"
@@ -15396,7 +15396,7 @@ msgstr ""
 
 #: superset/db_engine_specs/base.py:112
 msgid "Year"
-msgstr ""
+msgstr "Год"
 
 #: superset-frontend/src/explore/components/controls/DateFilterControl/utils/constants.ts:69
 msgid "Years %s"
@@ -15881,7 +15881,7 @@ msgstr ""
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:39
 msgid "day"
-msgstr ""
+msgstr "день"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:30
 msgid "day of the month"
@@ -16064,7 +16064,7 @@ msgstr ""
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:40
 msgid "hour"
-msgstr ""
+msgstr "час"
 
 #: superset-frontend/src/profile/components/UserInfo.tsx:75
 msgid "id:"
@@ -16157,7 +16157,7 @@ msgstr "нижний процентиль должен быть больше 0 �
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:41
 msgid "minute"
-msgstr ""
+msgstr "минута"
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:51
 msgid "minute(s)"
@@ -16165,7 +16165,7 @@ msgstr ""
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:37
 msgid "month"
-msgstr ""
+msgstr "месяц"
 
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/columns.tsx:53
 #: superset-frontend/plugins/plugin-chart-handlebars/src/plugin/controls/columns.tsx:78
@@ -16360,7 +16360,7 @@ msgstr ""
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:38
 msgid "week"
-msgstr ""
+msgstr "неделя"
 
 #: superset-frontend/plugins/legacy-plugin-chart-heatmap/src/controlPanel.tsx:182
 msgid "x: values are normalized within each column"
@@ -16372,7 +16372,7 @@ msgstr ""
 
 #: superset-frontend/src/components/CronPicker/CronPicker.tsx:36
 msgid "year"
-msgstr ""
+msgstr "год"
 
 #: superset-frontend/src/explore/components/controls/ConditionalFormattingControl/FormattingPopoverContent.tsx:43
 msgid "yellow"
