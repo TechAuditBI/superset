@@ -552,7 +552,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
         if result_format == ChartDataResultFormat.XLSX:
             sio = BytesIO()
             df = pandas.DataFrame(result["queries"][0]["data"])
-            writer = pandas.ExcelWriter(sio, engine='xlsxwriter')
+            writer = pandas.ExcelWriter(sio, engine='xlsxwriter', options={'strings_to_numbers': True})
             df.to_excel(writer, sheet_name="Лист 1", index=None)
             writer.save()
 
