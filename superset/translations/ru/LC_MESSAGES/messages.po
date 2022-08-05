@@ -4007,7 +4007,7 @@ msgstr ""
 #: superset/initialization/__init__.py:356
 #: superset/initialization/__init__.py:365
 msgid "Data"
-msgstr "БД"
+msgstr "Данные"
 
 #: superset-frontend/plugins/legacy-plugin-chart-parallel-coordinates/src/controlPanel.ts:47
 msgid "Data Table"
