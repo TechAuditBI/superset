@@ -133,7 +133,7 @@ msgstr "%(prefix)s %(title)s"
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:368
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:382
 msgid "%(rows)d rows returned"
-msgstr "%(rows) строк получено"
+msgstr ""
 
 #: superset-frontend/src/components/ErrorMessage/TimeoutErrorMessage.tsx:93
 msgid ""
@@ -3664,7 +3664,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:278
 msgid "Copy to Clipboard"
-msgstr "Скопировать в буфер обмена"
+msgstr ""
 
 #: superset-frontend/src/components/CopyToClipboard/index.jsx:44
 #: superset-frontend/src/dashboard/components/URLShortLinkButton/index.tsx:89
@@ -3737,7 +3737,7 @@ msgstr ""
 
 #: superset-frontend/src/SqlLab/components/ExploreResultsButton/index.tsx:48
 msgid "Create Chart"
-msgstr "Создать график"
+msgstr ""
 
 #: superset-frontend/src/explore/components/DatasourcePanel/index.tsx:379
 #: superset-frontend/src/explore/components/ExploreChartPanel.jsx:320
@@ -4954,7 +4954,7 @@ msgstr "Сохранить как картинку"
 
 #: superset-frontend/src/SqlLab/components/ResultSet/index.tsx:269
 msgid "Download to CSV"
-msgstr "Скачать как CSV"
+msgstr ""
 
 #: superset-frontend/src/dashboard/components/PublishedStatus/index.jsx:72
 #: superset-frontend/src/dashboard/components/PublishedStatus/index.jsx:83
@@ -5433,7 +5433,7 @@ msgstr "Включить выбор фильтра"
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/emitFilterControl.tsx:30
 #: superset-frontend/packages/superset-ui-chart-controls/src/shared-controls/emitFilterControl.tsx:33
 msgid "Enable dashboard cross filters"
-msgstr "Редактировать свойства дашборда"
+msgstr "Включить кросс-фильтры отчета"
 
 #: superset-frontend/plugins/plugin-chart-echarts/src/MixedTimeseries/controlPanel.tsx:323
 #: superset-frontend/plugins/plugin-chart-echarts/src/Timeseries/Area/controlPanel.tsx:173
