@@ -3820,7 +3820,7 @@ msgstr ""
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:388
 #: superset-frontend/src/dashboard/components/SliceHeaderControls/index.tsx:450
 msgid "Cross-filter scoping"
-msgstr ""
+msgstr "Область охвата кросс-фильтров"
 
 #: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:154
 msgid "Cumulative"

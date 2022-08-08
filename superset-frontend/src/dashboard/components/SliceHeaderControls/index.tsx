@@ -443,13 +443,6 @@ class SliceHeaderControls extends React.PureComponent<
             {t('Export current table')}
           </Menu.Item>
         ) : null}
-        {isFeatureEnabled(FeatureFlag.DASHBOARD_CROSS_FILTERS) &&
-          isCrossFilter &&
-          canEmitCrossFilter && (
-            <Menu.Item key={MENU_KEYS.CROSS_FILTER_SCOPING}>
-              {t('Cross-filter scoping')}
-            </Menu.Item>
-          )}
       </Menu>
     );
 
