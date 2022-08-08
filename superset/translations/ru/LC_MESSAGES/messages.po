@@ -817,7 +817,7 @@ msgstr "Добавить в дашборд"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/Header/index.tsx:104
 msgid "Add/Edit Filters"
-msgstr ""
+msgstr "Создать/Изменить Фильтры"
 
 #: superset-frontend/src/dashboard/components/AddSliceCard.jsx:142
 msgid "Added"
@@ -3034,7 +3034,7 @@ msgstr "Очистить"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/ActionButtons/index.tsx:127
 msgid "Clear all"
-msgstr ""
+msgstr "Сбросить"
 
 #: superset-frontend/src/explore/components/ControlPanelsContainer.tsx:493
 msgid "Clear form"
@@ -3822,7 +3822,7 @@ msgstr ""
 msgid "Cross-filter scoping"
 msgstr "Область охвата кросс-фильтров"
 
-#: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:154
+#: superset-frontend/plugins/legacy-plugin-chart-histogram/src/controlPanel.ts:154f
 msgid "Cumulative"
 msgstr ""
 
@@ -6186,7 +6186,7 @@ msgstr "Фильтруемый"
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/Header/index.tsx:88
 #: superset-frontend/src/explore/controls.jsx:444 superset/viz.py:2132
 msgid "Filters"
-msgstr "Фильтровать"
+msgstr "Фильтры"
 
 #: superset-frontend/src/dashboard/components/nativeFilters/FilterBar/FilterSets/FiltersHeader.tsx:88
 msgid "Filters (%d)"
