@@ -303,6 +303,13 @@ const exportXLSX = useCallback(
             {t('Export to .JSON')}
           </Menu.Item>
           <Menu.Item
+              key={MENU_KEYS.EXPORT_TO_XLSX}
+              icon={<FileOutlined />}
+              disabled={!canDownloadCSV}
+            >
+              {t('Export to EXCEL')}
+            </Menu.Item>
+          <Menu.Item
             key={MENU_KEYS.DOWNLOAD_AS_IMAGE}
             icon={<FileImageOutlined />}
           >
