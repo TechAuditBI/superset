@@ -21,7 +21,7 @@ do
   filename="${file%.*}"
   if [ $extension == "po" ]
   then
-    po2json --domain superset --format jed1.x $file $filename.json
-    ./superset-frontend/node_modules/.bin/prettier --write $filename.json
+    po2json --domain superset --format jed1.x $file $filename.json 
+    ./superset-frontend/node_modules/.bin/prettier --write $filename.json 
   fi
 done

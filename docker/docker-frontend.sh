@@ -16,14 +16,19 @@
 # limitations under the License.
 #
 set -e
+cd ./app/superset-frontend
+npm install -g npm@latest
+npm i -f --legacy-peer-deps --unsafe-perm=true --allow-root 
+npm install -f --no-optional --global webpack webpack-cli 
+npm run build
 
-# Packages needed for puppeteer:
 apt update
 apt install -y chromium
 
-cd /app/superset-frontend
-npm install -f --no-optional --global webpack webpack-cli
-npm install -f --no-optional
 
-echo "Running frontend"
-npm run dev
+cd ..
+npm install -g po2json
+./scripts/po2json.sh
+apt-get install python3-babel -y
+pybabel compile -d superset/translations
+cd ./superset-frontend

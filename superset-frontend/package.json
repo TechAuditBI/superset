@@ -1,6 +1,6 @@
 {
   "name": "superset",
-  "version": "0.0.0-dev",
+  "version": "TechAudit-2.0.0",
   "description": "Superset is a data exploration platform designed to be visual, intuitive, and interactive.",
   "keywords": [
     "big",
@@ -39,6 +39,7 @@
     "_prettier": "prettier './({src,spec,cypress-base,plugins,packages,.storybook}/**/*{.js,.jsx,.ts,.tsx,.css,.less,.scss,.sass}|package.json)'",
     "build": "cross-env NODE_OPTIONS=--max_old_space_size=8192 NODE_ENV=production BABEL_ENV=\"${BABEL_ENV:=production}\" webpack --mode=production --color",
     "build-dev": "cross-env NODE_OPTIONS=--max_old_space_size=8192 NODE_ENV=development webpack --mode=development --color",
+    "build-prod": "cross-env NODE_OPTIONS=--max_old_space_size=8192 NODE_ENV=production webpack --mode=production --color",
     "build-instrumented": "cross-env NODE_ENV=production BABEL_ENV=instrumented webpack --mode=production --color",
     "build-storybook": "build-storybook",
     "check-translation": "prettier --check ../superset/translations/**/LC_MESSAGES/*.json",
@@ -48,6 +49,9 @@
     "cover": "cross-env NODE_ENV=test jest --coverage",
     "dev": "webpack --mode=development --color --watch",
     "dev-server": "cross-env NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development",
+    "prod-server": "cross-env NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development --host 0.0.0.0",
+    "docker-server": "SUPERSET_URL=http://superset_app:8088 cross-env NODE_ENV=production BABEL_ENV=production node --max_old_space_size=4096 ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development --host 0.0.0.0",
+    "docker-server-dev": "SUPERSET_URL=http://superset_app:8088 cross-env NODE_ENV=development BABEL_ENV=development node --max_old_space_size=4096 ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --mode=development --host 0.0.0.0",
     "format": "npm run _prettier -- --write",
     "lint": "npm run _lint && npm run type",
     "lint-fix": "npm run _lint -- --fix && npm run type",
@@ -150,6 +154,7 @@
     "lodash-es": "^4.17.21",
     "match-sorter": "^6.1.0",
     "memoize-one": "^5.1.1",
+    "mapbox-gl": "2.10.0",
     "moment": "^2.26.0",
     "moment-timezone": "^0.5.33",
     "mousetrap": "^1.6.1",

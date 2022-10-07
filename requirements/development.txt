@@ -120,6 +120,7 @@ unicodecsv==0.14.1
     #   tabulator
 xlrd==2.0.1
     # via tabulator
+xlsxwriter==3.0.3
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools

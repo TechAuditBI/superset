@@ -162,6 +162,7 @@ if (!isDevMode) {
         memoryLimit: 4096,
         options: {
           ignorePath: './.eslintignore',
+          fix: true,
         },
       },
     }),
@@ -510,6 +511,7 @@ if (isDevMode) {
       logging: 'error',
     },
     static: path.join(process.cwd(), '../static/assets'),
+    allowedHosts: 'all'
   };
 }
 

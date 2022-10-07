@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
@@ -14,33 +15,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-COMPOSE_PROJECT_NAME=superset
+set -e
+cd ./app/superset-frontend
+npm install -g npm@latest
+npm i -f --legacy-peer-deps --unsafe-perm=true --allow-root 
+npm install -f --no-optional --global webpack webpack-cli 
 
-# database configurations (do not modify)
-DATABASE_DB=superset
-DATABASE_HOST=db
-DATABASE_PASSWORD=superset
-DATABASE_USER=superset
+apt update
+apt install -y chromium
 
-# database engine specific environment variables
-# change the below if you prefers another database engine
-DATABASE_PORT=5432
-DATABASE_DIALECT=postgresql
-POSTGRES_DB=superset
-POSTGRES_USER=superset
-POSTGRES_PASSWORD=superset
-#MYSQL_DATABASE=superset
-#MYSQL_USER=superset
-#MYSQL_PASSWORD=superset
-#MYSQL_RANDOM_ROOT_PASSWORD=yes
 
-# Add the mapped in /app/pythonpath_docker which allows devs to override stuff
-PYTHONPATH=/app/pythonpath:/app/docker/pythonpath_dev
-REDIS_HOST=redis
-REDIS_PORT=6379
-
-FLASK_ENV=production
-SUPERSET_ENV=production
-SUPERSET_LOAD_EXAMPLES=yes
-CYPRESS_CONFIG=false
-SUPERSET_PORT=8088
+cd ..
+npm install -g po2json
+./scripts/po2json.sh
+apt-get install python3-babel -y
+pybabel compile -d superset/translations
+cd ./superset-frontend
+npm run docker-server-dev

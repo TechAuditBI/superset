@@ -23,14 +23,13 @@
 import logging
 import os
 from datetime import timedelta
-from typing import Optional
-
+from typing import Optional, Dict
+from superset.superset_typing import CacheConfig
 from cachelib.file import FileSystemCache
 from celery.schedules import crontab
 
+
 logger = logging.getLogger()
-
-
 def get_env_variable(var_name: str, default: Optional[str] = None) -> str:
     """Get the environment variable or raise exception."""
     try:
@@ -62,23 +61,43 @@ SQLALCHEMY_DATABASE_URI = "%s://%s:%s@%s:%s/%s" % (
     DATABASE_DB,
 )
 
+CACHE_REDIS_URL = os.environ.get("CACHE_REDIS_URL", "redis://redis:6379/0")
+# Default cache for Superset objects
+CACHE_CONFIG: CacheConfig = {
+        "CACHE_TYPE": "redis",
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_KEY_PREFIX":"superset_13",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+
+# Cache for datasource metadata and query results
+DATA_CACHE_CONFIG: CacheConfig = {
+        "CACHE_TYPE": "redis",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_KEY_PREFIX":"superset_13_data",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+FILTER_STATE_CACHE_CONFIG = {
+        "CACHE_TYPE": "redis",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_KEY_PREFIX":"superset_13_filter_state",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+EXPLORE_FORM_DATA_CACHE_CONFIG = {
+        "CACHE_TYPE": "redis",
+        "CACHE_DEFAULT_TIMEOUT": 3600,
+        "CACHE_REDIS_PORT": "6379",
+        "CACHE_KEY_PREFIX":"superset_13_explore_form",
+        "CACHE_REDIS_URL": CACHE_REDIS_URL
+}
+
 REDIS_HOST = get_env_variable("REDIS_HOST")
 REDIS_PORT = get_env_variable("REDIS_PORT")
 REDIS_CELERY_DB = get_env_variable("REDIS_CELERY_DB", "0")
 REDIS_RESULTS_DB = get_env_variable("REDIS_RESULTS_DB", "1")
-
-RESULTS_BACKEND = FileSystemCache("/app/superset_home/sqllab")
-
-CACHE_CONFIG = {
-    "CACHE_TYPE": "redis",
-    "CACHE_DEFAULT_TIMEOUT": 300,
-    "CACHE_KEY_PREFIX": "superset_",
-    "CACHE_REDIS_HOST": REDIS_HOST,
-    "CACHE_REDIS_PORT": REDIS_PORT,
-    "CACHE_REDIS_DB": REDIS_RESULTS_DB,
-}
-DATA_CACHE_CONFIG = CACHE_CONFIG
-
 
 class CeleryConfig(object):
     BROKER_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_CELERY_DB}"
@@ -101,18 +120,58 @@ class CeleryConfig(object):
 
 CELERY_CONFIG = CeleryConfig
 
-FEATURE_FLAGS = {"ALERT_REPORTS": True}
-ALERT_REPORTS_NOTIFICATION_DRY_RUN = True
-WEBDRIVER_BASEURL = "http://superset:8088/"
+FEATURE_FLAGS = {"ALERT_REPORTS": True, "DASHBOARD_CROSS_FILTERS": True, "DRILL_TO_DETAIL": True}
+
+
+# Settings for Async Queries #
+GLOBAL_ASYNC_QUERIES_REDIS_CONFIG = {
+        "host": "redis",
+        "port": "6379",
+}
+
+# UNCOMMENT AND ADD GLOBAL_ASYNC TO FEATURES FLAG TO ENABLE WS#
+# GLOBAL_ASYNC_QUERIES_REDIS_STREAM_PREFIX = "async-events"
+# GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT = 1000
+# GLOBAL_ASYNC_QUERIES_REDIS_STREAM_LIMIT_FIREHOSE = 1000000
+# GLOBAL_ASYNC_QUERIES_JWT_COOKIE_NAME = "async-token"
+# GLOBAL_ASYNC_QUERIES_JWT_COOKIE_SECURE = False
+# GLOBAL_ASYNC_QUERIES_JWT_COOKIE_DOMAIN = None
+# GLOBAL_ASYNC_QUERIES_JWT_SECRET = "alwfnbjigu19gfaovmb85fsalvdigesx"
+# GLOBAL_ASYNC_QUERIES_TRANSPORT = "ws"
+# GLOBAL_ASYNC_QUERIES_WEBSOCKET_URL = "ws://superset_websocket:8080/"
+# GLOBAL_ASYNC_QUERIES_POLLING_DELAY = int(
+#     timedelta(milliseconds=500).total_seconds() * 1000
+# )
+
+
+
+WTF_CSRF_ENABLED = False
+
+
+ALERT_REPORTS_NOTIFICATION_DRY_RUN = False
 # The base URL for the email report hyperlinks.
-WEBDRIVER_BASEURL_USER_FRIENDLY = WEBDRIVER_BASEURL
+# False - reports will not works for real. True - email reports works.
 
 SQLLAB_CTAS_NO_LIMIT = True
+LANGUAGES = {
+    "en": {"flag": "us", "name": "English"},
+    "ru": {"flag": "ru", "name": "Russian"},
+}
 
-#
-# Optionally import superset_config_docker.py (which will have been included on
-# the PYTHONPATH) in order to allow for local settings to be overridden
-#
+
+# UNCOMMECT FOR USING (Here's examples for setting up yandex reporter) # 
+# SMTP_HOST = "smtp.yandex.com"
+# SMTP_STARTTLS = False
+# SMTP_SSL = True
+# SMTP_SSL_SERVER_AUTH = True
+# SMTP_USER = "any-user-name"
+# SMTP_PORT = 465
+# SMTP_PASSWORD = 'application-password'
+# SMTP_MAIL_FROM = "email@yandex.ru"
+
+# WEBDRIVER_BASEURL = "http://superset:8088"
+# WEBDRIVER_BASEURL_USER_FRIENDLY="http://localhost:8088"
+
 try:
     import superset_config_docker
     from superset_config_docker import *  # noqa
