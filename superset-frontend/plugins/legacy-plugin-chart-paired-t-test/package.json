@@ -22,7 +22,7 @@
     "lib"
   ],
   "dependencies": {
-    "distributions": "^1.0.0",
+    "distributions": "^2.1.0",
     "prop-types": "^15.6.2",
     "reactable": "^1.1.0"
   },
