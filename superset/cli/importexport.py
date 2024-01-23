@@ -88,7 +88,7 @@ if feature_flags.get("VERSIONED_EXPORT"):
                     dashboard_ids
                 ).run():
                     with bundle.open(f"{root}/{file_name}", "w") as fp:
-                        fp.write(file_content.encode())
+                        fp.write(file_content().encode())
         except Exception:  # pylint: disable=broad-except
             logger.exception(
                 "There was an error when exporting the dashboards, please check "
@@ -120,7 +120,7 @@ if feature_flags.get("VERSIONED_EXPORT"):
             with ZipFile(datasource_file, "w") as bundle:
                 for file_name, file_content in ExportDatasetsCommand(dataset_ids).run():
                     with bundle.open(f"{root}/{file_name}", "w") as fp:
-                        fp.write(file_content.encode())
+                        fp.write(file_content().encode())
         except Exception:  # pylint: disable=broad-except
             logger.exception(
                 "There was an error when exporting the datasets, please check "

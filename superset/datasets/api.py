@@ -531,8 +531,9 @@ class DatasetRestApi(BaseSupersetModelRestApi):
                     for file_name, file_content in ExportDatasetsCommand(
                         requested_ids
                     ).run():
+                        print(file_name)
                         with bundle.open(f"{root}/{file_name}", "w") as fp:
-                            fp.write(file_content.encode())
+                            fp.write(file_content().encode())
                 except DatasetNotFoundError:
                     return self.response_404()
             buf.seek(0)
